@@ -101,15 +101,15 @@ export default function Contact() {
         ogDescription="Get in touch with TopBetSite for questions about betting offers, reviews, or general inquiries."
       />
 
-      <div className="min-h-screen bg-neutral-50">
+      <div className="min-h-screen bg-neutral-50 dark:bg-gray-800">
         <Header />
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center mb-10">
-            <h1 className="text-3xl md:text-4xl font-bold text-neutral-800 mb-4">
+            <h1 className="text-3xl md:text-4xl font-bold text-neutral-800 dark:text-neutral-200 mb-4">
               Contact TopBetSite
             </h1>
-            <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
+            <p className="text-lg text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto">
               Have a question about betting offers or need help with something? 
               Send us a message and we'll get back to you.
             </p>

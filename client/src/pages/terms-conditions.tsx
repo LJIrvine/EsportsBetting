@@ -15,20 +15,20 @@ export default function TermsConditions() {
         ogDescription="Read TopBetSite's terms and conditions for using our betting comparison and review services."
       />
       
-      <div className="min-h-screen bg-neutral-50">
+      <div className="min-h-screen bg-neutral-50 dark:bg-gray-800">
         <Header />
         
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center mb-12">
-            <h1 className="text-3xl md:text-4xl font-bold text-neutral-800 mb-4">
+            <h1 className="text-3xl md:text-4xl font-bold text-neutral-800 dark:text-neutral-200 mb-4">
               Terms & Conditions
             </h1>
-            <p className="text-lg text-neutral-500">
+            <p className="text-lg text-neutral-500 dark:text-neutral-300">
               Last updated: January 2025
             </p>
           </div>
 
-          <div className="bg-white rounded-lg p-8 shadow-sm space-y-8">
+          <div className="bg-white dark:bg-gray-700 rounded-lg p-8 shadow-sm space-y-8">
             
             <section>
               <div className="flex items-center space-x-3 mb-4">
