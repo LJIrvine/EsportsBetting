@@ -24,7 +24,7 @@ export default function BettingGlossary() {
     { term: "Double", definition: "A bet on two selections, both must win for the bet to be successful." },
     { term: "Each Way (E/W)", definition: "Two bets in one: a win bet and a place bet on the same selection." },
     { term: "Edge", definition: "The advantage a bettor has over the bookmaker in a particular market." },
-    { term: "Even Money", definition: "Odds of 1/1 or 2.00, where you win the same amount as your stake." },
+    { term: "Even Money", definition: "Odds of 1/1 or 2.00, where you win the same amount as your stake. Sometimes written as Evs or Evens" },
     { term: "Favourite", definition: "The selection with the lowest odds, considered most likely to win." },
     { term: "Fixed Odds", definition: "Odds that remain the same from the time the bet is placed until settlement." },
     { term: "Fold", definition: "Each selection in an accumulator bet (e.g., 4-fold = 4 selections)." },

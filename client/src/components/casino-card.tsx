@@ -47,7 +47,7 @@ export default function CasinoCard({ casino }: CasinoCardProps) {
                     </span>
                   </div>
                   {casino.badge && (
-                    <Badge className="bg-secondary text-white">
+                    <Badge className="bg-primary text-white">
                       {casino.badge}
                     </Badge>
                   )}
