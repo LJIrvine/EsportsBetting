@@ -10,6 +10,12 @@ import Offers from "@/pages/offers";
 import Reviews from "@/pages/reviews";
 import Resources from "@/pages/resources";
 import FAQ from "@/pages/faq";
+import BettingStrategy from "@/pages/betting-strategy";
+import UnderstandingOdds from "@/pages/understanding-odds";
+import BettingTips from "@/pages/betting-tips";
+import HorseRacingGuide from "@/pages/horse-racing-guide";
+import ResponsibleGambling from "@/pages/responsible-gambling";
+import BettingGlossary from "@/pages/betting-glossary";
 import Blog from "@/pages/blog";
 import BlogPost from "@/pages/blog-post";
 
@@ -22,6 +28,12 @@ function Router() {
       <Route path="/reviews" component={Reviews} />
       <Route path="/resources" component={Resources} />
       <Route path="/faq" component={FAQ} />
+      <Route path="/betting-strategy" component={BettingStrategy} />
+      <Route path="/understanding-odds" component={UnderstandingOdds} />
+      <Route path="/betting-tips" component={BettingTips} />
+      <Route path="/horse-racing-guide" component={HorseRacingGuide} />
+      <Route path="/responsible-gambling" component={ResponsibleGambling} />
+      <Route path="/betting-glossary" component={BettingGlossary} />
       <Route path="/blog" component={Blog} />
       <Route path="/blog/:slug" component={BlogPost} />
       <Route component={NotFound} />

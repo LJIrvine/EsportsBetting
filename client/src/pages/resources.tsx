@@ -12,37 +12,37 @@ export default function Resources() {
       title: "Betting Strategy Guide",
       description: "Learn fundamental betting strategies, bankroll management, and value betting techniques.",
       icon: <Target className="h-8 w-8 text-primary" />,
-      link: "/resources/strategy-guide"
+      link: "/betting-strategy"
     },
     {
       title: "Understanding Odds",
       description: "Complete guide to reading odds, calculating probability, and finding value bets.",
       icon: <Calculator className="h-8 w-8 text-secondary" />,
-      link: "/resources/odds-guide"
+      link: "/understanding-odds"
     },
     {
-      title: "Football Betting Tips",
-      description: "Expert analysis and tips for Premier League, Championship, and international football.",
+      title: "Betting Tips",
+      description: "Learn about betting tips and discover trusted external tipsters for football and racing.",
       icon: <TrendingUp className="h-8 w-8 text-accent" />,
-      link: "/resources/football-tips"
+      link: "/betting-tips"
     },
     {
       title: "Horse Racing Guide",
       description: "Learn to read form, understand race types, and identify value in horse racing markets.",
       icon: <BarChart3 className="h-8 w-8 text-primary" />,
-      link: "/resources/horse-racing"
+      link: "/horse-racing-guide"
     },
     {
       title: "Responsible Gambling",
       description: "Information on safe betting practices, setting limits, and getting help if needed.",
       icon: <Shield className="h-8 w-8 text-secondary" />,
-      link: "/resources/responsible-gambling"
+      link: "/responsible-gambling"
     },
     {
       title: "Betting Glossary",
       description: "A-Z of betting terms and definitions to help you understand the jargon.",
       icon: <BookOpen className="h-8 w-8 text-accent" />,
-      link: "/resources/glossary"
+      link: "/betting-glossary"
     }
   ];
 
