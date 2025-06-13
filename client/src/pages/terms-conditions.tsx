@@ -55,18 +55,18 @@ export default function TermsConditions() {
             <section>
               <div className="flex items-center space-x-3 mb-4">
                 <Users className="h-6 w-6 text-primary" />
-                <h2 className="text-2xl font-bold text-neutral-800">User Eligibility and Responsibilities</h2>
+                <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200">User Eligibility and Responsibilities</h2>
               </div>
               
-              <h3 className="text-lg font-semibold mb-3">Age Requirement</h3>
-              <p className="text-neutral-600 mb-4">
+              <h3 className="text-lg font-semibold mb-3 dark:text-neutral-200">Age Requirement</h3>
+              <p className="text-neutral-600 dark:text-neutral-300 mb-4">
                 You must be at least 18 years old to use this Website. By using our services, you represent and warrant 
                 that you meet this age requirement.
               </p>
 
-              <h3 className="text-lg font-semibold mb-3">User Conduct</h3>
-              <p className="text-neutral-600 mb-3">You agree not to:</p>
-              <ul className="list-disc pl-6 space-y-2 text-neutral-600">
+              <h3 className="text-lg font-semibold mb-3 dark:text-neutral-200">User Conduct</h3>
+              <p className="text-neutral-600 dark:text-neutral-300 mb-3">You agree not to:</p>
+              <ul className="list-disc pl-6 space-y-2 text-neutral-600 dark:text-neutral-300">
                 <li>Use the Website for any unlawful purpose</li>
                 <li>Attempt to gain unauthorized access to any portion of the Website</li>
                 <li>Transmit viruses, malware, or other harmful code</li>
@@ -78,40 +78,40 @@ export default function TermsConditions() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-neutral-800 mb-4">Website Content and Information</h2>
+              <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-4">Website Content and Information</h2>
               
-              <h3 className="text-lg font-semibold mb-3">Information Accuracy</h3>
-              <p className="text-neutral-600 mb-4">
+              <h3 className="text-lg font-semibold mb-3 dark:text-neutral-200">Information Accuracy</h3>
+              <p className="text-neutral-600 dark:text-neutral-300 mb-4">
                 We strive to provide accurate and up-to-date information about bookmakers, odds, and betting offers. 
                 However, we cannot guarantee the accuracy, completeness, or timeliness of all information. You should 
                 always verify details directly with bookmakers before placing bets.
               </p>
 
-              <h3 className="text-lg font-semibold mb-3">Educational Purpose</h3>
-              <p className="text-neutral-600 mb-4">
+              <h3 className="text-lg font-semibold mb-3 dark:text-neutral-200">Educational Purpose</h3>
+              <p className="text-neutral-600 dark:text-neutral-300 mb-4">
                 Our content is provided for informational and educational purposes only. We do not provide betting advice 
                 or guarantee any outcomes. All betting decisions are your sole responsibility.
               </p>
 
-              <h3 className="text-lg font-semibold mb-3">Third-Party Content</h3>
-              <p className="text-neutral-600">
+              <h3 className="text-lg font-semibold mb-3 dark:text-neutral-200">Third-Party Content</h3>
+              <p className="text-neutral-600 dark:text-neutral-300">
                 We may include links to third-party websites and services. We are not responsible for the content, 
                 accuracy, or practices of these external sites.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-neutral-800 mb-4">Affiliate Relationships</h2>
+              <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-4">Affiliate Relationships</h2>
               
-              <h3 className="text-lg font-semibold mb-3">Commercial Relationships</h3>
-              <p className="text-neutral-600 mb-4">
+              <h3 className="text-lg font-semibold mb-3 dark:text-neutral-200">Commercial Relationships</h3>
+              <p className="text-neutral-600 dark:text-neutral-300 mb-4">
                 TopBetSite operates as an affiliate marketing website. We may receive commission from bookmakers when 
                 users sign up through our links. This commercial relationship does not influence our editorial content 
                 or review integrity.
               </p>
 
-              <h3 className="text-lg font-semibold mb-3">Transparency</h3>
-              <p className="text-neutral-600">
+              <h3 className="text-lg font-semibold mb-3 dark:text-neutral-200">Transparency</h3>
+              <p className="text-neutral-600 dark:text-neutral-300">
                 We clearly disclose our affiliate relationships and maintain editorial independence. Our reviews and 
                 recommendations are based on genuine assessment criteria, not commission rates.
               </p>
@@ -120,45 +120,45 @@ export default function TermsConditions() {
             <section>
               <div className="flex items-center space-x-3 mb-4">
                 <AlertTriangle className="h-6 w-6 text-primary" />
-                <h2 className="text-2xl font-bold text-neutral-800">Gambling Disclaimers</h2>
+                <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200">Gambling Disclaimers</h2>
               </div>
               
-              <h3 className="text-lg font-semibold mb-3">Responsible Gambling</h3>
-              <p className="text-neutral-600 mb-4">
+              <h3 className="text-lg font-semibold mb-3 dark:text-neutral-200">Responsible Gambling</h3>
+              <p className="text-neutral-600 dark:text-neutral-300 mb-4">
                 Gambling can be addictive. We strongly encourage responsible gambling practices. Never bet more than 
                 you can afford to lose. If gambling becomes a problem, seek help immediately.
               </p>
 
-              <h3 className="text-lg font-semibold mb-3">Regulatory Compliance</h3>
-              <p className="text-neutral-600 mb-4">
+              <h3 className="text-lg font-semibold mb-3 dark:text-neutral-200">Regulatory Compliance</h3>
+              <p className="text-neutral-600 dark:text-neutral-300 mb-4">
                 All bookmakers featured on our Website hold valid UK Gambling Commission licenses. However, you are 
                 responsible for ensuring that online gambling is legal in your jurisdiction.
               </p>
 
-              <h3 className="text-lg font-semibold mb-3">No Guarantees</h3>
-              <p className="text-neutral-600">
+              <h3 className="text-lg font-semibold mb-3 dark:text-neutral-200">No Guarantees</h3>
+              <p className="text-neutral-600 dark:text-neutral-300">
                 We do not guarantee any betting outcomes or profits. Gambling involves risk, and losses are possible. 
                 All betting decisions are made at your own risk.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-neutral-800 mb-4">Intellectual Property</h2>
+              <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-4">Intellectual Property</h2>
               
-              <h3 className="text-lg font-semibold mb-3">Our Content</h3>
-              <p className="text-neutral-600 mb-4">
+              <h3 className="text-lg font-semibold mb-3 dark:text-neutral-200">Our Content</h3>
+              <p className="text-neutral-600 dark:text-neutral-300 mb-4">
                 All content on TopBetSite, including text, graphics, logos, and design, is owned by us or our licensors 
                 and protected by copyright and other intellectual property laws.
               </p>
 
-              <h3 className="text-lg font-semibold mb-3">Limited License</h3>
-              <p className="text-neutral-600 mb-4">
+              <h3 className="text-lg font-semibold mb-3 dark:text-neutral-200">Limited License</h3>
+              <p className="text-neutral-600 dark:text-neutral-300 mb-4">
                 We grant you a limited, non-exclusive, non-transferable license to access and use the Website for personal, 
                 non-commercial purposes only.
               </p>
 
-              <h3 className="text-lg font-semibold mb-3">Restrictions</h3>
-              <p className="text-neutral-600">
+              <h3 className="text-lg font-semibold mb-3 dark:text-neutral-200">Restrictions</h3>
+              <p className="text-neutral-600 dark:text-neutral-300">
                 You may not reproduce, distribute, modify, create derivative works, or publicly display our content 
                 without written permission.
               </p>
@@ -167,14 +167,14 @@ export default function TermsConditions() {
             <section>
               <div className="flex items-center space-x-3 mb-4">
                 <Shield className="h-6 w-6 text-primary" />
-                <h2 className="text-2xl font-bold text-neutral-800">Limitation of Liability</h2>
+                <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200">Limitation of Liability</h2>
               </div>
               
-              <p className="text-neutral-600 mb-4">
+              <p className="text-neutral-600 dark:text-neutral-300 mb-4">
                 To the fullest extent permitted by law, TopBetSite shall not be liable for any indirect, incidental, 
                 special, consequential, or punitive damages, including but not limited to:
               </p>
-              <ul className="list-disc pl-6 space-y-2 text-neutral-600 mb-4">
+              <ul className="list-disc pl-6 space-y-2 text-neutral-600 dark:text-neutral-300 mb-4">
                 <li>Loss of profits or revenue</li>
                 <li>Loss of data or information</li>
                 <li>Business interruption</li>
@@ -183,33 +183,33 @@ export default function TermsConditions() {
                 <li>Service interruptions</li>
               </ul>
               
-              <p className="text-neutral-600">
+              <p className="text-neutral-600 dark:text-neutral-300">
                 Our total liability shall not exceed £100 or the amount you paid to access our services, whichever is less.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-neutral-800 mb-4">Privacy and Data Protection</h2>
-              <p className="text-neutral-600">
+              <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-4">Privacy and Data Protection</h2>
+              <p className="text-neutral-600 dark:text-neutral-300">
                 Your privacy is important to us. Our collection and use of personal information is governed by our 
                 Privacy Policy, which forms part of these Terms and Conditions.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-neutral-800 mb-4">Termination</h2>
-              <p className="text-neutral-600 mb-4">
+              <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-4">Termination</h2>
+              <p className="text-neutral-600 dark:text-neutral-300 mb-4">
                 We reserve the right to terminate or suspend your access to the Website at any time, without notice, 
                 for conduct that we believe violates these Terms or is harmful to other users or our business.
               </p>
-              <p className="text-neutral-600">
+              <p className="text-neutral-600 dark:text-neutral-300">
                 Upon termination, your right to use the Website will cease immediately.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-neutral-800 mb-4">Changes to Terms</h2>
-              <p className="text-neutral-600">
+              <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-4">Changes to Terms</h2>
+              <p className="text-neutral-600 dark:text-neutral-300">
                 We reserve the right to modify these Terms at any time. Changes will be effective immediately upon 
                 posting on the Website. Your continued use of the Website after changes are posted constitutes 
                 acceptance of the modified Terms.
@@ -217,16 +217,16 @@ export default function TermsConditions() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-neutral-800 mb-4">Governing Law</h2>
-              <p className="text-neutral-600">
+              <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-4">Governing Law</h2>
+              <p className="text-neutral-600 dark:text-neutral-300">
                 These Terms shall be governed by and construed in accordance with the laws of England and Wales. 
                 Any disputes arising from these Terms shall be subject to the exclusive jurisdiction of the English courts.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-neutral-800 mb-4">Contact Information</h2>
-              <p className="text-neutral-600 mb-4">
+              <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-4">Contact Information</h2>
+              <p className="text-neutral-600 dark:text-neutral-300 mb-4">
                 If you have any questions about these Terms and Conditions, please contact us through our contact form.
               </p>
               <Link href="/contact">
@@ -234,7 +234,7 @@ export default function TermsConditions() {
                   Contact Us
                 </Button>
               </Link>
-              <p className="text-sm text-neutral-500 mt-4">
+              <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-4">
                 Response time: 3-5 working days due to high traffic volume
               </p>
             </section>
