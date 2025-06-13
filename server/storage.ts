@@ -69,7 +69,7 @@ export class MemStorage implements IStorage {
       {
         name: "William Hill",
         slug: "william-hill",
-        logo: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&h=80",
+        logo: "/logos/william-hill.png",
         rating: 5,
         bonus: "£30",
         bonusType: "in Free Bets",
@@ -82,7 +82,7 @@ export class MemStorage implements IStorage {
       {
         name: "Bet365",
         slug: "bet365",
-        logo: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&h=80",
+        logo: "/logos/bet365.png",
         rating: 5,
         bonus: "Up to £100",
         bonusType: "in Bet Credits",
@@ -95,7 +95,7 @@ export class MemStorage implements IStorage {
       {
         name: "BetVictor",
         slug: "betvictor",
-        logo: "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&h=80",
+        logo: "/logos/betvictor.png",
         rating: 4,
         bonus: "£25",
         bonusType: "Free Bet",
@@ -108,7 +108,7 @@ export class MemStorage implements IStorage {
       {
         name: "Betfred",
         slug: "betfred",
-        logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&h=80",
+        logo: "/logos/betfred.png",
         rating: 4,
         bonus: "£40",
         bonusType: "Free Bet Bundle",
