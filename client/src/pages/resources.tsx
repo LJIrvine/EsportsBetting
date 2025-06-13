@@ -129,15 +129,14 @@ export default function Resources() {
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               {popularGuides.map((guide, index) => (
-                <div
-                  key={index}
-                  className="flex items-center space-x-3 p-3 rounded-lg hover:bg-neutral-50 dark:hover:bg-gray-600 transition-colors"
-                >
-                  <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span className="text-neutral-700 dark:text-neutral-300 hover:text-primary cursor-pointer transition-colors">
-                    {guide}
-                  </span>
-                </div>
+                <Link key={index} href={guide.link}>
+                  <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-neutral-50 dark:hover:bg-gray-600 transition-colors cursor-pointer">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span className="text-neutral-700 dark:text-neutral-300 hover:text-primary transition-colors">
+                      {guide.title}
+                    </span>
+                  </div>
+                </Link>
               ))}
             </div>
           </div>

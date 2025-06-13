@@ -1,10 +1,124 @@
+import { useState } from "react";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import SEOHead from "@/components/seo-head";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { Calculator, TrendingUp, Target, Info } from "lucide-react";
 
+// Odds conversion functions
+function fractionalToDecimal(numerator: number, denominator: number): number {
+  return (numerator / denominator) + 1;
+}
+
+function decimalToFractional(decimal: number): { numerator: number; denominator: number } {
+  const fraction = decimal - 1;
+  let numerator = fraction;
+  let denominator = 1;
+  
+  // Convert to fraction
+  while (numerator % 1 !== 0) {
+    numerator *= 10;
+    denominator *= 10;
+  }
+  
+  // Simplify fraction
+  const gcd = (a: number, b: number): number => b === 0 ? a : gcd(b, a % b);
+  const divisor = gcd(numerator, denominator);
+  
+  return {
+    numerator: numerator / divisor,
+    denominator: denominator / divisor
+  };
+}
+
+function decimalToMoneyline(decimal: number): number {
+  if (decimal >= 2.0) {
+    return Math.round((decimal - 1) * 100);
+  } else {
+    return Math.round(-100 / (decimal - 1));
+  }
+}
+
+function moneylineToDecimal(moneyline: number): number {
+  if (moneyline > 0) {
+    return (moneyline / 100) + 1;
+  } else {
+    return (100 / Math.abs(moneyline)) + 1;
+  }
+}
+
+function parseFractional(fractional: string): { numerator: number; denominator: number } | null {
+  const parts = fractional.split('/');
+  if (parts.length !== 2) return null;
+  
+  const numerator = parseInt(parts[0]);
+  const denominator = parseInt(parts[1]);
+  
+  if (isNaN(numerator) || isNaN(denominator) || denominator === 0) return null;
+  
+  return { numerator, denominator };
+}
+
 export default function UnderstandingOdds() {
+  const [inputType, setInputType] = useState<'fractional' | 'decimal' | 'moneyline'>('decimal');
+  const [inputValue, setInputValue] = useState('');
+  const [convertedOdds, setConvertedOdds] = useState<{
+    fractional: string;
+    decimal: string;
+    moneyline: string;
+    probability: string;
+  } | null>(null);
+
+  const handleConvert = () => {
+    try {
+      let decimalOdds: number;
+
+      if (inputType === 'decimal') {
+        decimalOdds = parseFloat(inputValue);
+        if (isNaN(decimalOdds) || decimalOdds <= 1) throw new Error('Invalid decimal odds');
+      } else if (inputType === 'fractional') {
+        const fraction = parseFractional(inputValue);
+        if (!fraction) throw new Error('Invalid fractional odds');
+        decimalOdds = fractionalToDecimal(fraction.numerator, fraction.denominator);
+      } else if (inputType === 'moneyline') {
+        const moneyline = parseInt(inputValue);
+        if (isNaN(moneyline) || moneyline === 0 || (moneyline > -100 && moneyline < 100)) {
+          throw new Error('Invalid moneyline odds');
+        }
+        decimalOdds = moneylineToDecimal(moneyline);
+      } else {
+        throw new Error('Invalid input type');
+      }
+
+      // Convert to all formats
+      const fraction = decimalToFractional(decimalOdds);
+      const moneyline = decimalToMoneyline(decimalOdds);
+      const probability = ((1 / decimalOdds) * 100).toFixed(2);
+
+      setConvertedOdds({
+        fractional: `${fraction.numerator}/${fraction.denominator}`,
+        decimal: decimalOdds.toFixed(2),
+        moneyline: moneyline > 0 ? `+${moneyline}` : moneyline.toString(),
+        probability: `${probability}%`
+      });
+    } catch (error) {
+      setConvertedOdds(null);
+      alert('Please enter valid odds in the selected format');
+    }
+  };
+
+  const getInputPlaceholder = () => {
+    switch (inputType) {
+      case 'fractional': return 'e.g., 5/1 or 2/5';
+      case 'decimal': return 'e.g., 6.00 or 1.40';
+      case 'moneyline': return 'e.g., +500 or -250';
+      default: return '';
+    }
+  };
+
   const oddsExamples = [
     {
       type: "Fractional",
@@ -119,6 +233,112 @@ export default function UnderstandingOdds() {
               </div>
             </div>
           </div>
+
+          {/* Interactive Odds Converter */}
+          <Card className="mb-8 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 border-blue-200 dark:border-blue-700">
+            <CardHeader>
+              <CardTitle className="text-2xl text-center text-blue-800 dark:text-blue-300 flex items-center justify-center space-x-2">
+                <Calculator className="h-6 w-6" />
+                <span>Interactive Odds Converter</span>
+              </CardTitle>
+              <p className="text-center text-blue-600 dark:text-blue-400">
+                Convert between fractional, decimal, and moneyline odds formats instantly
+              </p>
+            </CardHeader>
+            <CardContent>
+              <div className="max-w-md mx-auto space-y-6">
+                {/* Input Type Selection */}
+                <div>
+                  <Label className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3 block">
+                    Select Input Format:
+                  </Label>
+                  <div className="grid grid-cols-3 gap-2">
+                    <Button
+                      variant={inputType === 'fractional' ? 'default' : 'outline'}
+                      size="sm"
+                      onClick={() => setInputType('fractional')}
+                      className={inputType === 'fractional' ? 'bg-blue-600 hover:bg-blue-700' : ''}
+                    >
+                      Fractional
+                    </Button>
+                    <Button
+                      variant={inputType === 'decimal' ? 'default' : 'outline'}
+                      size="sm"
+                      onClick={() => setInputType('decimal')}
+                      className={inputType === 'decimal' ? 'bg-blue-600 hover:bg-blue-700' : ''}
+                    >
+                      Decimal
+                    </Button>
+                    <Button
+                      variant={inputType === 'moneyline' ? 'default' : 'outline'}
+                      size="sm"
+                      onClick={() => setInputType('moneyline')}
+                      className={inputType === 'moneyline' ? 'bg-blue-600 hover:bg-blue-700' : ''}
+                    >
+                      Moneyline
+                    </Button>
+                  </div>
+                </div>
+
+                {/* Odds Input */}
+                <div>
+                  <Label htmlFor="odds-input" className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 block">
+                    Enter {inputType.charAt(0).toUpperCase() + inputType.slice(1)} Odds:
+                  </Label>
+                  <div className="flex space-x-2">
+                    <Input
+                      id="odds-input"
+                      type="text"
+                      value={inputValue}
+                      onChange={(e) => setInputValue(e.target.value)}
+                      placeholder={getInputPlaceholder()}
+                      className="flex-1"
+                    />
+                    <Button 
+                      onClick={handleConvert}
+                      className="bg-blue-600 hover:bg-blue-700 text-white px-6"
+                    >
+                      Convert
+                    </Button>
+                  </div>
+                </div>
+
+                {/* Conversion Results */}
+                {convertedOdds && (
+                  <div className="mt-6 p-4 bg-white dark:bg-gray-800 rounded-lg border border-blue-200 dark:border-blue-700">
+                    <h3 className="font-semibold text-gray-800 dark:text-gray-200 mb-3 text-center">
+                      Conversion Results:
+                    </h3>
+                    <div className="grid grid-cols-2 gap-4 text-sm">
+                      <div className="text-center p-3 bg-gray-50 dark:bg-gray-700 rounded">
+                        <p className="font-medium text-gray-600 dark:text-gray-300">Fractional</p>
+                        <p className="text-lg font-bold text-blue-600 dark:text-blue-400">{convertedOdds.fractional}</p>
+                      </div>
+                      <div className="text-center p-3 bg-gray-50 dark:bg-gray-700 rounded">
+                        <p className="font-medium text-gray-600 dark:text-gray-300">Decimal</p>
+                        <p className="text-lg font-bold text-blue-600 dark:text-blue-400">{convertedOdds.decimal}</p>
+                      </div>
+                      <div className="text-center p-3 bg-gray-50 dark:bg-gray-700 rounded">
+                        <p className="font-medium text-gray-600 dark:text-gray-300">Moneyline</p>
+                        <p className="text-lg font-bold text-blue-600 dark:text-blue-400">{convertedOdds.moneyline}</p>
+                      </div>
+                      <div className="text-center p-3 bg-green-50 dark:bg-green-900/30 rounded">
+                        <p className="font-medium text-gray-600 dark:text-gray-300">Probability</p>
+                        <p className="text-lg font-bold text-green-600 dark:text-green-400">{convertedOdds.probability}</p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Usage Instructions */}
+                <div className="text-xs text-gray-500 dark:text-gray-400 text-center space-y-1">
+                  <p>• Fractional: Enter as "5/1" or "2/5"</p>
+                  <p>• Decimal: Enter as "6.00" or "1.40"</p>
+                  <p>• Moneyline: Enter as "+500" or "-250"</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
 
           {/* Key Calculations */}
           <div className="grid md:grid-cols-3 gap-6 mb-8">
