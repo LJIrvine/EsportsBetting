@@ -84,7 +84,7 @@ export default function Reviews() {
                       opacity: 0.85,
                     }}
                   />
-                  <CardContent className="relative z-10 p-6 flex items-center min-h-[160px] bg-gradient-to-r from-white/90 via-white/70 to-white/40">
+                  <CardContent className="relative z-10 p-6 flex items-center min-h-[160px] bg-gradient-to-r from-white/0 via-white/0 to-white/0">
                     <div className="flex-1 min-w-0 max-w-xl pr-6">
                       <div className="flex items-center gap-3 mb-3">
                         <h3 className="text-xl font-bold text-neutral-900 truncate">

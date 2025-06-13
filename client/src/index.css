@@ -33,25 +33,30 @@
 }
 
 .dark {
-  --background: hsl(240, 10%, 3.9%);
-  --foreground: hsl(0, 0%, 98%);
-  --muted: hsl(240, 3.7%, 15.9%);
-  --muted-foreground: hsl(240, 5%, 64.9%);
-  --popover: hsl(240, 10%, 3.9%);
-  --popover-foreground: hsl(0, 0%, 98%);
-  --card: hsl(240, 10%, 3.9%);
-  --card-foreground: hsl(0, 0%, 98%);
-  --border: hsl(240, 3.7%, 15.9%);
-  --input: hsl(240, 3.7%, 15.9%);
+  --background: hsl(0, 0%, 15%);
+  --foreground: hsl(0, 0%, 95%);
+  --muted: hsl(0, 0%, 20%);
+  --muted-foreground: hsl(0, 0%, 70%);
+  --popover: hsl(0, 0%, 18%);
+  --popover-foreground: hsl(0, 0%, 95%);
+  --card: hsl(0, 0%, 18%);
+  --card-foreground: hsl(0, 0%, 95%);
+  --border: hsl(0, 0%, 30%);
+  --input: hsl(0, 0%, 25%);
   --primary: hsl(269, 49%, 45%);
   --primary-foreground: hsl(0, 0%, 100%);
-  --secondary: hsl(240, 3.7%, 15.9%);
-  --secondary-foreground: hsl(0, 0%, 98%);
-  --accent: hsl(240, 3.7%, 15.9%);
-  --accent-foreground: hsl(0, 0%, 98%);
-  --destructive: hsl(0, 62.8%, 30.6%);
+  --secondary: hsl(119, 60%, 39%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --accent: hsl(43, 96%, 56%);
+  --accent-foreground: hsl(0, 0%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
   --destructive-foreground: hsl(0, 0%, 98%);
-  --ring: hsl(240, 4.9%, 83.9%);
+  --ring: hsl(0, 0%, 70%);
+
+  /* Custom neutral colors for dark mode */
+  --neutral-50: hsl(0, 0%, 12%);
+  --neutral-500: hsl(0, 0%, 65%);
+  --neutral-800: hsl(0, 0%, 90%);
 }
 
 @layer base {

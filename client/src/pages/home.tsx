@@ -71,13 +71,13 @@ export default function Home() {
         ogDescription="Find the best UK betting offers and welcome bonuses from top bookmakers including William Hill, Bet365, and Ladbrokes."
       />
 
-      <div className="min-h-screen bg-neutral-50">
+      <div className="min-h-screen bg-neutral-50 dark:bg-gray-900">
         <Header />
 
         {/* Top Banner */}
         <section className="bg-primary text-white py-8">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-3xl md:text-5xl font-bold mb-4">TopBetSite</h1>
+            <h1 className="text-3xl md:text-5xl font-bold mb-4">TopBetSite<span className="text-2xl md:text-3xl">.co.uk</span></h1>
             <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto">
               Your trusted source for the best UK betting offers, expert
               reviews, and winning strategies
@@ -86,13 +86,13 @@ export default function Home() {
         </section>
 
         {/* Welcome Offers Section */}
-        <section className="py-12 bg-white">
+        <section className="py-12 bg-white dark:bg-gray-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl md:text-4xl font-bold text-neutral-800 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-neutral-800 dark:text-neutral-200 mb-4">
                 Best Welcome Offers
               </h2>
-              <p className="text-lg text-neutral-600 max-w-3xl mx-auto">
+              <p className="text-lg text-neutral-600 dark:text-neutral-300 max-w-3xl mx-auto">
                 Claim exclusive welcome bonuses from the UK's top bookmakers.
                 All offers verified and updated regularly.
               </p>
@@ -200,13 +200,13 @@ export default function Home() {
         </section>
 
         {/* What Are Welcome Offers */}
-        <section className="py-12 bg-neutral-50">
+        <section className="py-12 bg-neutral-50 dark:bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold text-neutral-800 mb-4">
+              <h2 className="text-3xl font-bold text-neutral-800 dark:text-neutral-200 mb-4">
                 What Are Welcome Offers?
               </h2>
-              <p className="text-lg text-neutral-600 max-w-3xl mx-auto">
+              <p className="text-lg text-neutral-600 dark:text-neutral-300 max-w-3xl mx-auto">
                 Welcome offers are promotional bonuses designed to attract new
                 customers to betting sites.
               </p>
@@ -278,7 +278,7 @@ export default function Home() {
                       opacity: 0.85,
                     }}
                   />
-                  <CardContent className="relative z-10 p-6 flex items-center min-h-[160px] bg-gradient-to-r from-white/90 via-white/70 to-white/40">
+                  <CardContent className="relative z-10 p-6 flex items-center min-h-[160px] bg-gradient-to-r from-white/0 via-white/0 to-white/0">
                     <div className="flex-1 min-w-0 max-w-xl pr-6">
                       <div className="flex items-center gap-3 mb-3">
                         <h3 className="text-xl font-bold text-neutral-900 truncate">
