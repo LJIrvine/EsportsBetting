@@ -87,12 +87,12 @@ export default function BettingStrategy() {
           </div>
 
           {/* Warning Card */}
-          <div className="bg-amber-50 border border-amber-200 rounded-lg p-6 mb-8">
+          <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700 rounded-lg p-6 mb-8">
             <div className="flex items-start space-x-3">
-              <AlertTriangle className="h-6 w-6 text-amber-600 mt-0.5 flex-shrink-0" />
+              <AlertTriangle className="h-6 w-6 text-amber-600 dark:text-amber-400 mt-0.5 flex-shrink-0" />
               <div>
-                <h3 className="font-semibold text-amber-800 mb-2">Important Disclaimer</h3>
-                <p className="text-amber-700">
+                <h3 className="font-semibold text-amber-800 dark:text-amber-300 mb-2">Important Disclaimer</h3>
+                <p className="text-amber-700 dark:text-amber-200">
                   Betting should always be done responsibly. Never bet money you cannot afford to lose, and remember that no strategy guarantees profits. 
                   These strategies are for educational purposes and can help improve your approach to betting.
                 </p>
@@ -126,15 +126,15 @@ export default function BettingStrategy() {
           </div>
 
           {/* Key Principles */}
-          <div className="bg-white rounded-lg p-8 shadow-sm mb-8">
-            <h2 className="text-2xl font-bold text-neutral-800 mb-6 text-center">
+          <div className="bg-white dark:bg-gray-700 rounded-lg p-8 shadow-sm mb-8">
+            <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-6 text-center">
               Key Betting Principles
             </h2>
             <div className="grid md:grid-cols-2 gap-4">
               {keyPrinciples.map((principle, index) => (
-                <div key={index} className="flex items-start space-x-3 p-3 rounded-lg hover:bg-neutral-50">
+                <div key={index} className="flex items-start space-x-3 p-3 rounded-lg hover:bg-neutral-50 dark:hover:bg-gray-600">
                   <div className="w-2 h-2 bg-secondary rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-neutral-700">{principle}</span>
+                  <span className="text-neutral-700 dark:text-neutral-300">{principle}</span>
                 </div>
               ))}
             </div>

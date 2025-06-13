@@ -82,12 +82,12 @@ export default function BettingTips() {
           </div>
 
           {/* Important Disclaimer */}
-          <div className="bg-amber-50 border border-amber-200 rounded-lg p-6 mb-8">
+          <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700 rounded-lg p-6 mb-8">
             <div className="flex items-start space-x-3">
-              <AlertTriangle className="h-6 w-6 text-amber-600 mt-0.5 flex-shrink-0" />
+              <AlertTriangle className="h-6 w-6 text-amber-600 dark:text-amber-400 mt-0.5 flex-shrink-0" />
               <div>
-                <h3 className="font-semibold text-amber-800 mb-2">Important: We Don't Provide Tips</h3>
-                <p className="text-amber-700">
+                <h3 className="font-semibold text-amber-800 dark:text-amber-300 mb-2">Important: We Don't Provide Tips</h3>
+                <p className="text-amber-700 dark:text-amber-200">
                   TopBetSite does not provide betting tips or predictions. Instead, we help you find trusted external sources 
                   and teach you how to evaluate tipsters. Always do your own research and never bet more than you can afford to lose.
                 </p>
@@ -96,17 +96,17 @@ export default function BettingTips() {
           </div>
 
           {/* What Are Betting Tips */}
-          <div className="bg-white rounded-lg p-8 shadow-sm mb-8">
-            <h2 className="text-2xl font-bold text-neutral-800 mb-6">What Are Betting Tips?</h2>
+          <div className="bg-white dark:bg-gray-700 rounded-lg p-8 shadow-sm mb-8">
+            <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-6">What Are Betting Tips?</h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <h3 className="font-semibold text-lg mb-3">Definition</h3>
-                <p className="text-neutral-600 mb-4">
+                <h3 className="font-semibold text-lg mb-3 dark:text-neutral-200">Definition</h3>
+                <p className="text-neutral-600 dark:text-neutral-300 mb-4">
                   Betting tips are predictions or recommendations made by experienced bettors (tipsters) who analyze sports events 
                   and suggest which bets offer good value. They typically include the selection, odds, stake recommendation, and reasoning.
                 </p>
-                <h3 className="font-semibold text-lg mb-3">Types of Tips</h3>
-                <ul className="space-y-2 text-neutral-600">
+                <h3 className="font-semibold text-lg mb-3 dark:text-neutral-200">Types of Tips</h3>
+                <ul className="space-y-2 text-neutral-600 dark:text-neutral-300">
                   <li>• <strong>Match Result:</strong> Predicting the winner of a game</li>
                   <li>• <strong>Over/Under:</strong> Total goals, points, or other statistics</li>
                   <li>• <strong>Handicap:</strong> Betting with adjusted starting positions</li>
@@ -115,8 +115,8 @@ export default function BettingTips() {
                 </ul>
               </div>
               <div>
-                <h3 className="font-semibold text-lg mb-3">What Good Tips Include</h3>
-                <ul className="space-y-2 text-neutral-600">
+                <h3 className="font-semibold text-lg mb-3 dark:text-neutral-200">What Good Tips Include</h3>
+                <ul className="space-y-2 text-neutral-600 dark:text-neutral-300">
                   <li>• Clear selection and recommended odds</li>
                   <li>• Stake suggestion (usually 1-5% of bankroll)</li>
                   <li>• Detailed analysis and reasoning</li>

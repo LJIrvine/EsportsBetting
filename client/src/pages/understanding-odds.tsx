@@ -75,47 +75,47 @@ export default function UnderstandingOdds() {
           {/* Odds Format Comparison */}
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             {oddsExamples.map((odds, index) => (
-              <Card key={index} className="text-center">
+              <Card key={index} className="text-center dark:bg-gray-700">
                 <CardHeader>
                   <CardTitle className="text-xl text-primary">{odds.type} Odds</CardTitle>
-                  <div className="text-3xl font-bold text-neutral-800">{odds.format}</div>
+                  <div className="text-3xl font-bold text-neutral-800 dark:text-neutral-200">{odds.format}</div>
                 </CardHeader>
                 <CardContent className="space-y-3">
-                  <p className="text-neutral-600">{odds.description}</p>
-                  <div className="bg-neutral-50 p-3 rounded">
+                  <p className="text-neutral-600 dark:text-neutral-300">{odds.description}</p>
+                  <div className="bg-neutral-50 dark:bg-gray-600 p-3 rounded">
                     <p className="font-semibold text-secondary">{odds.totalReturn}</p>
                   </div>
-                  <p className="text-sm text-neutral-500">Implied Probability: {odds.probability}</p>
+                  <p className="text-sm text-neutral-500 dark:text-neutral-400">Implied Probability: {odds.probability}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
 
           {/* Converting Between Formats */}
-          <div className="bg-white rounded-lg p-8 shadow-sm mb-8">
-            <h2 className="text-2xl font-bold text-neutral-800 mb-6 text-center">
+          <div className="bg-white dark:bg-gray-700 rounded-lg p-8 shadow-sm mb-8">
+            <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-6 text-center">
               Converting Between Odds Formats
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="text-center p-4 bg-neutral-50 rounded-lg">
-                <h3 className="font-semibold mb-2">Fractional to Decimal</h3>
-                <p className="text-sm text-neutral-600 mb-2">5/1 → (5÷1) + 1 = 6.00</p>
-                <p className="text-xs text-neutral-500">Divide fraction, add 1</p>
+              <div className="text-center p-4 bg-neutral-50 dark:bg-gray-600 rounded-lg">
+                <h3 className="font-semibold mb-2 dark:text-neutral-200">Fractional to Decimal</h3>
+                <p className="text-sm text-neutral-600 dark:text-neutral-300 mb-2">5/1 → (5÷1) + 1 = 6.00</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Divide fraction, add 1</p>
               </div>
-              <div className="text-center p-4 bg-neutral-50 rounded-lg">
-                <h3 className="font-semibold mb-2">Decimal to Fractional</h3>
-                <p className="text-sm text-neutral-600 mb-2">6.00 → 6.00-1 = 5/1</p>
-                <p className="text-xs text-neutral-500">Subtract 1, convert to fraction</p>
+              <div className="text-center p-4 bg-neutral-50 dark:bg-gray-600 rounded-lg">
+                <h3 className="font-semibold mb-2 dark:text-neutral-200">Decimal to Fractional</h3>
+                <p className="text-sm text-neutral-600 dark:text-neutral-300 mb-2">6.00 → 6.00-1 = 5/1</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Subtract 1, convert to fraction</p>
               </div>
-              <div className="text-center p-4 bg-neutral-50 rounded-lg">
-                <h3 className="font-semibold mb-2">Decimal to Moneyline</h3>
-                <p className="text-sm text-neutral-600 mb-2">6.00 → (6.00-1) × 100 = +500</p>
-                <p className="text-xs text-neutral-500">Subtract 1, multiply by 100</p>
+              <div className="text-center p-4 bg-neutral-50 dark:bg-gray-600 rounded-lg">
+                <h3 className="font-semibold mb-2 dark:text-neutral-200">Decimal to Moneyline</h3>
+                <p className="text-sm text-neutral-600 dark:text-neutral-300 mb-2">6.00 → (6.00-1) × 100 = +500</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Subtract 1, multiply by 100</p>
               </div>
-              <div className="text-center p-4 bg-neutral-50 rounded-lg">
-                <h3 className="font-semibold mb-2">Moneyline to Decimal</h3>
-                <p className="text-sm text-neutral-600 mb-2">+500 → (500÷100) + 1 = 6.00</p>
-                <p className="text-xs text-neutral-500">Divide by 100, add 1</p>
+              <div className="text-center p-4 bg-neutral-50 dark:bg-gray-600 rounded-lg">
+                <h3 className="font-semibold mb-2 dark:text-neutral-200">Moneyline to Decimal</h3>
+                <p className="text-sm text-neutral-600 dark:text-neutral-300 mb-2">+500 → (500÷100) + 1 = 6.00</p>
+                <p className="text-xs text-neutral-500 dark:text-neutral-400">Divide by 100, add 1</p>
               </div>
             </div>
           </div>
@@ -123,38 +123,38 @@ export default function UnderstandingOdds() {
           {/* Key Calculations */}
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             {calculations.map((calc, index) => (
-              <Card key={index}>
+              <Card key={index} className="dark:bg-gray-700">
                 <CardHeader>
                   <div className="flex items-center space-x-2 mb-2">
                     <Calculator className="h-5 w-5 text-primary" />
-                    <CardTitle className="text-lg">{calc.title}</CardTitle>
+                    <CardTitle className="text-lg dark:text-neutral-200">{calc.title}</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <div className="bg-neutral-50 p-3 rounded mb-3">
-                    <p className="font-mono text-sm font-semibold">{calc.formula}</p>
+                  <div className="bg-neutral-50 dark:bg-gray-600 p-3 rounded mb-3">
+                    <p className="font-mono text-sm font-semibold dark:text-neutral-200">{calc.formula}</p>
                   </div>
                   <p className="text-secondary font-semibold mb-2">{calc.example}</p>
-                  <p className="text-neutral-600 text-sm">{calc.description}</p>
+                  <p className="text-neutral-600 dark:text-neutral-300 text-sm">{calc.description}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
 
           {/* Bookmaker Margin */}
-          <div className="bg-amber-50 border border-amber-200 rounded-lg p-6 mb-8">
+          <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700 rounded-lg p-6 mb-8">
             <div className="flex items-start space-x-3">
-              <Info className="h-6 w-6 text-amber-600 mt-0.5 flex-shrink-0" />
+              <Info className="h-6 w-6 text-amber-600 dark:text-amber-400 mt-0.5 flex-shrink-0" />
               <div>
-                <h3 className="font-semibold text-amber-800 mb-2">Understanding Bookmaker Margin</h3>
-                <p className="text-amber-700 mb-3">
+                <h3 className="font-semibold text-amber-800 dark:text-amber-300 mb-2">Understanding Bookmaker Margin</h3>
+                <p className="text-amber-700 dark:text-amber-200 mb-3">
                   Bookmakers build in a profit margin (overround) by offering odds slightly lower than the true probability. 
                   This is how they guarantee long-term profit regardless of outcomes.
                 </p>
-                <div className="bg-white p-3 rounded border">
-                  <p className="text-sm font-semibold mb-1">Example: Football Match</p>
-                  <p className="text-sm">Team A: 2.10 (47.6%) | Draw: 3.40 (29.4%) | Team B: 3.60 (27.8%)</p>
-                  <p className="text-sm mt-1">Total probability: 104.8% (4.8% is the bookmaker's margin)</p>
+                <div className="bg-white dark:bg-gray-600 p-3 rounded border dark:border-gray-500">
+                  <p className="text-sm font-semibold mb-1 dark:text-neutral-200">Example: Football Match</p>
+                  <p className="text-sm dark:text-neutral-300">Team A: 2.10 (47.6%) | Draw: 3.40 (29.4%) | Team B: 3.60 (27.8%)</p>
+                  <p className="text-sm mt-1 dark:text-neutral-300">Total probability: 104.8% (4.8% is the bookmaker's margin)</p>
                 </div>
               </div>
             </div>
