@@ -33,17 +33,17 @@ export default function TermsConditions() {
             <section>
               <div className="flex items-center space-x-3 mb-4">
                 <FileText className="h-6 w-6 text-primary" />
-                <h2 className="text-2xl font-bold text-neutral-800">Agreement to Terms</h2>
+                <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200">Agreement to Terms</h2>
               </div>
-              <p className="text-neutral-600 leading-relaxed">
+              <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed">
                 By accessing and using TopBetSite ("the Website"), you accept and agree to be bound by the terms and provision 
                 of this agreement. If you do not agree to abide by the above, please do not use this service.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-neutral-800 mb-4">Definitions</h2>
-              <ul className="space-y-3 text-neutral-600">
+              <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-4">Definitions</h2>
+              <ul className="space-y-3 text-neutral-600 dark:text-neutral-300">
                 <li><strong>"We," "Us," "Our":</strong> TopBetSite and its operators</li>
                 <li><strong>"You," "User":</strong> Any individual accessing or using the Website</li>
                 <li><strong>"Content":</strong> All information, text, graphics, and materials on the Website</li>

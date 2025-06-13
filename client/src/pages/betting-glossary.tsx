@@ -162,14 +162,14 @@ export default function BettingGlossary() {
           )}
 
           {/* Quick Reference */}
-          <div className="mt-12 bg-white rounded-lg p-8 shadow-sm">
-            <h2 className="text-2xl font-bold text-neutral-800 mb-6 text-center">
+          <div className="mt-12 bg-white dark:bg-gray-700 rounded-lg p-8 shadow-sm">
+            <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-6 text-center">
               Most Common Betting Terms
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
               <div>
                 <h3 className="font-semibold mb-3 text-primary">Bet Types</h3>
-                <ul className="space-y-1 text-sm text-neutral-600">
+                <ul className="space-y-1 text-sm text-neutral-600 dark:text-neutral-300">
                   <li>• Single - One selection</li>
                   <li>• Double - Two selections</li>
                   <li>• Treble - Three selections</li>
@@ -179,7 +179,7 @@ export default function BettingGlossary() {
               </div>
               <div>
                 <h3 className="font-semibold mb-3 text-primary">Key Concepts</h3>
-                <ul className="space-y-1 text-sm text-neutral-600">
+                <ul className="space-y-1 text-sm text-neutral-600 dark:text-neutral-300">
                   <li>• Odds - Price of a bet</li>
                   <li>• Stake - Amount wagered</li>
                   <li>• Value - Good betting opportunity</li>
@@ -189,7 +189,7 @@ export default function BettingGlossary() {
               </div>
               <div>
                 <h3 className="font-semibold mb-3 text-primary">Markets</h3>
-                <ul className="space-y-1 text-sm text-neutral-600">
+                <ul className="space-y-1 text-sm text-neutral-600 dark:text-neutral-300">
                   <li>• Match Result - Win/Draw/Win</li>
                   <li>• Over/Under - Total goals/points</li>
                   <li>• Handicap - Virtual advantage</li>

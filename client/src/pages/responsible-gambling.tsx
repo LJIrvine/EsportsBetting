@@ -117,26 +117,26 @@ export default function ResponsibleGambling() {
 
           {/* Gamstop Section */}
           <div className="bg-white dark:bg-gray-700 rounded-lg p-8 shadow-sm mb-8">
-            <h2 className="text-2xl font-bold text-neutral-800 mb-6 text-center">
+            <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-6 text-center">
               Gamstop - Self-Exclusion Service
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h3 className="font-semibold text-lg mb-4">What is Gamstop?</h3>
-                <p className="text-neutral-600 mb-4">
+                <h3 className="font-semibold text-lg mb-4 dark:text-neutral-200">What is Gamstop?</h3>
+                <p className="text-neutral-600 dark:text-neutral-300 mb-4">
                   Gamstop is a free service that allows you to put barriers in place to restrict your online gambling across all UK licensed operators. 
                   Once registered, you'll be blocked from accessing gambling websites and apps.
                 </p>
-                <h4 className="font-semibold mb-2">Exclusion Periods:</h4>
-                <ul className="space-y-1 text-neutral-600">
+                <h4 className="font-semibold mb-2 dark:text-neutral-200">Exclusion Periods:</h4>
+                <ul className="space-y-1 text-neutral-600 dark:text-neutral-300">
                   <li>• 6 months (minimum period)</li>
                   <li>• 1 year</li>
                   <li>• 5 years</li>
                 </ul>
               </div>
               <div>
-                <h3 className="font-semibold text-lg mb-4">How It Works</h3>
-                <ul className="space-y-2 text-neutral-600 mb-4">
+                <h3 className="font-semibold text-lg mb-4 dark:text-neutral-200">How It Works</h3>
+                <ul className="space-y-2 text-neutral-600 dark:text-neutral-300 mb-4">
                   <li>• Register online with basic personal details</li>
                   <li>• Choose your exclusion period</li>
                   <li>• Automatic blocking across all UK gambling sites</li>

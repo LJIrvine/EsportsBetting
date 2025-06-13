@@ -190,29 +190,29 @@ export default function HorseRacingGuide() {
           <div className="bg-white dark:bg-gray-700 rounded-lg p-8 shadow-sm mb-8">
             <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-6 text-center">Popular Horse Racing Betting Markets</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="p-4 border rounded-lg">
-                <h3 className="font-semibold mb-2">Win</h3>
-                <p className="text-sm text-neutral-600">Back a horse to finish first</p>
+              <div className="p-4 border dark:border-gray-600 rounded-lg">
+                <h3 className="font-semibold mb-2 dark:text-neutral-200">Win</h3>
+                <p className="text-sm text-neutral-600 dark:text-neutral-300">Back a horse to finish first</p>
               </div>
-              <div className="p-4 border rounded-lg">
-                <h3 className="font-semibold mb-2">Each Way</h3>
-                <p className="text-sm text-neutral-600">Win bet + place bet combined</p>
+              <div className="p-4 border dark:border-gray-600 rounded-lg">
+                <h3 className="font-semibold mb-2 dark:text-neutral-200">Each Way</h3>
+                <p className="text-sm text-neutral-600 dark:text-neutral-300">Win bet + place bet combined</p>
               </div>
-              <div className="p-4 border rounded-lg">
-                <h3 className="font-semibold mb-2">Place</h3>
-                <p className="text-sm text-neutral-600">Finish in top 2-4 positions</p>
+              <div className="p-4 border dark:border-gray-600 rounded-lg">
+                <h3 className="font-semibold mb-2 dark:text-neutral-200">Place</h3>
+                <p className="text-sm text-neutral-600 dark:text-neutral-300">Finish in top 2-4 positions</p>
               </div>
-              <div className="p-4 border rounded-lg">
-                <h3 className="font-semibold mb-2">Forecast</h3>
-                <p className="text-sm text-neutral-600">Pick first and second in order</p>
+              <div className="p-4 border dark:border-gray-600 rounded-lg">
+                <h3 className="font-semibold mb-2 dark:text-neutral-200">Forecast</h3>
+                <p className="text-sm text-neutral-600 dark:text-neutral-300">Pick first and second in order</p>
               </div>
-              <div className="p-4 border rounded-lg">
-                <h3 className="font-semibold mb-2">Tricast</h3>
-                <p className="text-sm text-neutral-600">Pick first three in order</p>
+              <div className="p-4 border dark:border-gray-600 rounded-lg">
+                <h3 className="font-semibold mb-2 dark:text-neutral-200">Tricast</h3>
+                <p className="text-sm text-neutral-600 dark:text-neutral-300">Pick first three in order</p>
               </div>
-              <div className="p-4 border rounded-lg">
-                <h3 className="font-semibold mb-2">Placepot</h3>
-                <p className="text-sm text-neutral-600">Pick placed horses in 6 races</p>
+              <div className="p-4 border dark:border-gray-600 rounded-lg">
+                <h3 className="font-semibold mb-2 dark:text-neutral-200">Placepot</h3>
+                <p className="text-sm text-neutral-600 dark:text-neutral-300">Pick placed horses in 6 races</p>
               </div>
             </div>
           </div>

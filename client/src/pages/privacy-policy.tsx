@@ -83,38 +83,38 @@ export default function PrivacyPolicy() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-neutral-800 mb-4">Cookies and Tracking Technologies</h2>
+              <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-4">Cookies and Tracking Technologies</h2>
               
-              <h3 className="text-lg font-semibold mb-3">Essential Cookies</h3>
-              <p className="text-neutral-600 mb-4">
+              <h3 className="text-lg font-semibold mb-3 dark:text-neutral-200">Essential Cookies</h3>
+              <p className="text-neutral-600 dark:text-neutral-300 mb-4">
                 These cookies are necessary for the website to function properly. They enable basic features like page navigation 
                 and access to secure areas of the website.
               </p>
 
-              <h3 className="text-lg font-semibold mb-3">Analytics Cookies</h3>
-              <p className="text-neutral-600 mb-4">
+              <h3 className="text-lg font-semibold mb-3 dark:text-neutral-200">Analytics Cookies</h3>
+              <p className="text-neutral-600 dark:text-neutral-300 mb-4">
                 We use Google Analytics to understand how visitors use our site. This helps us improve our content and user experience. 
                 These cookies collect anonymous information about your visit.
               </p>
 
-              <h3 className="text-lg font-semibold mb-3">Affiliate Tracking</h3>
-              <p className="text-neutral-600 mb-4">
+              <h3 className="text-lg font-semibold mb-3 dark:text-neutral-200">Affiliate Tracking</h3>
+              <p className="text-neutral-600 dark:text-neutral-300 mb-4">
                 When you click on bookmaker links, we use cookies to track referrals for commission purposes. This does not 
                 collect personal information but helps us understand which offers are most popular.
               </p>
 
-              <h3 className="text-lg font-semibold mb-3">Managing Cookies</h3>
-              <p className="text-neutral-600">
+              <h3 className="text-lg font-semibold mb-3 dark:text-neutral-200">Managing Cookies</h3>
+              <p className="text-neutral-600 dark:text-neutral-300">
                 You can control cookies through your browser settings. However, disabling certain cookies may affect website functionality.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-neutral-800 mb-4">Information Sharing</h2>
-              <p className="text-neutral-600 mb-4">
+              <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-4">Information Sharing</h2>
+              <p className="text-neutral-600 dark:text-neutral-300 mb-4">
                 We do not sell, trade, or rent your personal information to third parties. We may share information in the following circumstances:
               </p>
-              <ul className="list-disc pl-6 space-y-2 text-neutral-600">
+              <ul className="list-disc pl-6 space-y-2 text-neutral-600 dark:text-neutral-300">
                 <li>With your explicit consent</li>
                 <li>To comply with legal requirements or court orders</li>
                 <li>To protect our rights, property, or safety</li>
@@ -126,7 +126,7 @@ export default function PrivacyPolicy() {
             <section>
               <div className="flex items-center space-x-3 mb-4">
                 <Lock className="h-6 w-6 text-primary" />
-                <h2 className="text-2xl font-bold text-neutral-800">Data Security</h2>
+                <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200">Data Security</h2>
               </div>
               <p className="text-neutral-600 mb-4">
                 We implement appropriate security measures to protect your information against unauthorized access, alteration, 
