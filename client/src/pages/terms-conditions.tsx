@@ -1,6 +1,8 @@
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import SEOHead from "@/components/seo-head";
+import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 import { FileText, AlertTriangle, Shield, Users } from "lucide-react";
 
 export default function TermsConditions() {
