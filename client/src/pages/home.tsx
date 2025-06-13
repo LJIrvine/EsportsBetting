@@ -101,7 +101,7 @@ export default function Home() {
 
             <div className="space-y-4">
               {bookmakersLoading
-                ? Array.from({ length: 8 }).map((_, i) => (
+                ? Array.from({ length: 16 }).map((_, i) => (
                     <Card key={i} className="animate-pulse">
                       <CardContent className="p-6 flex items-center">
                         <div className="w-32 h-32 bg-gray-200 rounded-xl mr-6"></div>
@@ -116,7 +116,7 @@ export default function Home() {
                 : topBookmakers.map((bookmaker) => (
                     <Card
                       key={bookmaker.id}
-                      className="relative overflow-hidden hover:shadow-xl transition-all duration-300 border-2 hover:border-primary group h-28"
+                      className="relative overflow-hidden hover:shadow-xl transition-all duration-300 border-2 hover:border-primary group h-36"
                     >
                       <div 
                         className="absolute inset-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300"
@@ -127,11 +127,11 @@ export default function Home() {
                         }}
                       />
                       <CardContent className="relative z-10 p-4 flex items-center h-full bg-gradient-to-r from-white/95 via-white/90 to-white/95">
-                        <div className="relative w-24 h-24 mr-6 flex-shrink-0 flex items-center justify-center">
+                        <div className="relative w-28 h-28 mr-6 flex-shrink-0 flex items-center justify-center">
                           <img
                             src={bookmaker.logo}
                             alt={`${bookmaker.name} Logo`}
-                            className="w-20 h-20 object-contain rounded-xl border-2 border-neutral-300 shadow-xl bg-white p-2 transition-all duration-300 group-hover:shadow-2xl group-hover:scale-105"
+                            className="w-24 h-24 object-contain rounded-xl border-2 border-neutral-300 shadow-xl bg-white p-3 transition-all duration-300 group-hover:shadow-2xl group-hover:scale-105"
                             style={{
                               filter: 'drop-shadow(0 6px 12px rgba(108, 59, 170, 0.2))',
                             }}
@@ -140,35 +140,46 @@ export default function Home() {
                         </div>
                         
                         <div className="flex-1 min-w-0">
-                          <div className="flex items-center gap-3 mb-2">
-                            <h3 className="font-bold text-xl text-neutral-800">
+                          <div className="flex items-center gap-3 mb-3">
+                            <h3 className="font-bold text-2xl text-neutral-800">
                               {bookmaker.name}
                             </h3>
-                            <StarRating rating={bookmaker.rating} size="sm" />
+                            <StarRating rating={bookmaker.rating} size="md" />
                           </div>
-                          <div className="flex items-center gap-4 mb-2">
-                            <div className="text-2xl font-bold text-secondary">
+                          <div className="mb-4">
+                            <div className="text-4xl font-bold text-secondary mb-2">
                               {bookmaker.bonus}
                             </div>
-                            <div className="text-sm text-neutral-600">
-                              {bookmaker.bonusType}
+                            <div className="flex items-center gap-3">
+                              <div className="text-lg text-neutral-600">
+                                {bookmaker.bonusType}
+                              </div>
+                              {bookmaker.badge && (
+                                <Badge className="bg-primary text-white text-sm px-3 py-1">
+                                  {bookmaker.badge}
+                                </Badge>
+                              )}
                             </div>
-                            {bookmaker.badge && (
-                              <Badge className="bg-primary text-white text-xs px-2 py-1">
-                                {bookmaker.badge}
-                              </Badge>
-                            )}
                           </div>
                         </div>
                         
-                        <div className="flex-shrink-0 ml-4">
+                        <div className="flex flex-col gap-3 ml-6">
                           <Button
                             onClick={() => handleAffiliateClick(bookmaker)}
-                            className="bg-secondary hover:bg-green-600 text-white font-semibold px-6 py-3"
+                            className="bg-secondary hover:bg-green-600 text-white font-bold px-8 py-4 text-xl"
+                            size="lg"
                           >
-                            <Play className="mr-2 h-4 w-4" />
-                            Claim Offer
+                            <Play className="mr-3 h-6 w-6" />
+                            CLAIM OFFER
                           </Button>
+                          <Link href={`/casino/${bookmaker.slug}`}>
+                            <Button 
+                              variant="outline" 
+                              className="w-full border-primary text-primary hover:bg-primary hover:text-white px-8 py-2"
+                            >
+                              Read Review
+                            </Button>
+                          </Link>
                         </div>
                       </CardContent>
                     </Card>
