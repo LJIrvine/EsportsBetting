@@ -15,7 +15,7 @@ export const casinos = pgTable("casinos", {
   affiliateUrl: text("affiliate_url").notNull(),
   badge: text("badge"),
   isFeatured: boolean("is_featured").default(false),
-  createdAt: timestamp("created_at").defaultNow(),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
 });
 
 export const blogPosts = pgTable("blog_posts", {
@@ -30,8 +30,8 @@ export const blogPosts = pgTable("blog_posts", {
   isPublished: boolean("is_published").default(false),
   metaTitle: text("meta_title"),
   metaDescription: text("meta_description"),
-  createdAt: timestamp("created_at").defaultNow(),
-  updatedAt: timestamp("updated_at").defaultNow(),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+  updatedAt: timestamp("updated_at").defaultNow().notNull(),
 });
 
 export const affiliateClicks = pgTable("affiliate_clicks", {
@@ -41,7 +41,7 @@ export const affiliateClicks = pgTable("affiliate_clicks", {
   userAgent: text("user_agent"),
   ipAddress: text("ip_address"),
   referrer: text("referrer"),
-  timestamp: timestamp("timestamp").defaultNow(),
+  timestamp: timestamp("timestamp").defaultNow().notNull(),
 });
 
 export const insertCasinoSchema = createInsertSchema(casinos).omit({
