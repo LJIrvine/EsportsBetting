@@ -115,7 +115,7 @@ export default function Home() {
                 : bookmakers.map((bookmaker) => (
                     <Card
                       key={bookmaker.id}
-                      className="relative overflow-hidden hover:shadow-xl transition-all duration-300 border-2 hover:border-primary group min-h-[180px]"
+                      className="relative overflow-hidden hover:shadow-xl transition-all duration-300 border-2 hover:border-primary group min-h-[180px] dark:bg-gray-700"
                     >
                       <div
                         className="absolute inset-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300"
@@ -127,7 +127,7 @@ export default function Home() {
                             "linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 30%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0) 100%)",
                         }}
                       />
-                      <CardContent className="relative z-10 p-4 flex items-stretch min-h-[180px] bg-gradient-to-r from-white/95 via-white/90 to-white/95">
+                      <CardContent className="relative z-10 p-4 flex items-stretch min-h-[180px] bg-gradient-to-r from-white/95 via-white/90 to-white/95 dark:from-gray-700/95 dark:via-gray-700/90 dark:to-gray-700/95">
                         <div className="relative w-32 h-32 mr-6 flex-shrink-0 flex items-center justify-center self-center">
                           <img
                             src={bookmaker.logo}
@@ -143,7 +143,7 @@ export default function Home() {
 
                         <div className="flex-1 min-w-0 flex flex-col justify-center py-2">
                           <div className="flex items-center gap-3 mb-2">
-                            <h3 className="font-bold text-lg text-neutral-800 truncate">
+                            <h3 className="font-bold text-lg text-neutral-800 dark:text-white truncate">
                               {bookmaker.name}
                             </h3>
                             <StarRating rating={bookmaker.rating} size="sm" />
@@ -154,7 +154,7 @@ export default function Home() {
                             </div>
                             <div className="flex items-start gap-3">
                               <div
-                                className="text-xs text-neutral-500 leading-tight flex-1"
+                                className="text-xs text-neutral-500 dark:text-neutral-400 leading-tight flex-1"
                                 style={{
                                   display: "-webkit-box",
                                   WebkitLineClamp: 3,
@@ -186,7 +186,7 @@ export default function Home() {
                           <Link href={`/casino/${bookmaker.slug}`}>
                             <Button
                               variant="outline"
-                              className="w-full border-primary text-primary hover:bg-primary hover:text-white px-4 py-2 text-xs whitespace-nowrap"
+                              className="w-full border-primary text-primary hover:bg-primary hover:text-white dark:border-gray-400 dark:text-gray-300 dark:hover:bg-gray-400 dark:hover:text-gray-900 px-4 py-2 text-xs whitespace-nowrap"
                             >
                               Read Review
                             </Button>
@@ -269,7 +269,7 @@ export default function Home() {
               {sampleReviews.map((bookmaker) => (
                 <Card
                   key={bookmaker.id}
-                  className="relative overflow-hidden hover:shadow-xl transition-all duration-300 border-2 hover:border-primary group min-h-[160px]"
+                  className="relative overflow-hidden hover:shadow-xl transition-all duration-300 border-2 hover:border-primary group min-h-[160px] dark:bg-gray-700"
                 >
                   <div
                     className="absolute inset-0 transition-opacity duration-300"
@@ -278,7 +278,7 @@ export default function Home() {
                       opacity: 0.85,
                     }}
                   />
-                  <CardContent className="relative z-10 p-6 flex items-center min-h-[160px] bg-gradient-to-r from-white/0 via-white/0 to-white/0">
+                  <CardContent className="relative z-10 p-6 flex items-center min-h-[160px] bg-gradient-to-r from-white/95 via-white/85 to-white/60 dark:from-gray-700/95 dark:via-gray-700/85 dark:to-gray-700/60">
                     <div className="flex-1 min-w-0 max-w-xl pr-6">
                       <div className="flex items-center gap-3 mb-3">
                         <h3 className="text-xl font-bold text-neutral-900 truncate">
