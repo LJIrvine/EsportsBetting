@@ -369,6 +369,9 @@ export default function Home() {
                           <div className="text-lg font-bold text-secondary mb-1">
                             {bookmaker.bonus}
                           </div>
+                          <div className="text-xs text-neutral-600 dark:text-neutral-300 leading-tight">
+                            {bookmaker.bonusType}
+                          </div>
                         </div>
                       </div>
                       
