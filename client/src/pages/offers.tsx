@@ -65,7 +65,7 @@ export default function Offers() {
               bookmakers.map((bookmaker) => (
                 <Card
                   key={bookmaker.id}
-                  className="relative overflow-hidden hover:shadow-xl transition-all duration-300 border-2 hover:border-primary group h-36"
+                  className="relative overflow-hidden hover:shadow-xl transition-all duration-300 border-2 hover:border-primary group h-40"
                 >
                   <div 
                     className="absolute inset-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300"
@@ -76,11 +76,11 @@ export default function Offers() {
                     }}
                   />
                   <CardContent className="relative z-10 p-4 flex items-center h-full bg-gradient-to-r from-white/95 via-white/90 to-white/95">
-                    <div className="relative w-28 h-28 mr-6 flex-shrink-0 flex items-center justify-center">
+                    <div className="relative w-36 h-36 mr-6 flex-shrink-0 flex items-center justify-center">
                       <img
                         src={bookmaker.logo}
                         alt={`${bookmaker.name} Logo`}
-                        className="w-24 h-24 object-contain rounded-xl border-2 border-neutral-300 shadow-xl bg-white p-3 transition-all duration-300 group-hover:shadow-2xl group-hover:scale-105"
+                        className="w-32 h-32 object-contain rounded-xl border-2 border-neutral-300 shadow-xl bg-white p-4 transition-all duration-300 group-hover:shadow-2xl group-hover:scale-105"
                         style={{
                           filter: 'drop-shadow(0 6px 12px rgba(108, 59, 170, 0.2))',
                         }}
@@ -119,7 +119,7 @@ export default function Offers() {
                         size="lg"
                       >
                         <Play className="mr-3 h-6 w-6" />
-                        CLAIM OFFER
+                        Claim Offer
                       </Button>
                       <Link href={`/casino/${bookmaker.slug}`}>
                         <Button 
