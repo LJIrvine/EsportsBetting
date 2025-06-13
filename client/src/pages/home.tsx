@@ -281,13 +281,13 @@ export default function Home() {
                   <CardContent className="relative z-10 p-6 flex items-center min-h-[160px] bg-gradient-to-r from-white/95 via-white/85 to-white/60 dark:from-gray-700/95 dark:via-gray-700/85 dark:to-gray-700/60">
                     <div className="flex-1 min-w-0 max-w-xl pr-6">
                       <div className="flex items-center gap-3 mb-3">
-                        <h3 className="text-xl font-bold text-neutral-900 truncate">
+                        <h3 className="text-xl font-bold text-neutral-900 dark:text-white truncate">
                           {bookmaker.name}
                         </h3>
                         <StarRating rating={bookmaker.rating} size="sm" />
                       </div>
                       <p
-                        className="text-neutral-700 mb-4 text-sm leading-relaxed"
+                        className="text-neutral-700 dark:text-gray-300 mb-4 text-sm leading-relaxed"
                         style={{
                           display: "-webkit-box",
                           WebkitLineClamp: 2,
@@ -303,12 +303,12 @@ export default function Home() {
                         <Link href={`/casino/${bookmaker.slug}`}>
                           <Button
                             variant="outline"
-                            className="px-4 py-2 text-sm font-medium border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors duration-200 shadow-sm"
+                            className="px-4 py-2 text-sm font-medium border-2 border-primary text-primary hover:bg-primary hover:text-white dark:border-gray-400 dark:text-gray-300 dark:hover:bg-gray-400 dark:hover:text-gray-900 transition-colors duration-200 shadow-sm"
                           >
                             Read Review
                           </Button>
                         </Link>
-                        <div className="text-right bg-white/80 rounded-lg px-3 py-2 shadow-sm">
+                        <div className="text-right bg-white/80 dark:bg-gray-600/80 rounded-lg px-3 py-2 shadow-sm">
                           <div className="text-base font-bold text-secondary">
                             {bookmaker.bonus}
                           </div>
@@ -332,13 +332,13 @@ export default function Home() {
         </section>
 
         {/* How Do Welcome Offers Work */}
-        <section className="py-12 bg-gradient-to-r from-neutral-100 to-neutral-200">
+        <section className="py-12 bg-gradient-to-r from-neutral-100 to-neutral-200 dark:from-gray-800 dark:to-gray-700">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold text-neutral-800 mb-4">
+              <h2 className="text-3xl font-bold text-neutral-800 dark:text-neutral-200 mb-4">
                 How Do Welcome Offers Work?
               </h2>
-              <p className="text-lg text-neutral-600 max-w-3xl mx-auto">
+              <p className="text-lg text-neutral-600 dark:text-neutral-300 max-w-3xl mx-auto">
                 Follow these simple steps to claim your welcome bonus and start
                 betting.
               </p>
@@ -349,8 +349,8 @@ export default function Home() {
                 <div className="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                   1
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Sign Up</h3>
-                <p className="text-neutral-600">
+                <h3 className="text-xl font-semibold mb-3 dark:text-neutral-200">Sign Up</h3>
+                <p className="text-neutral-600 dark:text-neutral-300">
                   Create a new account with your chosen bookmaker. You'll need
                   to provide basic personal details and verify your identity.
                 </p>
@@ -360,8 +360,8 @@ export default function Home() {
                 <div className="bg-secondary text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                   2
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Make a Deposit</h3>
-                <p className="text-neutral-600">
+                <h3 className="text-xl font-semibold mb-3 dark:text-neutral-200">Make a Deposit</h3>
+                <p className="text-neutral-600 dark:text-neutral-300">
                   Fund your account with the minimum qualifying deposit. Most
                   offers require £10-£20 to activate the welcome bonus.
                 </p>
@@ -371,23 +371,23 @@ export default function Home() {
                 <div className="bg-accent text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                   3
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Place Your Bet</h3>
-                <p className="text-neutral-600">
+                <h3 className="text-xl font-semibold mb-3 dark:text-neutral-200">Place Your Bet</h3>
+                <p className="text-neutral-600 dark:text-neutral-300">
                   Place a qualifying bet according to the terms. Your free bet
                   or bonus will be credited after settlement.
                 </p>
               </div>
             </div>
 
-            <Card className="mt-10 bg-white border-l-4 border-l-primary">
+            <Card className="mt-10 bg-white dark:bg-gray-700 border-l-4 border-l-primary">
               <CardContent className="p-6">
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="h-6 w-6 text-primary mt-0.5 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold mb-2">
+                    <h4 className="font-semibold mb-2 dark:text-neutral-200">
                       Important Terms & Conditions
                     </h4>
-                    <p className="text-neutral-600 text-sm">
+                    <p className="text-neutral-600 dark:text-neutral-300 text-sm">
                       Always read the full terms and conditions before claiming
                       any offer. Pay attention to wagering requirements, minimum
                       odds, time limits, and excluded markets. Some offers may
@@ -402,13 +402,13 @@ export default function Home() {
         </section>
 
         {/* FAQs */}
-        <section className="py-12 bg-white">
+        <section className="py-12 bg-white dark:bg-gray-800">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold text-neutral-800 mb-4">
+              <h2 className="text-3xl font-bold text-neutral-800 dark:text-neutral-200 mb-4">
                 Frequently Asked Questions
               </h2>
-              <p className="text-lg text-neutral-600">
+              <p className="text-lg text-neutral-600 dark:text-neutral-300">
                 Get answers to the most common questions about betting offers
                 and bonuses.
               </p>
@@ -416,15 +416,15 @@ export default function Home() {
 
             <div className="space-y-6">
               {faqs.map((faq, index) => (
-                <Card key={index}>
+                <Card key={index} className="dark:bg-gray-700">
                   <CardContent className="p-6">
                     <div className="flex items-start space-x-3">
                       <HelpCircle className="h-6 w-6 text-primary mt-0.5 flex-shrink-0" />
                       <div>
-                        <h3 className="font-semibold text-lg mb-2">
+                        <h3 className="font-semibold text-lg mb-2 dark:text-neutral-200">
                           {faq.question}
                         </h3>
-                        <p className="text-neutral-600">{faq.answer}</p>
+                        <p className="text-neutral-600 dark:text-neutral-300">{faq.answer}</p>
                       </div>
                     </div>
                   </CardContent>
