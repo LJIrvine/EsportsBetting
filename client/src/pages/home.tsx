@@ -142,7 +142,7 @@ export default function Home() {
                               />
                             </div>
                             <div className="flex-1 min-w-0">
-                              <h3 className="font-bold text-xl text-neutral-800 dark:text-neutral-200 mb-2 leading-tight">
+                              <h3 className="font-bold text-3xl text-neutral-800 dark:text-neutral-200 mb-2 leading-tight">
                                 {bookmaker.name}
                               </h3>
                               <div className="flex items-center gap-3 mb-2">
