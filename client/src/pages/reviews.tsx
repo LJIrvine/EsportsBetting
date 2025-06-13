@@ -169,6 +169,7 @@ export default function Reviews() {
                             <div className="text-base font-bold text-secondary">
                               {bookmaker.bonus}
                             </div>
+                          </div>
                         </div>
                       </div>
                     </div>
