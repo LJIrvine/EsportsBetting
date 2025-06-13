@@ -227,13 +227,16 @@ export default function TermsConditions() {
             <section>
               <h2 className="text-2xl font-bold text-neutral-800 mb-4">Contact Information</h2>
               <p className="text-neutral-600 mb-4">
-                If you have any questions about these Terms and Conditions, please contact us:
+                If you have any questions about these Terms and Conditions, please contact us through our contact form.
               </p>
-              <div className="bg-neutral-50 p-4 rounded-lg">
-                <p className="text-neutral-700"><strong>Email:</strong> legal@topbetsite.com</p>
-                <p className="text-neutral-700"><strong>Phone:</strong> 0800 123 4567</p>
-                <p className="text-neutral-700"><strong>Address:</strong> TopBetSite Limited, 123 Betting Street, London, UK, SW1A 1AA</p>
-              </div>
+              <Link href="/contact">
+                <Button className="bg-primary hover:bg-primary/90 text-white px-6 py-3">
+                  Contact Us
+                </Button>
+              </Link>
+              <p className="text-sm text-neutral-500 mt-4">
+                Response time: 3-5 working days due to high traffic volume
+              </p>
             </section>
 
           </div>
