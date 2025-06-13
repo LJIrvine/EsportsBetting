@@ -269,15 +269,15 @@ export default function Home() {
                   className="relative overflow-hidden hover:shadow-xl transition-all duration-300 border-2 hover:border-primary group min-h-[160px]"
                 >
                   <div 
-                    className="absolute inset-0 opacity-8 group-hover:opacity-12 transition-opacity duration-300"
+                    className="absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity duration-300"
                     style={{
-                      background: `url(${bookmaker.logo}) right center/auto 80% no-repeat`,
-                      maskImage: 'linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0.5) 100%)',
-                      WebkitMaskImage: 'linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0.5) 100%)',
+                      background: `url(${bookmaker.logo}) right center/auto 100% no-repeat`,
+                      maskImage: 'linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 30%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,1) 100%)',
+                      WebkitMaskImage: 'linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 30%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,1) 100%)',
                     }}
                   />
-                  <CardContent className="relative z-10 p-6 flex items-center min-h-[160px] bg-gradient-to-r from-white/98 via-white/95 to-white/85">
-                    <div className="flex-1 min-w-0 max-w-2xl">
+                  <CardContent className="relative z-10 p-6 flex items-center min-h-[160px] bg-gradient-to-r from-white/98 via-white/90 to-white/70">
+                    <div className="flex-1 min-w-0 max-w-lg pr-4">
                       <div className="flex items-center gap-3 mb-3">
                         <h3 className="text-xl font-bold text-neutral-900 truncate">
                           {bookmaker.name}
