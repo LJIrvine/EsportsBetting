@@ -436,7 +436,7 @@ export default function Home() {
               <Link href="/faq">
                 <Button
                   variant="outline"
-                  className="border-primary text-primary hover:bg-primary hover:text-white"
+                  className="border-primary text-primary hover:bg-primary hover:text-white dark:border-gray-400 dark:text-gray-300 dark:hover:bg-gray-400 dark:hover:text-gray-900"
                 >
                   View All FAQs
                   <ChevronRight className="ml-2 h-4 w-4" />
