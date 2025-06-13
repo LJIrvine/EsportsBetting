@@ -37,7 +37,7 @@ export default function Home() {
     window.open(`/goto/${bookmaker.slug}`, "_blank");
   };
 
-  const topBookmakers = bookmakers.slice(0, 8);
+  const topBookmakers = bookmakers;
   const sampleReviews = bookmakers.slice(0, 4);
 
   const faqs = [

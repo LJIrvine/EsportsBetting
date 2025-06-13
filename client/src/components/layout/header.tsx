@@ -1,10 +1,12 @@
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
+import { Menu, Moon, Sun } from "lucide-react";
+import { useTheme } from "@/lib/theme-context";
 
 export default function Header() {
   const [location] = useLocation();
+  const { theme, setTheme } = useTheme();
 
   const isActive = (path: string) => {
     if (path === "/" && location === "/") return true;
@@ -46,13 +48,13 @@ export default function Header() {
   );
 
   return (
-    <header className="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
+    <header className="bg-white dark:bg-gray-900 shadow-sm border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <Link href="/">
-                <h1 className="text-2xl font-bold text-primary cursor-pointer">TopBetSite</h1>
+                <h1 className="text-2xl font-bold text-primary dark:text-primary cursor-pointer">TopBetSite</h1>
               </Link>
             </div>
             <nav className="hidden md:ml-8 md:flex md:space-x-2">
@@ -61,6 +63,18 @@ export default function Header() {
           </div>
           
           <div className="flex items-center space-x-4">
+            {/* Theme toggle */}
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+              className="h-9 w-9 px-0"
+            >
+              <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+              <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+              <span className="sr-only">Toggle theme</span>
+            </Button>
+            
             {/* Mobile menu */}
             <Sheet>
               <SheetTrigger asChild>
