@@ -48,15 +48,15 @@ export default function AboutUs() {
         ogDescription="Discover TopBetSite's commitment to transparency, responsible gambling, and helping UK bettors find the best betting opportunities."
       />
       
-      <div className="min-h-screen bg-neutral-50">
+      <div className="min-h-screen bg-neutral-50 dark:bg-gray-800">
         <Header />
         
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center mb-12">
-            <h1 className="text-3xl md:text-4xl font-bold text-neutral-800 mb-4">
+            <h1 className="text-3xl md:text-4xl font-bold text-neutral-800 dark:text-neutral-200 mb-4">
               About TopBetSite
             </h1>
-            <p className="text-lg text-neutral-500 max-w-3xl mx-auto">
+            <p className="text-lg text-neutral-500 dark:text-neutral-300 max-w-3xl mx-auto">
               Your trusted source for honest betting information, comprehensive bookmaker reviews, and educational resources for UK sports betting.
             </p>
           </div>
