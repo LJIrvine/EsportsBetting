@@ -65,7 +65,7 @@ export default function CasinoDetail() {
   return (
     <>
       <SEOHead 
-        title={`${casino.name} Review - Expert Analysis & Ratings | CasinoHub`}
+        title={`${casino.name} Review - Expert Analysis & Ratings | TopBetSite`}
         description={`${casino.description.slice(0, 150)}...`}
         ogTitle={`${casino.name} Review - Expert Analysis & Ratings`}
         ogDescription={casino.description}

@@ -6,20 +6,24 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
 import CasinoDetail from "@/pages/casino-detail";
-import Casinos from "@/pages/casinos";
+import Offers from "@/pages/offers";
+import Reviews from "@/pages/reviews";
+import Resources from "@/pages/resources";
+import FAQ from "@/pages/faq";
 import Blog from "@/pages/blog";
 import BlogPost from "@/pages/blog-post";
-import Admin from "@/pages/admin";
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/casino/:slug" component={CasinoDetail} />
-      <Route path="/casinos" component={Casinos} />
+      <Route path="/offers" component={Offers} />
+      <Route path="/reviews" component={Reviews} />
+      <Route path="/resources" component={Resources} />
+      <Route path="/faq" component={FAQ} />
       <Route path="/blog" component={Blog} />
       <Route path="/blog/:slug" component={BlogPost} />
-      <Route path="/admin" component={Admin} />
       <Route component={NotFound} />
     </Switch>
   );
