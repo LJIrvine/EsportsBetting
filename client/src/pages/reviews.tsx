@@ -75,7 +75,7 @@ export default function Reviews() {
               filteredBookmakers.map((bookmaker) => (
                 <Card
                   key={bookmaker.id}
-                  className="relative overflow-hidden hover:shadow-xl transition-all duration-300 border-2 hover:border-primary group min-h-[160px]"
+                  className="relative overflow-hidden hover:shadow-xl transition-all duration-300 border-2 hover:border-primary group min-h-[160px] dark:bg-gray-700"
                 >
                   <div
                     className="absolute inset-0 transition-opacity duration-300"
@@ -84,10 +84,10 @@ export default function Reviews() {
                       opacity: 0.85,
                     }}
                   />
-                  <CardContent className="relative z-10 p-6 flex items-center min-h-[160px] bg-gradient-to-r from-white/0 via-white/0 to-white/0">
+                  <CardContent className="relative z-10 p-6 flex items-center min-h-[160px] bg-gradient-to-r from-white/0 via-white/0 to-white/0 dark:from-gray-700/0 dark:via-gray-700/0 dark:to-gray-700/0">
                     <div className="flex-1 min-w-0 max-w-xl pr-6">
                       <div className="flex items-center gap-3 mb-3">
-                        <h3 className="text-xl font-bold text-neutral-900 truncate">
+                        <h3 className="text-xl font-bold text-neutral-900 dark:text-neutral-200 truncate">
                           {bookmaker.name}
                         </h3>
                         <StarRating rating={bookmaker.rating} size="sm" />

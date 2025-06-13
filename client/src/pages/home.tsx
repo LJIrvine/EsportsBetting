@@ -77,7 +77,9 @@ export default function Home() {
         {/* Top Banner */}
         <section className="bg-primary text-white py-8">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-3xl md:text-5xl font-bold mb-4">TopBetSite<span className="text-2xl md:text-3xl">.co.uk</span></h1>
+            <h1 className="text-3xl md:text-5xl font-bold mb-4">
+              TopBetSite<span className="text-2xl md:text-3xl">.co.uk</span>
+            </h1>
             <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto">
               Your trusted source for the best UK betting offers, expert
               reviews, and winning strategies
@@ -216,7 +218,9 @@ export default function Home() {
               <Card className="text-center">
                 <CardContent className="p-6">
                   <Gift className="h-12 w-12 text-secondary mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold mb-3 dark:text-neutral-200">Free Bets</h3>
+                  <h3 className="text-xl font-semibold mb-3 dark:text-neutral-200">
+                    Free Bets
+                  </h3>
                   <p className="text-neutral-600 dark:text-neutral-300">
                     Risk-free bets that let you place wagers without using your
                     own money. Perfect for trying new markets or strategies.
@@ -241,7 +245,9 @@ export default function Home() {
               <Card className="text-center">
                 <CardContent className="p-6">
                   <Clock className="h-12 w-12 text-accent mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold mb-3 dark:text-neutral-200">Enhanced Odds</h3>
+                  <h3 className="text-xl font-semibold mb-3 dark:text-neutral-200">
+                    Enhanced Odds
+                  </h3>
                   <p className="text-neutral-600 dark:text-neutral-300">
                     Boosted odds on selected markets giving you better potential
                     returns than the standard market price.
@@ -278,7 +284,7 @@ export default function Home() {
                       opacity: 0.85,
                     }}
                   />
-                  <CardContent className="relative z-10 p-6 flex items-center min-h-[160px] bg-gradient-to-r from-white/95 via-white/85 to-white/60 dark:from-gray-700/95 dark:via-gray-700/85 dark:to-gray-700/60">
+                  <CardContent className="relative z-10 p-6 flex items-center min-h-[160px] bg-gradient-to-r from-white/100 via-white/0 to-white/0 dark:from-gray-700/100 dark:via-gray-700/0 dark:to-gray-700/0">
                     <div className="flex-1 min-w-0 max-w-xl pr-6">
                       <div className="flex items-center gap-3 mb-3">
                         <h3 className="text-xl font-bold text-neutral-900 dark:text-white truncate">
@@ -349,7 +355,9 @@ export default function Home() {
                 <div className="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                   1
                 </div>
-                <h3 className="text-xl font-semibold mb-3 dark:text-neutral-200">Sign Up</h3>
+                <h3 className="text-xl font-semibold mb-3 dark:text-neutral-200">
+                  Sign Up
+                </h3>
                 <p className="text-neutral-600 dark:text-neutral-300">
                   Create a new account with your chosen bookmaker. You'll need
                   to provide basic personal details and verify your identity.
@@ -360,7 +368,9 @@ export default function Home() {
                 <div className="bg-secondary text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                   2
                 </div>
-                <h3 className="text-xl font-semibold mb-3 dark:text-neutral-200">Make a Deposit</h3>
+                <h3 className="text-xl font-semibold mb-3 dark:text-neutral-200">
+                  Make a Deposit
+                </h3>
                 <p className="text-neutral-600 dark:text-neutral-300">
                   Fund your account with the minimum qualifying deposit. Most
                   offers require £10-£20 to activate the welcome bonus.
@@ -371,7 +381,9 @@ export default function Home() {
                 <div className="bg-accent text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                   3
                 </div>
-                <h3 className="text-xl font-semibold mb-3 dark:text-neutral-200">Place Your Bet</h3>
+                <h3 className="text-xl font-semibold mb-3 dark:text-neutral-200">
+                  Place Your Bet
+                </h3>
                 <p className="text-neutral-600 dark:text-neutral-300">
                   Place a qualifying bet according to the terms. Your free bet
                   or bonus will be credited after settlement.
@@ -424,7 +436,9 @@ export default function Home() {
                         <h3 className="font-semibold text-lg mb-2 dark:text-neutral-200">
                           {faq.question}
                         </h3>
-                        <p className="text-neutral-600 dark:text-neutral-300">{faq.answer}</p>
+                        <p className="text-neutral-600 dark:text-neutral-300">
+                          {faq.answer}
+                        </p>
                       </div>
                     </div>
                   </CardContent>
