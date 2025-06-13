@@ -87,8 +87,8 @@ export default function Reviews() {
                   />
                   <CardContent className="relative z-10 p-3 sm:p-6 sm:bg-gradient-to-r sm:from-white/0 sm:via-white/0 sm:to-white/0 dark:sm:from-gray-700/0 dark:sm:via-gray-700/0 dark:sm:to-gray-700/0">
                     {/* Mobile Layout */}
-                    <div className="flex flex-col space-y-4 sm:hidden">
-                      <div className="flex items-center justify-center">
+                    <div className="flex flex-col space-y-3 sm:hidden">
+                      <div className="flex items-start space-x-4">
                         <div className="relative w-24 h-20 flex-shrink-0">
                           <img
                             src={bookmaker.logo}
@@ -96,16 +96,16 @@ export default function Reviews() {
                             className="w-full h-full object-contain rounded-lg border border-neutral-300 dark:border-gray-600 shadow-md bg-white p-2"
                           />
                         </div>
-                      </div>
-                      <div className="text-center">
-                        <h3 className="font-bold text-xl text-neutral-800 dark:text-neutral-200 mb-2">
-                          {bookmaker.name}
-                        </h3>
-                        <div className="flex items-center justify-center gap-3 mb-2">
-                          <StarRating rating={bookmaker.rating} size="sm" />
-                          <span className="text-sm text-neutral-600 dark:text-neutral-300">
-                            {bookmaker.rating}/5
-                          </span>
+                        <div className="flex-1 min-w-0">
+                          <h3 className="font-bold text-xl text-neutral-800 dark:text-neutral-200 mb-2 leading-tight">
+                            {bookmaker.name}
+                          </h3>
+                          <div className="flex items-center gap-3 mb-2">
+                            <StarRating rating={bookmaker.rating} size="sm" />
+                            <span className="text-sm text-neutral-600 dark:text-neutral-300">
+                              {bookmaker.rating}/5
+                            </span>
+                          </div>
                         </div>
                       </div>
                       

@@ -133,26 +133,29 @@ export default function Home() {
                       <CardContent className="relative z-10 p-3 sm:p-4 sm:bg-gradient-to-r sm:from-white/95 sm:via-white/90 sm:to-white/95 dark:sm:from-gray-700/95 dark:sm:via-gray-700/90 dark:sm:to-gray-700/95">
                         {/* Mobile Layout */}
                         <div className="flex flex-col space-y-3 sm:hidden">
-                          <div className="flex items-center space-x-3">
-                            <div className="relative w-16 h-12 flex-shrink-0">
+                          <div className="flex items-start space-x-4">
+                            <div className="relative w-24 h-20 flex-shrink-0">
                               <img
                                 src={bookmaker.logo}
                                 alt={`${bookmaker.name} Logo`}
                                 className="w-full h-full object-contain rounded-lg border border-neutral-300 dark:border-gray-600 shadow-md bg-white p-2"
                               />
                             </div>
-                            <div className="flex-grow min-w-0">
-                              <div className="flex items-center gap-2 mb-1">
-                                <h3 className="font-bold text-base text-neutral-800 dark:text-neutral-200 truncate">
-                                  {bookmaker.name}
-                                </h3>
+                            <div className="flex-1 min-w-0">
+                              <h3 className="font-bold text-xl text-neutral-800 dark:text-neutral-200 mb-2 leading-tight">
+                                {bookmaker.name}
+                              </h3>
+                              <div className="flex items-center gap-3 mb-2">
                                 <StarRating rating={bookmaker.rating} size="sm" />
+                                <span className="text-sm text-neutral-600 dark:text-neutral-300">
+                                  {bookmaker.rating}/5
+                                </span>
+                                {bookmaker.badge && (
+                                  <Badge className="bg-primary text-white text-xs">
+                                    {bookmaker.badge}
+                                  </Badge>
+                                )}
                               </div>
-                              {bookmaker.badge && (
-                                <Badge className="bg-primary text-white text-xs">
-                                  {bookmaker.badge}
-                                </Badge>
-                              )}
                             </div>
                           </div>
                           
