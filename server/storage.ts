@@ -282,6 +282,8 @@ export class MemStorage implements IStorage {
         ...casino,
         id,
         createdAt: new Date(),
+        badge: casino.badge || null,
+        isFeatured: casino.isFeatured ?? false,
       };
       this.casinos.set(id, fullCasino);
     });
@@ -369,6 +371,10 @@ Value betting is the key to long-term profitability. Learn how to identify when 
         id,
         createdAt: new Date(),
         updatedAt: new Date(),
+        featuredImage: post.featuredImage || null,
+        isPublished: post.isPublished ?? true,
+        metaTitle: post.metaTitle || null,
+        metaDescription: post.metaDescription || null,
       };
       this.blogPosts.set(id, fullPost);
     });
@@ -395,6 +401,8 @@ Value betting is the key to long-term profitability. Learn how to identify when 
       ...insertCasino,
       id,
       createdAt: new Date(),
+      badge: insertCasino.badge || null,
+      isFeatured: insertCasino.isFeatured ?? false,
     };
     this.casinos.set(id, casino);
     return casino;
@@ -404,7 +412,12 @@ Value betting is the key to long-term profitability. Learn how to identify when 
     const casino = this.casinos.get(id);
     if (!casino) return undefined;
     
-    const updatedCasino: Casino = { ...casino, ...updates };
+    const updatedCasino: Casino = { 
+      ...casino, 
+      ...updates,
+      badge: updates.badge !== undefined ? updates.badge : casino.badge,
+      isFeatured: updates.isFeatured !== undefined ? updates.isFeatured : casino.isFeatured,
+    };
     this.casinos.set(id, updatedCasino);
     return updatedCasino;
   }
@@ -433,6 +446,10 @@ Value betting is the key to long-term profitability. Learn how to identify when 
       id,
       createdAt: new Date(),
       updatedAt: new Date(),
+      featuredImage: insertPost.featuredImage || null,
+      isPublished: insertPost.isPublished ?? true,
+      metaTitle: insertPost.metaTitle || null,
+      metaDescription: insertPost.metaDescription || null,
     };
     this.blogPosts.set(id, post);
     return post;
@@ -445,7 +462,11 @@ Value betting is the key to long-term profitability. Learn how to identify when 
     const updatedPost: BlogPost = { 
       ...post, 
       ...updates, 
-      updatedAt: new Date() 
+      updatedAt: new Date(),
+      featuredImage: updates.featuredImage !== undefined ? updates.featuredImage : post.featuredImage,
+      isPublished: updates.isPublished !== undefined ? updates.isPublished : post.isPublished,
+      metaTitle: updates.metaTitle !== undefined ? updates.metaTitle : post.metaTitle,
+      metaDescription: updates.metaDescription !== undefined ? updates.metaDescription : post.metaDescription,
     };
     this.blogPosts.set(id, updatedPost);
     return updatedPost;
@@ -462,6 +483,10 @@ Value betting is the key to long-term profitability. Learn how to identify when 
       ...insertClick,
       id,
       timestamp: new Date(),
+      casinoId: insertClick.casinoId || null,
+      userAgent: insertClick.userAgent || null,
+      ipAddress: insertClick.ipAddress || null,
+      referrer: insertClick.referrer || null,
     };
     this.affiliateClicks.set(id, click);
     return click;
