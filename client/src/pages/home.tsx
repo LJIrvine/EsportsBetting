@@ -268,40 +268,25 @@ export default function Home() {
                     }}
                   />
                   <CardContent className="relative z-10 p-4 flex items-center h-full bg-gradient-to-r from-white/96 via-white/92 to-white/96">
-                    <div className="relative w-32 h-32 mr-6 flex-shrink-0 flex items-center justify-center">
-                      <img
-                        src={bookmaker.logo}
-                        alt={`${bookmaker.name} Logo`}
-                        className="w-24 h-24 object-contain rounded-xl border-2 border-neutral-300 shadow-xl bg-white p-3 transition-all duration-300 group-hover:shadow-2xl group-hover:scale-105"
-                        style={{
-                          filter: 'drop-shadow(0 8px 16px rgba(108, 59, 170, 0.25))',
-                        }}
-                      />
-                      <div className="absolute inset-0 rounded-xl bg-gradient-to-tr from-transparent via-white/30 to-transparent opacity-50 pointer-events-none"></div>
-                    </div>
-                    
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-3 mb-2">
-                        <h3 className="text-xl font-bold text-neutral-800">
+                        <h3 className="text-lg font-bold text-neutral-800">
                           {bookmaker.name}
                         </h3>
                         <StarRating rating={bookmaker.rating} size="sm" />
                       </div>
                       <p className="text-neutral-600 mb-3 text-sm line-clamp-2 leading-relaxed">
-                        {bookmaker.description.substring(0, 140)}...
+                        {bookmaker.description.substring(0, 120)}...
                       </p>
                       <div className="flex items-center gap-4">
                         <Link href={`/casino/${bookmaker.slug}`}>
-                          <Button variant="outline" className="px-4 py-2 text-xs">
-                            Read Full Review
+                          <Button variant="outline" className="px-3 py-1 text-xs">
+                            Read Review
                           </Button>
                         </Link>
                         <div className="text-right">
-                          <div className="text-base font-bold text-secondary">
+                          <div className="text-sm font-bold text-secondary">
                             {bookmaker.bonus}
-                          </div>
-                          <div className="text-xs text-neutral-500">
-                            {bookmaker.bonusType}
                           </div>
                         </div>
                       </div>

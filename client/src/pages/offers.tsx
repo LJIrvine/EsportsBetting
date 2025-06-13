@@ -90,21 +90,21 @@ export default function Offers() {
                     
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-3 mb-3">
-                        <h3 className="font-bold text-2xl text-neutral-800">
+                        <h3 className="font-bold text-xl text-neutral-800">
                           {bookmaker.name}
                         </h3>
-                        <StarRating rating={bookmaker.rating} size="md" />
+                        <StarRating rating={bookmaker.rating} size="sm" />
                       </div>
                       <div className="mb-4">
-                        <div className="text-4xl font-bold text-secondary mb-2">
+                        <div className="text-2xl font-bold text-secondary mb-2">
                           {bookmaker.bonus}
                         </div>
-                        <div className="flex items-center gap-3">
-                          <div className="text-lg text-neutral-600">
+                        <div className="flex items-start gap-3">
+                          <div className="text-xs text-neutral-500 leading-tight max-w-md">
                             {bookmaker.bonusType}
                           </div>
                           {bookmaker.badge && (
-                            <Badge className="bg-primary text-white text-sm px-3 py-1">
+                            <Badge className="bg-primary text-white text-xs px-2 py-1 flex-shrink-0">
                               {bookmaker.badge}
                             </Badge>
                           )}
@@ -115,16 +115,15 @@ export default function Offers() {
                     <div className="flex flex-col gap-3 ml-6">
                       <Button
                         onClick={() => handleAffiliateClick(bookmaker)}
-                        className="bg-secondary hover:bg-green-600 text-white font-bold px-8 py-4 text-xl"
-                        size="lg"
+                        className="bg-secondary hover:bg-green-600 text-white font-semibold px-6 py-3 text-base"
                       >
-                        <Play className="mr-3 h-6 w-6" />
+                        <Play className="mr-2 h-4 w-4" />
                         Claim Offer
                       </Button>
                       <Link href={`/casino/${bookmaker.slug}`}>
                         <Button 
                           variant="outline" 
-                          className="w-full border-primary text-primary hover:bg-primary hover:text-white px-8 py-2"
+                          className="w-full border-primary text-primary hover:bg-primary hover:text-white px-4 py-2 text-sm"
                         >
                           Read Review
                         </Button>

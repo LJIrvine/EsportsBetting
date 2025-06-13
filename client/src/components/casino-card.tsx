@@ -60,10 +60,10 @@ export default function CasinoCard({ casino }: CasinoCardProps) {
                 </div>
               </div>
               <div className="text-right">
-                <div className="text-3xl font-bold text-secondary mb-1">
+                <div className="text-2xl font-bold text-secondary mb-1">
                   {casino.bonus}
                 </div>
-                <div className="text-sm text-neutral-500">
+                <div className="text-xs text-neutral-500 leading-tight max-w-xs">
                   {casino.bonusType}
                 </div>
               </div>
