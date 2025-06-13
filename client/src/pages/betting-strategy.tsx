@@ -72,16 +72,16 @@ export default function BettingStrategy() {
         ogDescription="Learn proven betting strategies for long-term success including bankroll management and value betting techniques."
       />
       
-      <div className="min-h-screen bg-neutral-50">
+      <div className="min-h-screen bg-neutral-50 dark:bg-gray-800">
         <Header />
         
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           {/* Page Header */}
           <div className="text-center mb-12">
-            <h1 className="text-3xl md:text-4xl font-bold text-neutral-800 mb-4">
+            <h1 className="text-3xl md:text-4xl font-bold text-neutral-800 dark:text-neutral-200 mb-4">
               Betting Strategy Guide
             </h1>
-            <p className="text-lg text-neutral-500 max-w-3xl mx-auto">
+            <p className="text-lg text-neutral-500 dark:text-neutral-300 max-w-3xl mx-auto">
               Master the fundamentals of successful sports betting with proven strategies for long-term profitability and responsible gambling.
             </p>
           </div>
@@ -103,20 +103,20 @@ export default function BettingStrategy() {
           {/* Main Strategies */}
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {strategies.map((strategy, index) => (
-              <Card key={index} className="h-full">
+              <Card key={index} className="h-full dark:bg-gray-700">
                 <CardHeader>
                   <div className="flex items-center space-x-3 mb-2">
                     {strategy.icon}
-                    <CardTitle className="text-xl">{strategy.title}</CardTitle>
+                    <CardTitle className="text-xl dark:text-neutral-200">{strategy.title}</CardTitle>
                   </div>
-                  <p className="text-neutral-600">{strategy.description}</p>
+                  <p className="text-neutral-600 dark:text-neutral-300">{strategy.description}</p>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2">
                     {strategy.details.map((detail, detailIndex) => (
                       <li key={detailIndex} className="flex items-start space-x-2">
                         <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-neutral-600">{detail}</span>
+                        <span className="text-neutral-600 dark:text-neutral-300">{detail}</span>
                       </li>
                     ))}
                   </ul>

@@ -59,15 +59,15 @@ export default function UnderstandingOdds() {
         ogDescription="Master betting odds with our complete guide covering fractional, decimal, and moneyline formats plus probability calculations."
       />
       
-      <div className="min-h-screen bg-neutral-50">
+      <div className="min-h-screen bg-neutral-50 dark:bg-gray-800">
         <Header />
         
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center mb-12">
-            <h1 className="text-3xl md:text-4xl font-bold text-neutral-800 mb-4">
+            <h1 className="text-3xl md:text-4xl font-bold text-neutral-800 dark:text-neutral-200 mb-4">
               Understanding Betting Odds
             </h1>
-            <p className="text-lg text-neutral-500 max-w-3xl mx-auto">
+            <p className="text-lg text-neutral-500 dark:text-neutral-300 max-w-3xl mx-auto">
               Master the three main odds formats used by bookmakers and learn to calculate probability and potential returns.
             </p>
           </div>

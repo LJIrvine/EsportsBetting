@@ -68,15 +68,15 @@ export default function BettingTips() {
         ogDescription="Discover trusted betting tipsters and learn how to evaluate tips for football, horse racing and other sports."
       />
       
-      <div className="min-h-screen bg-neutral-50">
+      <div className="min-h-screen bg-neutral-50 dark:bg-gray-800">
         <Header />
         
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center mb-12">
-            <h1 className="text-3xl md:text-4xl font-bold text-neutral-800 mb-4">
+            <h1 className="text-3xl md:text-4xl font-bold text-neutral-800 dark:text-neutral-200 mb-4">
               Betting Tips & Trusted Tipsters
             </h1>
-            <p className="text-lg text-neutral-500 max-w-3xl mx-auto">
+            <p className="text-lg text-neutral-500 dark:text-neutral-300 max-w-3xl mx-auto">
               Learn what betting tips are, how to evaluate tipsters, and discover trusted sources for sports betting analysis and selections.
             </p>
           </div>

@@ -77,16 +77,16 @@ export default function Resources() {
         ogDescription="Comprehensive betting resources including strategy guides, odds explanations, and expert tips for successful sports betting."
       />
 
-      <div className="min-h-screen bg-neutral-50">
+      <div className="min-h-screen bg-neutral-50 dark:bg-gray-800">
         <Header />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           {/* Page Header */}
           <div className="text-center mb-12">
-            <h1 className="text-3xl md:text-4xl font-bold text-neutral-800 mb-4">
+            <h1 className="text-3xl md:text-4xl font-bold text-neutral-800 dark:text-neutral-200 mb-4">
               Betting Resources
             </h1>
-            <p className="text-lg text-neutral-500 max-w-2xl mx-auto">
+            <p className="text-lg text-neutral-500 dark:text-neutral-300 max-w-2xl mx-auto">
               Educational guides, expert tips, and essential information to
               improve your betting knowledge and skills.
             </p>
@@ -97,22 +97,22 @@ export default function Resources() {
             {resources.map((resource, index) => (
               <Card
                 key={index}
-                className="hover:shadow-lg transition-shadow cursor-pointer"
+                className="hover:shadow-lg transition-shadow cursor-pointer dark:bg-gray-700"
               >
                 <CardHeader>
                   <div className="flex items-center space-x-3 mb-2">
                     {resource.icon}
-                    <CardTitle className="text-xl">{resource.title}</CardTitle>
+                    <CardTitle className="text-xl dark:text-neutral-200">{resource.title}</CardTitle>
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-neutral-600 mb-4">
+                  <p className="text-neutral-600 dark:text-neutral-300 mb-4">
                     {resource.description}
                   </p>
                   <Link href={resource.link}>
                     <Button
                       variant="outline"
-                      className="w-full border-primary text-primary hover:bg-primary hover:text-white"
+                      className="w-full border-primary text-primary hover:bg-primary hover:text-white dark:border-gray-400 dark:text-gray-300 dark:hover:bg-gray-400 dark:hover:text-gray-900"
                     >
                       Read Guide
                     </Button>
@@ -123,18 +123,18 @@ export default function Resources() {
           </div>
 
           {/* Popular Guides Section */}
-          <div className="bg-white rounded-lg p-8 shadow-sm">
-            <h2 className="text-2xl font-bold text-neutral-800 mb-6 text-center">
+          <div className="bg-white dark:bg-gray-700 rounded-lg p-8 shadow-sm">
+            <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-6 text-center">
               Popular Betting Guides
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               {popularGuides.map((guide, index) => (
                 <div
                   key={index}
-                  className="flex items-center space-x-3 p-3 rounded-lg hover:bg-neutral-50 transition-colors"
+                  className="flex items-center space-x-3 p-3 rounded-lg hover:bg-neutral-50 dark:hover:bg-gray-600 transition-colors"
                 >
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span className="text-neutral-700 hover:text-primary cursor-pointer transition-colors">
+                  <span className="text-neutral-700 dark:text-neutral-300 hover:text-primary cursor-pointer transition-colors">
                     {guide}
                   </span>
                 </div>

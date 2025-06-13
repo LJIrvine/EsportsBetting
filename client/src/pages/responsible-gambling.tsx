@@ -85,7 +85,7 @@ export default function ResponsibleGambling() {
         ogDescription="Get help with gambling problems. Information on Gamstop, support organizations, and responsible gambling tools."
       />
       
-      <div className="min-h-screen bg-neutral-50">
+      <div className="min-h-screen bg-neutral-50 dark:bg-gray-800">
         <Header />
         
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

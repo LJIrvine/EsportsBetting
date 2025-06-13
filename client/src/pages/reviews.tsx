@@ -93,7 +93,7 @@ export default function Reviews() {
                         <StarRating rating={bookmaker.rating} size="sm" />
                       </div>
                       <p 
-                        className="text-neutral-700 mb-4 text-sm leading-relaxed"
+                        className="text-neutral-700 dark:text-neutral-300 mb-4 text-sm leading-relaxed"
                         style={{
                           display: '-webkit-box',
                           WebkitLineClamp: 2,
@@ -109,7 +109,7 @@ export default function Reviews() {
                         <Link href={`/casino/${bookmaker.slug}`}>
                           <Button 
                             variant="outline" 
-                            className="px-4 py-2 text-sm font-medium border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors duration-200 shadow-sm"
+                            className="px-4 py-2 text-sm font-medium border-2 border-primary text-primary hover:bg-primary hover:text-white dark:border-gray-400 dark:text-gray-300 dark:hover:bg-gray-400 dark:hover:text-gray-900 transition-colors duration-200 shadow-sm"
                           >
                             Read Review
                           </Button>

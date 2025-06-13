@@ -93,7 +93,7 @@ export default function BettingGlossary() {
         ogDescription="Complete A-Z glossary of betting terms and definitions for sports betting beginners and experts."
       />
       
-      <div className="min-h-screen bg-neutral-50">
+      <div className="min-h-screen bg-neutral-50 dark:bg-gray-800">
         <Header />
         
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
