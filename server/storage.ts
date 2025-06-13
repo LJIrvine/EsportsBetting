@@ -71,7 +71,7 @@ export class MemStorage implements IStorage {
         slug: "william-hill",
         logo: "/logos/william-hill.png",
         rating: 5,
-        bonus: "Bet £10 get £30 in free bets",
+        bonus: "Bet £10 get £60 in free bets",
         bonusType: "18+. Play Safe. New players using T60 code. Online only. Get £60 bonus split as follows: (i) Deposit £10. Get a £20 Vegas Bonus on selected games (72hr expiry, wagering reqs apply); (ii) bet £10+ (odds 1/2+) with cash or Vegas winnings (after wager reqs met). Once settled, get 4x£10 sports free bets (valid 7 days, excl. virtual sports). Payment & country restrictions & full T&Cs apply. #ad",
         description: "Britain's most trusted bookmaker with over 80 years of experience. Offering competitive odds on football, horse racing, and all major sports with excellent live streaming.",
         features: ["Live Streaming", "In-Play Betting", "Mobile App", "Cash Out"],
