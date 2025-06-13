@@ -19,6 +19,12 @@ import BettingTips from "@/pages/betting-tips";
 import HorseRacingGuide from "@/pages/horse-racing-guide";
 import ResponsibleGambling from "@/pages/responsible-gambling";
 import BettingGlossary from "@/pages/betting-glossary";
+import FirstBetGuide from "@/pages/first-bet-guide";
+import AccumulatorBets from "@/pages/accumulator-bets";
+import LiveBettingStrategies from "@/pages/live-betting-strategies";
+import BettingAppsReview from "@/pages/betting-apps-review";
+import BettingTaxGuide from "@/pages/betting-tax-guide";
+import MatchedBettingGuide from "@/pages/matched-betting-guide";
 import AboutUs from "@/pages/about-us";
 import PrivacyPolicy from "@/pages/privacy-policy";
 import TermsConditions from "@/pages/terms-conditions";
@@ -44,6 +50,12 @@ function Router() {
       <Route path="/horse-racing-guide" component={HorseRacingGuide} />
       <Route path="/responsible-gambling" component={ResponsibleGambling} />
       <Route path="/betting-glossary" component={BettingGlossary} />
+      <Route path="/first-bet-guide" component={FirstBetGuide} />
+      <Route path="/accumulator-bets" component={AccumulatorBets} />
+      <Route path="/live-betting-strategies" component={LiveBettingStrategies} />
+      <Route path="/betting-apps-review" component={BettingAppsReview} />
+      <Route path="/betting-tax-guide" component={BettingTaxGuide} />
+      <Route path="/matched-betting-guide" component={MatchedBettingGuide} />
       <Route path="/about-us" component={AboutUs} />
       <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route path="/terms-conditions" component={TermsConditions} />

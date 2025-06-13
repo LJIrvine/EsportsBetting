@@ -60,12 +60,12 @@ export default function Resources() {
   ];
 
   const popularGuides = [
-    "How to Place Your First Bet",
-    "Understanding Accumulator Bets",
-    "Live Betting Strategies",
-    "Best Betting Apps Review",
-    "Tax on Betting Winnings",
-    "Matched Betting Explained",
+    { title: "How to Place Your First Bet", link: "/first-bet-guide" },
+    { title: "Understanding Accumulator Bets", link: "/accumulator-bets" },
+    { title: "Live Betting Strategies", link: "/live-betting-strategies" },
+    { title: "Best Betting Apps Review", link: "/betting-apps-review" },
+    { title: "Tax on Betting Winnings", link: "/betting-tax-guide" },
+    { title: "Matched Betting Explained", link: "/matched-betting-guide" },
   ];
 
   return (
