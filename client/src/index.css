@@ -17,7 +17,7 @@
   --input: hsl(20, 5.9%, 90%);
   --primary: hsl(269, 49%, 45%);
   --primary-foreground: hsl(0, 0%, 100%);
-  --secondary: hsl(159, 64%, 40%);
+  --secondary: hsl(119, 60%, 39%);
   --secondary-foreground: hsl(60, 9.1%, 97.8%);
   --accent: hsl(43, 96%, 56%);
   --accent-foreground: hsl(24, 9.8%, 10%);
@@ -25,7 +25,7 @@
   --destructive-foreground: hsl(60, 9.1%, 97.8%);
   --ring: hsl(20, 14.3%, 4.1%);
   --radius: 0.5rem;
-  
+
   /* Custom neutral colors matching design */
   --neutral-50: hsl(210, 40%, 98%);
   --neutral-500: hsl(215, 16%, 47%);
@@ -80,8 +80,9 @@
 
 /* Gradient background for hero section */
 .bg-gradient-primary {
-  background: linear-gradient(135deg, var(--primary) 0%, hsl(221, 83%, 53%) 100%);
+  background: var(--primary);
 }
+
 
 /* Custom button styles */
 .btn-secondary {
