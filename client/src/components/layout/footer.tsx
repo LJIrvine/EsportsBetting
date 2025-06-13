@@ -83,8 +83,21 @@ export default function Footer() {
                   Gambling Commission
                 </a>
               </li>
-              <li><a href="#" className="hover:text-white transition-colors">Betting Guide</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Odds Guide</a></li>
+              <li>
+                <Link href="/contact" className="hover:text-white transition-colors">
+                  Contact Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/betting-strategy" className="hover:text-white transition-colors">
+                  Betting Guide
+                </Link>
+              </li>
+              <li>
+                <Link href="/understanding-odds" className="hover:text-white transition-colors">
+                  Odds Guide
+                </Link>
+              </li>
             </ul>
           </div>
           

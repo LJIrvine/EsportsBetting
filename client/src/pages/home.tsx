@@ -117,11 +117,17 @@ export default function Home() {
                       className="hover:shadow-lg transition-shadow border-2 hover:border-primary"
                     >
                       <CardContent className="p-6 text-center">
-                        <img
-                          src={bookmaker.logo}
-                          alt={`${bookmaker.name} Logo`}
-                          className="w-20 h-12 object-contain mx-auto mb-4 rounded"
-                        />
+                        <div className="relative mx-auto mb-4 w-28 h-20 group">
+                          <img
+                            src={bookmaker.logo}
+                            alt={`${bookmaker.name} Logo`}
+                            className="w-full h-full object-contain rounded-xl border border-neutral-200 shadow-md bg-white p-2 transition-all duration-300 group-hover:shadow-lg group-hover:scale-105"
+                            style={{
+                              filter: 'drop-shadow(0 2px 4px rgba(108, 59, 170, 0.1))',
+                            }}
+                          />
+                          <div className="absolute inset-0 rounded-xl bg-gradient-to-tr from-transparent via-white/20 to-transparent opacity-30 pointer-events-none"></div>
+                        </div>
                         <h3 className="font-bold text-lg mb-2">
                           {bookmaker.name}
                         </h3>

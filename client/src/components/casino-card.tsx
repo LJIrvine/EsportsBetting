@@ -24,11 +24,17 @@ export default function CasinoCard({ casino }: CasinoCardProps) {
       <CardContent className="p-6">
         <div className="flex flex-col lg:flex-row items-start lg:items-center space-y-6 lg:space-y-0 lg:space-x-8">
           <div className="flex-shrink-0">
-            <img 
-              src={casino.logo} 
-              alt={`${casino.name} Logo`} 
-              className="w-24 h-16 object-cover rounded-lg"
-            />
+            <div className="relative w-32 h-24 group">
+              <img 
+                src={casino.logo} 
+                alt={`${casino.name} Logo`} 
+                className="w-full h-full object-contain rounded-xl border border-neutral-200 shadow-md bg-white p-3 transition-all duration-300 group-hover:shadow-lg group-hover:scale-105"
+                style={{
+                  filter: 'drop-shadow(0 2px 4px rgba(108, 59, 170, 0.1))',
+                }}
+              />
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-tr from-transparent via-white/20 to-transparent opacity-30 pointer-events-none"></div>
+            </div>
           </div>
           
           <div className="flex-grow">

@@ -64,11 +64,17 @@ export default function Offers() {
                 <Card key={bookmaker.id} className="hover:shadow-lg transition-shadow border-2 hover:border-primary">
                   <CardContent className="p-6">
                     <div className="text-center mb-4">
-                      <img 
-                        src={bookmaker.logo} 
-                        alt={`${bookmaker.name} Logo`} 
-                        className="w-24 h-16 object-contain mx-auto mb-3 rounded"
-                      />
+                      <div className="relative mx-auto mb-3 w-32 h-24 group">
+                        <img 
+                          src={bookmaker.logo} 
+                          alt={`${bookmaker.name} Logo`} 
+                          className="w-full h-full object-contain rounded-xl border border-neutral-200 shadow-md bg-white p-3 transition-all duration-300 group-hover:shadow-lg group-hover:scale-105"
+                          style={{
+                            filter: 'drop-shadow(0 2px 4px rgba(108, 59, 170, 0.1))',
+                          }}
+                        />
+                        <div className="absolute inset-0 rounded-xl bg-gradient-to-tr from-transparent via-white/20 to-transparent opacity-30 pointer-events-none"></div>
+                      </div>
                       <h3 className="font-bold text-xl mb-2">{bookmaker.name}</h3>
                       
                       <div className="flex items-center justify-center mb-3">

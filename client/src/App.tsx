@@ -21,6 +21,7 @@ import BettingGlossary from "@/pages/betting-glossary";
 import AboutUs from "@/pages/about-us";
 import PrivacyPolicy from "@/pages/privacy-policy";
 import TermsConditions from "@/pages/terms-conditions";
+import Contact from "@/pages/contact";
 import Blog from "@/pages/blog";
 import BlogPost from "@/pages/blog-post";
 
@@ -45,6 +46,7 @@ function Router() {
       <Route path="/about-us" component={AboutUs} />
       <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route path="/terms-conditions" component={TermsConditions} />
+      <Route path="/contact" component={Contact} />
       <Route path="/blog" component={Blog} />
       <Route path="/blog/:slug" component={BlogPost} />
       <Route component={NotFound} />
