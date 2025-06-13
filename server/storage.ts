@@ -69,7 +69,7 @@ export class MemStorage implements IStorage {
       {
         name: "William Hill",
         slug: "william-hill",
-        logo: "/logos/william-hill.png",
+        logo: "/logos/william-hill.svg",
         rating: 5,
         bonus: "£30",
         bonusType: "in Free Bets",
@@ -82,7 +82,7 @@ export class MemStorage implements IStorage {
       {
         name: "Bet365",
         slug: "bet365",
-        logo: "/logos/bet365.png",
+        logo: "/logos/bet365.svg",
         rating: 5,
         bonus: "Up to £100",
         bonusType: "in Bet Credits",
@@ -95,7 +95,7 @@ export class MemStorage implements IStorage {
       {
         name: "BetVictor",
         slug: "betvictor",
-        logo: "/logos/betvictor.png",
+        logo: "/logos/betvictor.svg",
         rating: 4,
         bonus: "£25",
         bonusType: "Free Bet",
@@ -108,7 +108,7 @@ export class MemStorage implements IStorage {
       {
         name: "Betfred",
         slug: "betfred",
-        logo: "/logos/betfred.png",
+        logo: "/logos/betfred.svg",
         rating: 4,
         bonus: "£40",
         bonusType: "Free Bet Bundle",
@@ -121,7 +121,7 @@ export class MemStorage implements IStorage {
       {
         name: "Coral",
         slug: "coral",
-        logo: "/logos/coral.png",
+        logo: "/logos/coral.svg",
         rating: 4,
         bonus: "£20",
         bonusType: "Free Bet",
@@ -134,7 +134,7 @@ export class MemStorage implements IStorage {
       {
         name: "Ladbrokes",
         slug: "ladbrokes",
-        logo: "/logos/ladbrokes.png",
+        logo: "/logos/ladbrokes.svg",
         rating: 4,
         bonus: "£25",
         bonusType: "Free Bet",
@@ -147,7 +147,7 @@ export class MemStorage implements IStorage {
       {
         name: "Unibet",
         slug: "unibet",
-        logo: "/logos/unibet.png",
+        logo: "/logos/unibet.svg",
         rating: 4,
         bonus: "£40",
         bonusType: "Money Back + Bonus",
@@ -160,7 +160,7 @@ export class MemStorage implements IStorage {
       {
         name: "BetUK",
         slug: "betuk",
-        logo: "/logos/betuk.png",
+        logo: "/logos/betuk.svg",
         rating: 4,
         bonus: "£30",
         bonusType: "Free Bet",
@@ -173,7 +173,7 @@ export class MemStorage implements IStorage {
       {
         name: "BoyleSports",
         slug: "boylesports",
-        logo: "/logos/boylesports.png",
+        logo: "/logos/boylesports.svg",
         rating: 4,
         bonus: "£20",
         bonusType: "Free Bet",
@@ -186,7 +186,7 @@ export class MemStorage implements IStorage {
       {
         name: "BetMGM",
         slug: "betmgm",
-        logo: "/logos/betmgm.png",
+        logo: "/logos/betmgm.svg",
         rating: 4,
         bonus: "£25",
         bonusType: "Free Bet",
@@ -199,7 +199,7 @@ export class MemStorage implements IStorage {
       {
         name: "Betano",
         slug: "betano",
-        logo: "/logos/betano.png",
+        logo: "/logos/betano.svg",
         rating: 4,
         bonus: "£30",
         bonusType: "Free Bet",
@@ -212,7 +212,7 @@ export class MemStorage implements IStorage {
       {
         name: "Virgin Bet",
         slug: "virgin-bet",
-        logo: "/logos/virgin-bet.png",
+        logo: "/logos/virgin-bet.svg",
         rating: 4,
         bonus: "£20",
         bonusType: "Free Bet",
@@ -225,7 +225,7 @@ export class MemStorage implements IStorage {
       {
         name: "Kwiff",
         slug: "kwiff",
-        logo: "/logos/kwiff.png",
+        logo: "/logos/kwiff.svg",
         rating: 3,
         bonus: "£30",
         bonusType: "Free Bet",
@@ -238,7 +238,7 @@ export class MemStorage implements IStorage {
       {
         name: "Casumo",
         slug: "casumo",
-        logo: "/logos/casumo.png",
+        logo: "/logos/casumo.svg",
         rating: 4,
         bonus: "£25",
         bonusType: "Free Bet",
@@ -251,7 +251,7 @@ export class MemStorage implements IStorage {
       {
         name: "Bet442",
         slug: "bet442",
-        logo: "/logos/bet442.png",
+        logo: "/logos/bet442.svg",
         rating: 3,
         bonus: "£10",
         bonusType: "Free Bet",
@@ -264,7 +264,7 @@ export class MemStorage implements IStorage {
       {
         name: "Betrino",
         slug: "betrino",
-        logo: "/logos/betrino.png",
+        logo: "/logos/betrino.svg",
         rating: 3,
         bonus: "£20",
         bonusType: "Free Bet",

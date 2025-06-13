@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
+import Casinos from "@/pages/casinos";
 import CasinoDetail from "@/pages/casino-detail";
 import Offers from "@/pages/offers";
 import Reviews from "@/pages/reviews";
@@ -29,6 +30,7 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/casinos" component={Casinos} />
       <Route path="/casino/:slug" component={CasinoDetail} />
       <Route path="/offers" component={Offers} />
       <Route path="/reviews" component={Reviews} />
