@@ -1,10 +1,13 @@
 import { useQuery } from "@tanstack/react-query";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
-import CasinoCard from "@/components/casino-card";
 import SEOHead from "@/components/seo-head";
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import StarRating from "@/components/star-rating";
+import { Link } from "wouter";
 import { useState } from "react";
 import type { Casino } from "@shared/schema";
 
@@ -56,7 +59,7 @@ export default function Reviews() {
           </div>
 
           {/* Bookmaker Reviews */}
-          <div className="space-y-8">
+          <div className="space-y-6">
             {isLoading ? (
               <div className="text-center py-12">
                 <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto"></div>
@@ -70,7 +73,59 @@ export default function Reviews() {
               </div>
             ) : (
               filteredBookmakers.map((bookmaker) => (
-                <CasinoCard key={bookmaker.id} casino={bookmaker} />
+                <Card
+                  key={bookmaker.id}
+                  className="relative overflow-hidden hover:shadow-xl transition-all duration-300 border-2 hover:border-primary group min-h-[160px]"
+                >
+                  <div
+                    className="absolute inset-0 opacity-60 group-hover:opacity-75 transition-opacity duration-300"
+                    style={{
+                      background: `url(${bookmaker.logo}) right center/auto 100% no-repeat`,
+                      maskImage:
+                        "linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 40%, rgba(0,0,0,0.7) 70%, rgba(0,0,0,1) 100%)",
+                      WebkitMaskImage:
+                        "linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 40%, rgba(0,0,0,0.7) 70%, rgba(0,0,0,1) 100%)",
+                    }}
+                  />
+                  <CardContent className="relative z-10 p-6 flex items-center min-h-[160px] bg-gradient-to-r from-white/95 via-white/85 to-white/60">
+                    <div className="flex-1 min-w-0 max-w-xl pr-6">
+                      <div className="flex items-center gap-3 mb-3">
+                        <h3 className="text-xl font-bold text-neutral-900 truncate">
+                          {bookmaker.name}
+                        </h3>
+                        <StarRating rating={bookmaker.rating} size="sm" />
+                      </div>
+                      <p 
+                        className="text-neutral-700 mb-4 text-sm leading-relaxed"
+                        style={{
+                          display: '-webkit-box',
+                          WebkitLineClamp: 2,
+                          WebkitBoxOrient: 'vertical',
+                          overflow: 'hidden',
+                          lineHeight: '1.5',
+                          maxHeight: '3em'
+                        }}
+                      >
+                        {bookmaker.description}
+                      </p>
+                      <div className="flex items-center justify-between gap-6">
+                        <Link href={`/casino/${bookmaker.slug}`}>
+                          <Button 
+                            variant="outline" 
+                            className="px-4 py-2 text-sm font-medium border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors duration-200 shadow-sm"
+                          >
+                            Read Review
+                          </Button>
+                        </Link>
+                        <div className="text-right bg-white/80 rounded-lg px-3 py-2 shadow-sm">
+                          <div className="text-base font-bold text-secondary">
+                            {bookmaker.bonus}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
               ))
             )}
           </div>
