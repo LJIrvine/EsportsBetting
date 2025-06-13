@@ -269,42 +269,45 @@ export default function Home() {
                   className="relative overflow-hidden hover:shadow-xl transition-all duration-300 border-2 hover:border-primary group min-h-[160px]"
                 >
                   <div 
-                    className="absolute inset-0 opacity-12 group-hover:opacity-20 transition-opacity duration-300"
+                    className="absolute inset-0 opacity-8 group-hover:opacity-12 transition-opacity duration-300"
                     style={{
-                      background: `url(${bookmaker.logo}) left center/auto 100% no-repeat`,
-                      maskImage: 'linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 35%, rgba(0,0,0,0.2) 65%, rgba(0,0,0,0) 100%)',
-                      WebkitMaskImage: 'linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 35%, rgba(0,0,0,0.2) 65%, rgba(0,0,0,0) 100%)',
+                      background: `url(${bookmaker.logo}) right center/auto 80% no-repeat`,
+                      maskImage: 'linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0.5) 100%)',
+                      WebkitMaskImage: 'linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0.5) 100%)',
                     }}
                   />
-                  <CardContent className="relative z-10 p-4 flex items-center min-h-[160px] bg-gradient-to-r from-white/96 via-white/92 to-white/96">
-                    <div className="flex-1 min-w-0 flex flex-col justify-center py-2">
-                      <div className="flex items-center gap-3 mb-2">
-                        <h3 className="text-lg font-bold text-neutral-800 truncate">
+                  <CardContent className="relative z-10 p-6 flex items-center min-h-[160px] bg-gradient-to-r from-white/98 via-white/95 to-white/85">
+                    <div className="flex-1 min-w-0 max-w-2xl">
+                      <div className="flex items-center gap-3 mb-3">
+                        <h3 className="text-xl font-bold text-neutral-900 truncate">
                           {bookmaker.name}
                         </h3>
                         <StarRating rating={bookmaker.rating} size="sm" />
                       </div>
                       <p 
-                        className="text-neutral-600 mb-3 text-sm leading-relaxed"
+                        className="text-neutral-700 mb-4 text-sm leading-relaxed"
                         style={{
                           display: '-webkit-box',
                           WebkitLineClamp: 2,
                           WebkitBoxOrient: 'vertical',
                           overflow: 'hidden',
-                          lineHeight: '1.4',
-                          maxHeight: '2.8em'
+                          lineHeight: '1.5',
+                          maxHeight: '3em'
                         }}
                       >
                         {bookmaker.description}
                       </p>
-                      <div className="flex items-center justify-between gap-4">
+                      <div className="flex items-center justify-between gap-6">
                         <Link href={`/casino/${bookmaker.slug}`}>
-                          <Button variant="outline" className="px-3 py-1 text-xs whitespace-nowrap">
+                          <Button 
+                            variant="outline" 
+                            className="px-4 py-2 text-sm font-medium border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors duration-200 shadow-sm"
+                          >
                             Read Review
                           </Button>
                         </Link>
-                        <div className="text-right">
-                          <div className="text-sm font-bold text-secondary">
+                        <div className="text-right bg-white/80 rounded-lg px-3 py-2 shadow-sm">
+                          <div className="text-base font-bold text-secondary">
                             {bookmaker.bonus}
                           </div>
                         </div>
