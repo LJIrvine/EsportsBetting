@@ -336,39 +336,87 @@ export default function Home() {
                       opacity: 0.85,
                     }}
                   />
-                  <CardContent className="relative z-10 p-6 flex items-center min-h-[160px] bg-gradient-to-r from-white/100 via-white/0 to-white/0 dark:from-gray-700/100 dark:via-gray-700/0 dark:to-gray-700/0">
-                    <div className="flex-1 min-w-0 max-w-xl pr-6">
-                      <div className="flex items-center gap-3 mb-3">
-                        <h3 className="text-xl font-bold text-neutral-900 dark:text-white truncate">
-                          {bookmaker.name}
-                        </h3>
-                        <StarRating rating={bookmaker.rating} size="sm" />
+                  <CardContent className="relative z-10 p-3 sm:p-6 sm:bg-gradient-to-r sm:from-white/100 sm:via-white/0 sm:to-white/0 dark:sm:from-gray-700/100 dark:sm:via-gray-700/0 dark:sm:to-gray-700/0">
+                    {/* Mobile Layout */}
+                    <div className="flex flex-col space-y-3 sm:hidden">
+                      <div className="flex items-start space-x-4">
+                        <div className="relative w-24 h-20 flex-shrink-0">
+                          <img
+                            src={bookmaker.logo}
+                            alt={`${bookmaker.name} Logo`}
+                            className="w-full h-full object-contain rounded-lg border border-neutral-300 dark:border-gray-600 shadow-md bg-white p-2"
+                          />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <h3 className="font-bold text-3xl text-neutral-800 dark:text-neutral-200 mb-2 leading-tight">
+                            {bookmaker.name}
+                          </h3>
+                          <div className="flex items-center gap-3 mb-2">
+                            <StarRating rating={bookmaker.rating} size="sm" />
+                            <span className="text-sm text-neutral-600 dark:text-neutral-300">
+                              {bookmaker.rating}/5
+                            </span>
+                          </div>
+                        </div>
                       </div>
-                      <p
-                        className="text-neutral-700 dark:text-gray-300 mb-4 text-sm leading-relaxed"
-                        style={{
-                          display: "-webkit-box",
-                          WebkitLineClamp: 2,
-                          WebkitBoxOrient: "vertical",
-                          overflow: "hidden",
-                          lineHeight: "1.5",
-                          maxHeight: "3em",
-                        }}
-                      >
+                      
+                      <p className="text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed line-clamp-2">
                         {bookmaker.description}
                       </p>
-                      <div className="flex items-center justify-between gap-6">
-                        <Link href={`/casino/${bookmaker.slug}`}>
-                          <Button
-                            variant="outline"
-                            className="px-4 py-2 text-sm font-medium border-2 border-primary text-primary hover:bg-primary hover:text-white dark:border-gray-400 dark:text-gray-300 dark:hover:bg-gray-400 dark:hover:text-gray-900 transition-colors duration-200 shadow-sm"
-                          >
-                            Read Review
-                          </Button>
-                        </Link>
-                        <div className="text-right bg-white/80 dark:bg-gray-600/80 rounded-lg px-3 py-2 shadow-sm">
-                          <div className="text-base font-bold text-secondary">
+                      
+                      <div className="bg-green-50 dark:bg-green-900/20 p-3 rounded-lg border border-green-200 dark:border-green-700">
+                        <div className="text-center">
+                          <div className="text-lg font-bold text-secondary mb-1">
                             {bookmaker.bonus}
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <Link href={`/casino/${bookmaker.slug}`}>
+                        <Button 
+                          variant="outline" 
+                          className="w-full border-primary text-primary hover:bg-primary hover:text-white dark:border-gray-400 dark:text-gray-300 dark:hover:bg-gray-400 dark:hover:text-gray-900"
+                        >
+                          Read Full Review
+                        </Button>
+                      </Link>
+                    </div>
+
+                    {/* Desktop Layout */}
+                    <div className="hidden sm:flex items-center min-h-[160px]">
+                      <div className="flex-1 min-w-0 max-w-xl pr-6">
+                        <div className="flex items-center gap-3 mb-3">
+                          <h3 className="text-xl font-bold text-neutral-900 dark:text-white truncate">
+                            {bookmaker.name}
+                          </h3>
+                          <StarRating rating={bookmaker.rating} size="sm" />
+                        </div>
+                        <p
+                          className="text-neutral-700 dark:text-gray-300 mb-4 text-sm leading-relaxed"
+                          style={{
+                            display: "-webkit-box",
+                            WebkitLineClamp: 2,
+                            WebkitBoxOrient: "vertical",
+                            overflow: "hidden",
+                            lineHeight: "1.5",
+                            maxHeight: "3em",
+                          }}
+                        >
+                          {bookmaker.description}
+                        </p>
+                        <div className="flex items-center justify-between gap-6">
+                          <Link href={`/casino/${bookmaker.slug}`}>
+                            <Button
+                              variant="outline"
+                              className="px-4 py-2 text-sm font-medium border-2 border-primary text-primary hover:bg-primary hover:text-white dark:border-gray-400 dark:text-gray-300 dark:hover:bg-gray-400 dark:hover:text-gray-900 transition-colors duration-200 shadow-sm"
+                            >
+                              Read Review
+                            </Button>
+                          </Link>
+                          <div className="text-right bg-white/80 dark:bg-gray-600/80 rounded-lg px-3 py-2 shadow-sm">
+                            <div className="text-base font-bold text-secondary">
+                              {bookmaker.bonus}
+                            </div>
                           </div>
                         </div>
                       </div>
