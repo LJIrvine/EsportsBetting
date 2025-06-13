@@ -90,33 +90,33 @@ export default function ResponsibleGambling() {
         
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center mb-12">
-            <h1 className="text-3xl md:text-4xl font-bold text-neutral-800 mb-4">
+            <h1 className="text-3xl md:text-4xl font-bold text-neutral-800 dark:text-neutral-200 mb-4">
               Responsible Gambling
             </h1>
-            <p className="text-lg text-neutral-500 max-w-3xl mx-auto">
+            <p className="text-lg text-neutral-500 dark:text-neutral-300 max-w-3xl mx-auto">
               Gambling should be enjoyable entertainment. If it's causing problems, help is available. Learn about support services, self-exclusion options, and protective tools.
             </p>
           </div>
 
           {/* Emergency Help */}
-          <div className="bg-red-50 border border-red-200 rounded-lg p-6 mb-8">
+          <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 rounded-lg p-6 mb-8">
             <div className="flex items-start space-x-3">
-              <Phone className="h-6 w-6 text-red-600 mt-0.5 flex-shrink-0" />
+              <Phone className="h-6 w-6 text-red-600 dark:text-red-400 mt-0.5 flex-shrink-0" />
               <div>
-                <h3 className="font-semibold text-red-800 mb-2">Need Help Now?</h3>
-                <p className="text-red-700 mb-3">
+                <h3 className="font-semibold text-red-800 dark:text-red-300 mb-2">Need Help Now?</h3>
+                <p className="text-red-700 dark:text-red-200 mb-3">
                   If gambling is causing you immediate distress or financial problems, contact the National Gambling Helpline:
                 </p>
-                <div className="bg-white p-3 rounded border">
-                  <p className="font-semibold text-red-800">📞 0808 8020 133</p>
-                  <p className="text-sm text-red-700">Free, confidential support available 24/7</p>
+                <div className="bg-white dark:bg-gray-600 p-3 rounded border dark:border-gray-500">
+                  <p className="font-semibold text-red-800 dark:text-red-300">📞 0808 8020 133</p>
+                  <p className="text-sm text-red-700 dark:text-red-200">Free, confidential support available 24/7</p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Gamstop Section */}
-          <div className="bg-white rounded-lg p-8 shadow-sm mb-8">
+          <div className="bg-white dark:bg-gray-700 rounded-lg p-8 shadow-sm mb-8">
             <h2 className="text-2xl font-bold text-neutral-800 mb-6 text-center">
               Gamstop - Self-Exclusion Service
             </h2>

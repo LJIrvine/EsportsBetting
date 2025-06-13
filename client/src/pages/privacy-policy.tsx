@@ -33,9 +33,9 @@ export default function PrivacyPolicy() {
             <section>
               <div className="flex items-center space-x-3 mb-4">
                 <Shield className="h-6 w-6 text-primary" />
-                <h2 className="text-2xl font-bold text-neutral-800">Introduction</h2>
+                <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200">Introduction</h2>
               </div>
-              <p className="text-neutral-600 leading-relaxed">
+              <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed">
                 TopBetSite ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, 
                 use, disclose, and safeguard your information when you visit our website topbetsite.com and use our services.
               </p>
@@ -44,11 +44,11 @@ export default function PrivacyPolicy() {
             <section>
               <div className="flex items-center space-x-3 mb-4">
                 <Eye className="h-6 w-6 text-primary" />
-                <h2 className="text-2xl font-bold text-neutral-800">Information We Collect</h2>
+                <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200">Information We Collect</h2>
               </div>
               
-              <h3 className="text-lg font-semibold mb-3">Automatically Collected Information</h3>
-              <ul className="list-disc pl-6 space-y-2 text-neutral-600 mb-4">
+              <h3 className="text-lg font-semibold mb-3 dark:text-neutral-200">Automatically Collected Information</h3>
+              <ul className="list-disc pl-6 space-y-2 text-neutral-600 dark:text-neutral-300 mb-4">
                 <li>IP address and general location information</li>
                 <li>Browser type and version</li>
                 <li>Operating system</li>
@@ -57,8 +57,8 @@ export default function PrivacyPolicy() {
                 <li>Device information (mobile, desktop, tablet)</li>
               </ul>
 
-              <h3 className="text-lg font-semibold mb-3">Information You Provide</h3>
-              <ul className="list-disc pl-6 space-y-2 text-neutral-600">
+              <h3 className="text-lg font-semibold mb-3 dark:text-neutral-200">Information You Provide</h3>
+              <ul className="list-disc pl-6 space-y-2 text-neutral-600 dark:text-neutral-300">
                 <li>Contact information when you reach out to us</li>
                 <li>Feedback and comments you submit</li>
                 <li>Newsletter subscription email addresses</li>
@@ -69,9 +69,9 @@ export default function PrivacyPolicy() {
             <section>
               <div className="flex items-center space-x-3 mb-4">
                 <UserCheck className="h-6 w-6 text-primary" />
-                <h2 className="text-2xl font-bold text-neutral-800">How We Use Your Information</h2>
+                <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200">How We Use Your Information</h2>
               </div>
-              <ul className="list-disc pl-6 space-y-2 text-neutral-600">
+              <ul className="list-disc pl-6 space-y-2 text-neutral-600 dark:text-neutral-300">
                 <li>To provide and improve our website and services</li>
                 <li>To analyze website usage and optimize user experience</li>
                 <li>To respond to your inquiries and provide customer support</li>

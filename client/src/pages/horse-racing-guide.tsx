@@ -87,28 +87,28 @@ export default function HorseRacingGuide() {
             <h1 className="text-3xl md:text-4xl font-bold text-neutral-800 dark:text-neutral-200 mb-4">
               Horse Racing Guide
             </h1>
-            <p className="text-lg text-neutral-500 max-w-3xl mx-auto">
+            <p className="text-lg text-neutral-500 dark:text-neutral-300 max-w-3xl mx-auto">
               Master the sport of kings with our comprehensive guide to horse racing types, form reading, and betting strategies.
             </p>
           </div>
 
           {/* Race Types */}
           <div className="mb-12">
-            <h2 className="text-2xl font-bold text-neutral-800 mb-6 text-center">Types of Horse Racing</h2>
+            <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-6 text-center">Types of Horse Racing</h2>
             <div className="grid md:grid-cols-3 gap-6">
               {raceTypes.map((race, index) => (
-                <Card key={index} className="h-full">
+                <Card key={index} className="h-full dark:bg-gray-700">
                   <CardHeader>
                     <CardTitle className="text-xl text-primary">{race.type}</CardTitle>
-                    <p className="text-sm text-neutral-500">Season: {race.seasons}</p>
+                    <p className="text-sm text-neutral-500 dark:text-neutral-400">Season: {race.seasons}</p>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-neutral-600 mb-4">{race.description}</p>
+                    <p className="text-neutral-600 dark:text-neutral-300 mb-4">{race.description}</p>
                     <div>
-                      <h4 className="font-semibold mb-2">Major Races:</h4>
+                      <h4 className="font-semibold mb-2 dark:text-neutral-200">Major Races:</h4>
                       <ul className="space-y-1">
                         {race.majorRaces.map((majorRace, raceIndex) => (
-                          <li key={raceIndex} className="text-sm text-neutral-600">• {majorRace}</li>
+                          <li key={raceIndex} className="text-sm text-neutral-600 dark:text-neutral-300">• {majorRace}</li>
                         ))}
                       </ul>
                     </div>
@@ -119,8 +119,8 @@ export default function HorseRacingGuide() {
           </div>
 
           {/* Form Reading */}
-          <div className="bg-white rounded-lg p-8 shadow-sm mb-8">
-            <h2 className="text-2xl font-bold text-neutral-800 mb-6 text-center">Reading Horse Racing Form</h2>
+          <div className="bg-white dark:bg-gray-700 rounded-lg p-8 shadow-sm mb-8">
+            <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-6 text-center">Reading Horse Racing Form</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h3 className="font-semibold text-lg mb-4">Form Numbers Explained</h3>

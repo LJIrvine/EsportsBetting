@@ -98,10 +98,10 @@ export default function BettingGlossary() {
         
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center mb-12">
-            <h1 className="text-3xl md:text-4xl font-bold text-neutral-800 mb-4">
+            <h1 className="text-3xl md:text-4xl font-bold text-neutral-800 dark:text-neutral-200 mb-4">
               Betting Glossary
             </h1>
-            <p className="text-lg text-neutral-500 max-w-3xl mx-auto">
+            <p className="text-lg text-neutral-500 dark:text-neutral-300 max-w-3xl mx-auto">
               A comprehensive A-Z reference of betting terms and definitions to help you understand the language of sports betting.
             </p>
           </div>
@@ -115,14 +115,14 @@ export default function BettingGlossary() {
                 placeholder="Search terms..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-10 border-primary focus:ring-primary"
+                className="pl-10 border-primary focus:ring-primary dark:bg-gray-600 dark:text-neutral-200"
               />
             </div>
           </div>
 
           {/* Terms Count */}
           <div className="text-center mb-8">
-            <p className="text-neutral-600">
+            <p className="text-neutral-600 dark:text-neutral-300">
               Showing {filteredTerms.length} of {glossaryTerms.length} terms
             </p>
           </div>
@@ -136,15 +136,15 @@ export default function BettingGlossary() {
                 </h2>
                 <div className="grid md:grid-cols-2 gap-4">
                   {groupedTerms[letter].map((item, index) => (
-                    <Card key={index} className="hover:shadow-md transition-shadow">
+                    <Card key={index} className="hover:shadow-md transition-shadow dark:bg-gray-700">
                       <CardHeader className="pb-3">
-                        <CardTitle className="text-lg flex items-center space-x-2">
+                        <CardTitle className="text-lg flex items-center space-x-2 dark:text-neutral-200">
                           <BookOpen className="h-5 w-5 text-primary" />
                           <span>{item.term}</span>
                         </CardTitle>
                       </CardHeader>
                       <CardContent>
-                        <p className="text-neutral-600">{item.definition}</p>
+                        <p className="text-neutral-600 dark:text-neutral-300">{item.definition}</p>
                       </CardContent>
                     </Card>
                   ))}
