@@ -2,6 +2,8 @@ import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import SEOHead from "@/components/seo-head";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 import { HelpCircle } from "lucide-react";
 
 export default function FAQ() {
@@ -101,16 +103,16 @@ export default function FAQ() {
         ogDescription="Get answers to common betting questions about welcome offers, payments, and responsible gambling."
       />
       
-      <div className="min-h-screen bg-neutral-50">
+      <div className="min-h-screen bg-neutral-50 dark:bg-gray-800">
         <Header />
         
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           {/* Page Header */}
           <div className="text-center mb-12">
-            <h1 className="text-3xl md:text-4xl font-bold text-neutral-800 mb-4">
+            <h1 className="text-3xl md:text-4xl font-bold text-neutral-800 dark:text-neutral-200 mb-4">
               Frequently Asked Questions
             </h1>
-            <p className="text-lg text-neutral-500 max-w-2xl mx-auto">
+            <p className="text-lg text-neutral-500 dark:text-neutral-300 max-w-2xl mx-auto">
               Find answers to the most common questions about betting, welcome offers, and account management.
             </p>
           </div>
@@ -119,20 +121,20 @@ export default function FAQ() {
           <div className="space-y-12">
             {faqs.map((section, sectionIndex) => (
               <div key={sectionIndex}>
-                <h2 className="text-2xl font-bold text-neutral-800 mb-6 text-center">
+                <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-6 text-center">
                   {section.category}
                 </h2>
                 <div className="space-y-4">
                   {section.questions.map((faq, index) => (
-                    <Card key={index}>
+                    <Card key={index} className="dark:bg-gray-700">
                       <CardContent className="p-6">
                         <div className="flex items-start space-x-3">
                           <HelpCircle className="h-6 w-6 text-primary mt-0.5 flex-shrink-0" />
                           <div>
-                            <h3 className="font-semibold text-lg mb-2 text-neutral-800">
+                            <h3 className="font-semibold text-lg mb-2 text-neutral-800 dark:text-neutral-200">
                               {faq.question}
                             </h3>
-                            <p className="text-neutral-600 leading-relaxed">
+                            <p className="text-neutral-600 dark:text-neutral-300 leading-relaxed">
                               {faq.answer}
                             </p>
                           </div>
@@ -146,18 +148,21 @@ export default function FAQ() {
           </div>
 
           {/* Contact Section */}
-          <div className="mt-12 text-center bg-white rounded-lg p-8 shadow-sm">
-            <h2 className="text-2xl font-bold text-neutral-800 mb-4">
+          <div className="mt-12 text-center bg-white dark:bg-gray-700 rounded-lg p-8 shadow-sm">
+            <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-4">
               Still Have Questions?
             </h2>
-            <p className="text-neutral-600 mb-6 max-w-2xl mx-auto">
-              If you can't find the answer you're looking for, please don't hesitate to get in touch with our support team.
+            <p className="text-neutral-600 dark:text-neutral-300 mb-4">
+              If you can't find the answer you're looking for, please contact us through our contact form.
             </p>
-            <div className="space-y-3 text-neutral-600">
-              <p>📧 Email: support@topbetsite.com</p>
-              <p>💬 Live chat available 24/7</p>
-              <p>📞 Phone: 0800 123 4567 (UK only)</p>
-            </div>
+            <Link href="/contact">
+              <Button className="bg-primary hover:bg-primary/90 text-white px-6 py-3">
+                Contact Us
+              </Button>
+            </Link>
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-4">
+              Response time: 3-5 working days due to high traffic volume
+            </p>
           </div>
         </div>
 

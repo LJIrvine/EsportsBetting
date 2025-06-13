@@ -59,12 +59,14 @@ export default function Header() {
                 </h1>
               </Link>
             </div>
-            <nav className="hidden md:ml-8 md:flex md:space-x-2">
-              <NavLinks />
-            </nav>
           </div>
           
           <div className="flex items-center space-x-4">
+            {/* Navigation Links */}
+            <nav className="hidden md:flex md:space-x-2">
+              <NavLinks />
+            </nav>
+            
             {/* Theme toggle */}
             <button
               onClick={() => setTheme(theme === "light" ? "dark" : "light")}
@@ -81,31 +83,6 @@ export default function Header() {
                 ) : (
                   <Moon className="h-3 w-3 text-blue-600" />
                 )}
-              </div>
-              
-              {/* Background decorations */}
-              <div className="absolute inset-0 rounded-full overflow-hidden">
-                {/* Sun side (left) */}
-                <div className="absolute left-2 top-1/2 transform -translate-y-1/2">
-                  <Sun className={`h-3 w-3 text-yellow-400 transition-opacity duration-300 ${
-                    theme === "light" ? "opacity-0" : "opacity-100"
-                  }`} />
-                </div>
-                
-                {/* Moon side (right) */}
-                <div className="absolute right-2 top-1/2 transform -translate-y-1/2">
-                  <Moon className={`h-3 w-3 text-blue-400 transition-opacity duration-300 ${
-                    theme === "dark" ? "opacity-0" : "opacity-100"
-                  }`} />
-                </div>
-                
-                {/* Stars for dark side */}
-                <div className={`absolute right-1 top-1 w-1 h-1 bg-yellow-300 rounded-full transition-opacity duration-300 ${
-                  theme === "dark" ? "opacity-0" : "opacity-60"
-                }`}></div>
-                <div className={`absolute right-3 top-3 w-0.5 h-0.5 bg-yellow-300 rounded-full transition-opacity duration-300 ${
-                  theme === "dark" ? "opacity-0" : "opacity-40"
-                }`}></div>
               </div>
             </button>
             
