@@ -47,73 +47,87 @@ export default function Offers() {
           </div>
 
           {/* Offers Grid */}
-          <div className="space-y-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {isLoading ? (
-              Array.from({ length: 16 }).map((_, i) => (
+              Array.from({ length: 9 }).map((_, i) => (
                 <Card key={i} className="animate-pulse">
-                  <CardContent className="p-6 flex items-center">
-                    <div className="w-28 h-28 bg-gray-200 rounded-xl mr-6"></div>
-                    <div className="flex-1">
-                      <div className="h-6 bg-gray-200 rounded mb-2"></div>
-                      <div className="h-4 bg-gray-200 rounded mb-4"></div>
-                      <div className="h-10 bg-gray-200 rounded w-32"></div>
-                    </div>
+                  <CardContent className="p-6">
+                    <div className="h-16 bg-gray-200 rounded mb-4"></div>
+                    <div className="h-6 bg-gray-200 rounded mb-2"></div>
+                    <div className="h-4 bg-gray-200 rounded mb-4"></div>
+                    <div className="h-10 bg-gray-200 rounded"></div>
                   </CardContent>
                 </Card>
               ))
             ) : (
               bookmakers.map((bookmaker) => (
-                <Card
-                  key={bookmaker.id}
-                  className="relative overflow-hidden hover:shadow-xl transition-all duration-300 border-2 hover:border-primary group h-32"
-                >
-                  <div 
-                    className="absolute inset-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300"
-                    style={{
-                      background: `url(${bookmaker.logo}) left center/auto 100% no-repeat`,
-                      maskImage: 'linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 30%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0) 100%)',
-                      WebkitMaskImage: 'linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 30%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0) 100%)',
-                    }}
-                  />
-                  <CardContent className="relative z-10 p-6 flex items-center h-full bg-gradient-to-r from-white/95 via-white/90 to-white/95">
-                    <div className="relative w-28 h-28 mr-8 flex-shrink-0 flex items-center justify-center">
-                      <img
-                        src={bookmaker.logo}
-                        alt={`${bookmaker.name} Logo`}
-                        className="w-24 h-24 object-contain transition-all duration-300 group-hover:scale-105"
-                      />
-                    </div>
-                    
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-3 mb-2">
-                        <h3 className="font-bold text-xl text-neutral-800">
-                          {bookmaker.name}
-                        </h3>
-                        <StarRating rating={bookmaker.rating} size="sm" />
+                <Card key={bookmaker.id} className="hover:shadow-lg transition-shadow border-2 hover:border-primary">
+                  <CardContent className="p-6">
+                    <div className="text-center mb-4">
+                      <div className="relative mx-auto mb-3 w-32 h-24 group">
+                        <img 
+                          src={bookmaker.logo} 
+                          alt={`${bookmaker.name} Logo`} 
+                          className="w-full h-full object-contain rounded-xl border border-neutral-200 shadow-md bg-white p-3 transition-all duration-300 group-hover:shadow-lg group-hover:scale-105"
+                          style={{
+                            filter: 'drop-shadow(0 2px 4px rgba(108, 59, 170, 0.1))',
+                          }}
+                        />
+                        <div className="absolute inset-0 rounded-xl bg-gradient-to-tr from-transparent via-white/20 to-transparent opacity-30 pointer-events-none"></div>
                       </div>
-                      <div className="flex items-center gap-4 mb-2">
-                        <div className="text-2xl font-bold text-secondary">
-                          {bookmaker.bonus}
-                        </div>
-                        <div className="text-sm text-neutral-600">
-                          {bookmaker.bonusType}
-                        </div>
-                        {bookmaker.badge && (
-                          <Badge className="bg-primary text-white text-xs px-2 py-1">
-                            {bookmaker.badge}
-                          </Badge>
-                        )}
+                      <h3 className="font-bold text-xl mb-2">{bookmaker.name}</h3>
+                      
+                      <div className="flex items-center justify-center mb-3">
+                        <StarRating rating={bookmaker.rating} />
+                        <span className="ml-2 text-neutral-600 font-medium">
+                          {bookmaker.rating}/5
+                        </span>
                       </div>
                     </div>
-                    
-                    <div className="flex-shrink-0 ml-4">
-                      <Button
+
+                    <div className="text-center mb-4">
+                      <div className="text-3xl font-bold text-secondary mb-1">
+                        {bookmaker.bonus}
+                      </div>
+                      <div className="text-sm text-neutral-600 mb-3">
+                        {bookmaker.bonusType}
+                      </div>
+                      {bookmaker.badge && (
+                        <Badge className="bg-primary text-white mb-3">
+                          {bookmaker.badge}
+                        </Badge>
+                      )}
+                    </div>
+
+                    <p className="text-neutral-600 text-sm mb-4 line-clamp-3">
+                      {bookmaker.description}
+                    </p>
+
+                    <div className="flex flex-wrap gap-1 mb-4">
+                      {bookmaker.features.slice(0, 3).map((feature, index) => (
+                        <Badge key={index} variant="outline" className="text-xs">
+                          {feature}
+                        </Badge>
+                      ))}
+                    </div>
+
+                    <div className="space-y-2">
+                      <Button 
                         onClick={() => handleAffiliateClick(bookmaker)}
-                        className="bg-secondary hover:bg-green-600 text-white font-semibold px-6 py-3"
+                        className="w-full bg-secondary hover:bg-green-600 text-white font-semibold"
                       >
                         <Play className="mr-2 h-4 w-4" />
                         Claim Offer
                       </Button>
+                      <Link href={`/casino/${bookmaker.slug}`}>
+                        <Button 
+                          variant="outline" 
+                          className="w-full border-primary text-primary hover:bg-primary hover:text-white"
+                        >
+                          <ExternalLink className="mr-2 h-4 w-4" />
+                          Read Review
+                        </Button>
+                      </Link>
                     </div>
                   </CardContent>
                 </Card>

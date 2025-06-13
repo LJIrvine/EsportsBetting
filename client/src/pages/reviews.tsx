@@ -70,55 +70,7 @@ export default function Reviews() {
               </div>
             ) : (
               filteredBookmakers.map((bookmaker) => (
-                <Card
-                  key={bookmaker.id}
-                  className="relative overflow-hidden hover:shadow-xl transition-all duration-300 border-2 hover:border-primary group h-36"
-                >
-                  <div 
-                    className="absolute inset-0 opacity-12 group-hover:opacity-20 transition-opacity duration-300"
-                    style={{
-                      background: `url(${bookmaker.logo}) left center/auto 100% no-repeat`,
-                      maskImage: 'linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 35%, rgba(0,0,0,0.2) 65%, rgba(0,0,0,0) 100%)',
-                      WebkitMaskImage: 'linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 35%, rgba(0,0,0,0.2) 65%, rgba(0,0,0,0) 100%)',
-                    }}
-                  />
-                  <CardContent className="relative z-10 p-6 flex items-center h-full bg-gradient-to-r from-white/96 via-white/92 to-white/96">
-                    <div className="relative w-32 h-32 mr-8 flex-shrink-0 flex items-center justify-center">
-                      <img
-                        src={bookmaker.logo}
-                        alt={`${bookmaker.name} Logo`}
-                        className="w-28 h-28 object-contain transition-all duration-300 group-hover:scale-105"
-                      />
-                    </div>
-                    
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-3 mb-3">
-                        <h3 className="text-xl font-bold text-neutral-800">
-                          {bookmaker.name}
-                        </h3>
-                        <StarRating rating={bookmaker.rating} size="sm" />
-                      </div>
-                      <p className="text-neutral-600 mb-4 text-sm line-clamp-2 leading-relaxed">
-                        {bookmaker.description.substring(0, 160)}...
-                      </p>
-                      <div className="flex items-center gap-4">
-                        <Link href={`/casino/${bookmaker.slug}`}>
-                          <Button variant="outline" className="px-4 py-2 text-sm">
-                            Read Full Review
-                          </Button>
-                        </Link>
-                        <div className="text-right">
-                          <div className="text-base font-bold text-secondary">
-                            {bookmaker.bonus}
-                          </div>
-                          <div className="text-xs text-neutral-500">
-                            {bookmaker.bonusType}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
+                <CasinoCard key={bookmaker.id} casino={bookmaker} />
               ))
             )}
           </div>
