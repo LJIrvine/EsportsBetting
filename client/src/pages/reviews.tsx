@@ -89,7 +89,7 @@ export default function Reviews() {
                     {/* Mobile Layout */}
                     <div className="flex flex-col space-y-3 sm:hidden">
                       <div className="flex items-center space-x-3">
-                        <div className="relative w-16 h-12 flex-shrink-0">
+                        <div className="relative w-24 h-20 flex-shrink-0">
                           <img
                             src={bookmaker.logo}
                             alt={`${bookmaker.name} Logo`}
