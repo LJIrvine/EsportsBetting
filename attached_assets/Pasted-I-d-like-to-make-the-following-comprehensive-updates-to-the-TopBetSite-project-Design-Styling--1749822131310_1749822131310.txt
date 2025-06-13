@@ -1,0 +1,69 @@
+I'd like to make the following comprehensive updates to the TopBetSite project:
+
+Design & Styling:
+Change all site branding colors from the current blue to #6C3BAA.
+
+Use Plus Jakarta Sans as the site’s typeface. If that isn’t available, use a visually similar modern sans-serif.
+
+Remove the search bar entirely unless it can be made to work properly.
+
+Add royalty-free images throughout the site (football, horse racing, betting ambiance) to enhance visual appeal — but do not replace bookmaker logos, everything related to a bookmaker needs to have an accurate logo.
+
+Bookmaker Content:
+Ensure the logos for all bookmakers are correct and real, not placeholders or generic icons.
+
+Create full bookmaker reviews for the following additional operators (in addition to any that already exist):
+
+BoyleSports
+
+BetMGM
+
+Betano
+
+Virgin Bet
+
+Kwiff
+
+Casumo
+
+Bet442
+
+Betrino
+
+These reviews should be based in reality, written in a trustworthy tone, and not generic fluff. Please don't add random or unfalsifiable statements.
+
+Display each bookmaker's welcome offer, but only use 100% accurate, current offers — no made-up bonuses.
+
+Betting Resources Section:
+Each resource link should go to its own fully written-out page:
+
+Betting Strategy Guide – a dedicated, in-depth page explaining long-term betting strategies.
+
+Understanding Odds – full guide on how fractional, decimal, and moneyline odds work.
+
+Betting Tips – don’t provide our own tips, but explain what betting tips are and link to trusted external tipsters (Twitter, Instagram, Tipstrr, etc.).
+
+Horse Racing Guide – keep this, flesh it out with info on types of races, terminology, form reading.
+
+Responsible Gambling – detailed section covering Gamstop, self-exclusion, deposit limits, time-outs, gambling help organizations (like BeGambleAware).
+
+Betting Glossary – comprehensive glossary of betting terms for beginners and intermediates.
+
+Footer Section:
+Ensure all footer links go to real, functional pages.
+
+Privacy Policy
+
+About Us
+
+Terms & Conditions
+
+Gambling Commission info
+
+Betting Guide
+
+Odds Guide
+
+Any other links currently shown in the footer — all should be routed to proper, well-written pages.
+
+Once all of the above is handled, feel free to suggest any improvements that would make the site more professional, trustworthy, or SEO-friendly.
