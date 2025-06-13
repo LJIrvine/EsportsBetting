@@ -32,16 +32,16 @@ export default function Offers() {
         ogDescription="Complete list of UK betting offers including welcome bonuses, free bets, and promotional deals from top bookmakers."
       />
       
-      <div className="min-h-screen bg-neutral-50">
+      <div className="min-h-screen bg-neutral-50 dark:bg-gray-900">
         <Header />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           {/* Page Header */}
           <div className="text-center mb-12">
-            <h1 className="text-3xl md:text-4xl font-bold text-neutral-800 mb-4">
+            <h1 className="text-3xl md:text-4xl font-bold text-neutral-800 dark:text-neutral-200 mb-4">
               All Betting Offers
             </h1>
-            <p className="text-lg text-neutral-500 max-w-2xl mx-auto mb-8">
+            <p className="text-lg text-neutral-500 dark:text-neutral-300 max-w-2xl mx-auto mb-8">
               Complete collection of welcome bonuses and promotional offers from the UK's leading bookmakers.
             </p>
           </div>
@@ -147,7 +147,7 @@ export default function Offers() {
 
           {/* Results count */}
           {!isLoading && (
-            <div className="text-center mt-8 text-neutral-500">
+            <div className="text-center mt-8 text-neutral-500 dark:text-neutral-400">
               Showing {bookmakers.length} betting offers
             </div>
           )}

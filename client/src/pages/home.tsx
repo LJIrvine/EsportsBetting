@@ -216,8 +216,8 @@ export default function Home() {
               <Card className="text-center">
                 <CardContent className="p-6">
                   <Gift className="h-12 w-12 text-secondary mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold mb-3">Free Bets</h3>
-                  <p className="text-neutral-600">
+                  <h3 className="text-xl font-semibold mb-3 dark:text-neutral-200">Free Bets</h3>
+                  <p className="text-neutral-600 dark:text-neutral-300">
                     Risk-free bets that let you place wagers without using your
                     own money. Perfect for trying new markets or strategies.
                   </p>
@@ -227,10 +227,10 @@ export default function Home() {
               <Card className="text-center">
                 <CardContent className="p-6">
                   <Shield className="h-12 w-12 text-primary mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold mb-3">
+                  <h3 className="text-xl font-semibold mb-3 dark:text-neutral-200">
                     Deposit Bonuses
                   </h3>
-                  <p className="text-neutral-600">
+                  <p className="text-neutral-600 dark:text-neutral-300">
                     Extra betting funds added to your account when you make your
                     first deposit. Typically matches a percentage of your
                     deposit.
@@ -241,8 +241,8 @@ export default function Home() {
               <Card className="text-center">
                 <CardContent className="p-6">
                   <Clock className="h-12 w-12 text-accent mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold mb-3">Enhanced Odds</h3>
-                  <p className="text-neutral-600">
+                  <h3 className="text-xl font-semibold mb-3 dark:text-neutral-200">Enhanced Odds</h3>
+                  <p className="text-neutral-600 dark:text-neutral-300">
                     Boosted odds on selected markets giving you better potential
                     returns than the standard market price.
                   </p>
@@ -253,13 +253,13 @@ export default function Home() {
         </section>
 
         {/* Trusted Sportsbook Reviews */}
-        <section className="py-12 bg-white">
+        <section className="py-12 bg-white dark:bg-gray-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-10">
-              <h2 className="text-3xl font-bold text-neutral-800 mb-4">
+              <h2 className="text-3xl font-bold text-neutral-800 dark:text-neutral-200 mb-4">
                 Trusted Sportsbook Reviews
               </h2>
-              <p className="text-lg text-neutral-600 max-w-3xl mx-auto">
+              <p className="text-lg text-neutral-600 dark:text-neutral-300 max-w-3xl mx-auto">
                 In-depth reviews of the UK's leading bookmakers by our expert
                 team.
               </p>
