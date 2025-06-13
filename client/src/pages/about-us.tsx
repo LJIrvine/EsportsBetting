@@ -160,11 +160,14 @@ export default function AboutUs() {
               Have questions about our reviews, suggestions for improvement, or need help with betting-related queries? 
               We're here to help.
             </p>
-            <div className="space-y-2 text-neutral-600">
-              <p>📧 Email: info@topbetsite.com</p>
-              <p>📞 Phone: 0800 123 4567 (UK only)</p>
-              <p>💬 Live chat available on our website</p>
-            </div>
+            <Link href="/contact">
+              <Button className="bg-primary hover:bg-primary/90 text-white px-8 py-3 text-lg">
+                Contact Us
+              </Button>
+            </Link>
+            <p className="text-sm text-neutral-500 mt-4">
+              Response time: 3-5 working days due to high traffic volume
+            </p>
           </div>
         </div>
 
