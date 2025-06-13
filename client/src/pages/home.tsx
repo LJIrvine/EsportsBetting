@@ -268,27 +268,45 @@ export default function Home() {
                     }}
                   />
                   <CardContent className="relative z-10 p-4 flex items-center h-full bg-gradient-to-r from-white/96 via-white/92 to-white/96">
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-3 mb-2">
-                        <h3 className="text-lg font-bold text-neutral-800">
+                    <div className="flex-1 min-w-0 grid grid-cols-12 gap-4 items-center h-full">
+                      {/* Name and Rating - Fixed width */}
+                      <div className="col-span-3">
+                        <h3 className="font-bold text-lg text-neutral-800 mb-1 truncate">
                           {bookmaker.name}
                         </h3>
-                        <StarRating rating={bookmaker.rating} size="sm" />
+                        <div className="flex items-center gap-2">
+                          <StarRating rating={bookmaker.rating} size="sm" />
+                          {bookmaker.badge && (
+                            <Badge className="bg-primary text-white text-xs px-2 py-1">
+                              {bookmaker.badge}
+                            </Badge>
+                          )}
+                        </div>
                       </div>
-                      <p className="text-neutral-600 mb-3 text-sm line-clamp-2 leading-relaxed">
-                        {bookmaker.description.substring(0, 120)}...
-                      </p>
-                      <div className="flex items-center gap-4">
+                      
+                      {/* Description - Fixed width */}
+                      <div className="col-span-5">
+                        <p className="text-neutral-600 text-sm leading-tight h-16 overflow-hidden">
+                          <span className="line-clamp-4">
+                            {bookmaker.description}
+                          </span>
+                        </p>
+                      </div>
+                      
+                      {/* Offer - Fixed width */}
+                      <div className="col-span-2">
+                        <div className="text-lg font-bold text-secondary truncate">
+                          {bookmaker.bonus}
+                        </div>
+                      </div>
+                      
+                      {/* Button - Fixed width */}
+                      <div className="col-span-2">
                         <Link href={`/casino/${bookmaker.slug}`}>
-                          <Button variant="outline" className="px-3 py-1 text-xs">
+                          <Button variant="outline" className="w-full px-3 py-2 text-xs border-primary text-primary hover:bg-primary hover:text-white">
                             Read Review
                           </Button>
                         </Link>
-                        <div className="text-right">
-                          <div className="text-sm font-bold text-secondary">
-                            {bookmaker.bonus}
-                          </div>
-                        </div>
                       </div>
                     </div>
                   </CardContent>
