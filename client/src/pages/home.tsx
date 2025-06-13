@@ -25,7 +25,7 @@ export default function Home() {
   const { data: bookmakers = [], isLoading: bookmakersLoading } = useQuery<
     Casino[]
   >({
-    queryKey: ["/api/casinos?featured=true"],
+    queryKey: ["/api/casinos"],
   });
 
   const { data: blogPosts = [] } = useQuery<BlogPost[]>({
@@ -37,7 +37,6 @@ export default function Home() {
     window.open(`/goto/${bookmaker.slug}`, "_blank");
   };
 
-  const topBookmakers = bookmakers;
   const sampleReviews = bookmakers.slice(0, 4);
 
   const faqs = [
@@ -113,7 +112,7 @@ export default function Home() {
                       </CardContent>
                     </Card>
                   ))
-                : topBookmakers.map((bookmaker) => (
+                : bookmakers.map((bookmaker) => (
                     <Card
                       key={bookmaker.id}
                       className="relative overflow-hidden hover:shadow-xl transition-all duration-300 border-2 hover:border-primary group h-36"
