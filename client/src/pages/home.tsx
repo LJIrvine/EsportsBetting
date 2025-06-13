@@ -101,7 +101,7 @@ export default function Home() {
 
             <div className="space-y-4">
               {bookmakersLoading
-                ? Array.from({ length: 8 }).map((_, i) => (
+                ? Array.from({ length: 16 }).map((_, i) => (
                     <Card key={i} className="animate-pulse">
                       <CardContent className="p-6 flex items-center">
                         <div className="w-32 h-32 bg-gray-200 rounded-xl mr-6"></div>
@@ -126,17 +126,13 @@ export default function Home() {
                           WebkitMaskImage: 'linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 30%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0) 100%)',
                         }}
                       />
-                      <CardContent className="relative z-10 p-4 flex items-center h-full bg-gradient-to-r from-white/95 via-white/90 to-white/95">
-                        <div className="relative w-24 h-24 mr-6 flex-shrink-0 flex items-center justify-center">
+                      <CardContent className="relative z-10 p-6 flex items-center h-full bg-gradient-to-r from-white/95 via-white/90 to-white/95">
+                        <div className="relative w-28 h-28 mr-8 flex-shrink-0 flex items-center justify-center">
                           <img
                             src={bookmaker.logo}
                             alt={`${bookmaker.name} Logo`}
-                            className="w-20 h-20 object-contain rounded-xl border-2 border-neutral-300 shadow-xl bg-white p-2 transition-all duration-300 group-hover:shadow-2xl group-hover:scale-105"
-                            style={{
-                              filter: 'drop-shadow(0 6px 12px rgba(108, 59, 170, 0.2))',
-                            }}
+                            className="w-24 h-24 object-contain transition-all duration-300 group-hover:scale-105"
                           />
-                          <div className="absolute inset-0 rounded-xl bg-gradient-to-tr from-transparent via-white/30 to-transparent opacity-50 pointer-events-none"></div>
                         </div>
                         
                         <div className="flex-1 min-w-0">
@@ -262,12 +258,8 @@ export default function Home() {
                       <img
                         src={bookmaker.logo}
                         alt={`${bookmaker.name} Logo`}
-                        className="w-24 h-24 object-contain rounded-xl border-2 border-neutral-300 shadow-xl bg-white p-3 transition-all duration-300 group-hover:shadow-2xl group-hover:scale-105"
-                        style={{
-                          filter: 'drop-shadow(0 8px 16px rgba(108, 59, 170, 0.25))',
-                        }}
+                        className="w-24 h-24 object-contain transition-all duration-300 group-hover:scale-105"
                       />
-                      <div className="absolute inset-0 rounded-xl bg-gradient-to-tr from-transparent via-white/30 to-transparent opacity-50 pointer-events-none"></div>
                     </div>
                     
                     <div className="flex-1 min-w-0">
