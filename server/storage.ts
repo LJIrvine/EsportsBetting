@@ -64,45 +64,110 @@ export class MemStorage implements IStorage {
   }
 
   private initializeSampleData() {
-    // Sample casinos
+    // Sample bookmakers
     const sampleCasinos: InsertCasino[] = [
       {
-        name: "Bet365 Casino",
-        slug: "bet365",
-        logo: "https://images.unsplash.com/photo-1596838132731-3301c3fd4317?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&h=80",
+        name: "William Hill",
+        slug: "william-hill",
+        logo: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&h=80",
         rating: 5,
-        bonus: "$1000",
-        bonusType: "Welcome Bonus",
-        description: "Industry-leading casino with over 400 games, lightning-fast payouts, and 24/7 customer support. Licensed in multiple jurisdictions with proven fair gaming.",
-        features: ["Live Dealer", "Mobile App", "Crypto Accepted", "24/7 Support"],
-        affiliateUrl: "https://bet365.com?affiliate=casinohub",
+        bonus: "£30",
+        bonusType: "in Free Bets",
+        description: "Britain's most trusted bookmaker with over 80 years of experience. Offering competitive odds on football, horse racing, and all major sports with excellent live streaming.",
+        features: ["Live Streaming", "In-Play Betting", "Mobile App", "Cash Out"],
+        affiliateUrl: "https://williamhill.com?affiliate=topbetsite",
+        badge: "Most Trusted",
+        isFeatured: true,
+      },
+      {
+        name: "Bet365",
+        slug: "bet365",
+        logo: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&h=80",
+        rating: 5,
+        bonus: "Up to £100",
+        bonusType: "in Bet Credits",
+        description: "World's favourite online sports betting company. Comprehensive live streaming, extensive in-play betting options, and industry-leading mobile app.",
+        features: ["Live Streaming", "In-Play Betting", "Best Odds", "Mobile App"],
+        affiliateUrl: "https://bet365.com?affiliate=topbetsite",
         badge: "#1 Choice",
         isFeatured: true,
       },
       {
-        name: "888 Casino",
-        slug: "888casino",
-        logo: "https://images.unsplash.com/photo-1551103782-8ab07afd45c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&h=80",
+        name: "BetVictor",
+        slug: "betvictor",
+        logo: "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&h=80",
         rating: 4,
-        bonus: "$888",
-        bonusType: "Sign-up Bonus",
-        description: "Established operator with 25+ years in the industry. Features exclusive games, VIP rewards program, and some of the highest RTPs in the market.",
-        features: ["Exclusive Games", "VIP Program", "High RTP"],
-        affiliateUrl: "https://888casino.com?affiliate=casinohub",
-        badge: "Hot Deal",
+        bonus: "£25",
+        bonusType: "Free Bet",
+        description: "Premium sportsbook with enhanced odds and excellent customer service. Known for competitive football and horse racing markets.",
+        features: ["Enhanced Odds", "Best Odds Guaranteed", "Live Streaming"],
+        affiliateUrl: "https://betvictor.com?affiliate=topbetsite",
+        badge: "Premium",
         isFeatured: true,
       },
       {
-        name: "LeoVegas",
-        slug: "leovegas",
-        logo: "https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&h=80",
+        name: "Betfred",
+        slug: "betfred",
+        logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&h=80",
         rating: 4,
-        bonus: "$1600",
-        bonusType: "+ 200 Spins",
-        description: "Award-winning mobile casino with the best mobile gaming experience. Features 1000+ games, instant deposits, and mobile-optimized live dealers.",
-        features: ["Mobile First", "1000+ Games", "Instant Deposits"],
-        affiliateUrl: "https://leovegas.com?affiliate=casinohub",
-        badge: "Mobile King",
+        bonus: "£40",
+        bonusType: "Free Bet Bundle",
+        description: "The 'Bonus King' offering generous promotions and competitive odds. Strong focus on horse racing and football betting.",
+        features: ["Daily Promotions", "Best Odds Guaranteed", "Live Results"],
+        affiliateUrl: "https://betfred.com?affiliate=topbetsite",
+        badge: "Bonus King",
+        isFeatured: true,
+      },
+      {
+        name: "Coral",
+        slug: "coral",
+        logo: "https://images.unsplash.com/photo-1594736797933-d0401ba9db65?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&h=80",
+        rating: 4,
+        bonus: "£20",
+        bonusType: "Free Bet",
+        description: "Established high-street bookmaker with excellent online platform. Great odds on football and comprehensive racing coverage.",
+        features: ["High Street Presence", "Live Streaming", "Cash Out"],
+        affiliateUrl: "https://coral.co.uk?affiliate=topbetsite",
+        badge: "High Street",
+        isFeatured: true,
+      },
+      {
+        name: "Ladbrokes",
+        slug: "ladbrokes",
+        logo: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&h=80",
+        rating: 4,
+        bonus: "£25",
+        bonusType: "Free Bet",
+        description: "One of Britain's oldest bookmakers with a strong reputation for horse racing. Excellent odds and comprehensive betting markets.",
+        features: ["Racing Specialist", "Live Streaming", "In-Shop Betting"],
+        affiliateUrl: "https://ladbrokes.com?affiliate=topbetsite",
+        badge: "Racing Expert",
+        isFeatured: true,
+      },
+      {
+        name: "Unibet",
+        slug: "unibet",
+        logo: "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&h=80",
+        rating: 4,
+        bonus: "£40",
+        bonusType: "Money Back + Bonus",
+        description: "European operator with innovative features and competitive odds. Excellent mobile app and live betting platform.",
+        features: ["Innovative Features", "Live Betting", "Multi-Sport Coverage"],
+        affiliateUrl: "https://unibet.co.uk?affiliate=topbetsite",
+        badge: "Innovation",
+        isFeatured: true,
+      },
+      {
+        name: "BetUK",
+        slug: "betuk",
+        logo: "https://images.unsplash.com/photo-1566577739112-5180d4bf9390?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&h=80",
+        rating: 4,
+        bonus: "£30",
+        bonusType: "Free Bet",
+        description: "British-focused bookmaker with competitive odds and excellent customer service. Strong football and racing markets.",
+        features: ["British Focus", "Competitive Odds", "Fast Payouts"],
+        affiliateUrl: "https://betuk.com?affiliate=topbetsite",
+        badge: "New",
         isFeatured: true,
       },
     ];
@@ -120,76 +185,76 @@ export class MemStorage implements IStorage {
     // Sample blog posts
     const samplePosts: InsertBlogPost[] = [
       {
-        title: "Essential Poker Strategy for Beginners",
-        slug: "poker-strategy-beginners",
-        excerpt: "Learn the fundamental poker strategies that every beginner needs to know. From hand selection to position play, master the basics...",
-        content: `# Essential Poker Strategy for Beginners
+        title: "Football Betting Strategy: Premier League Tips",
+        slug: "football-betting-premier-league-tips",
+        excerpt: "Master Premier League betting with our expert tips on form analysis, value betting, and in-play strategies for consistent profits...",
+        content: `# Football Betting Strategy: Premier League Tips
 
-## Hand Selection
+## Form Analysis
 
-The foundation of good poker play starts with knowing which hands to play...
+Understanding recent form is crucial for successful Premier League betting. Look beyond just wins and losses to examine underlying performance metrics...
 
-## Position Matters
+## Value Betting
 
-Position is one of the most important concepts in poker...
+Finding value in Premier League markets requires deep knowledge of team strengths, weaknesses, and current odds pricing...
 
-## Betting Patterns
+## In-Play Strategies
 
-Understanding how to read betting patterns will give you a significant edge...`,
-        featuredImage: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=240",
-        category: "Strategy",
+Live betting during Premier League matches offers unique opportunities for profitable wagering when you know what to look for...`,
+        featuredImage: "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=240",
+        category: "Football Betting",
+        readTime: 6,
+        isPublished: true,
+        metaTitle: "Premier League Betting Tips - Football Strategy Guide",
+        metaDescription: "Expert Premier League betting tips and strategies. Learn form analysis, value betting, and in-play tactics for profitable football wagering.",
+      },
+      {
+        title: "Horse Racing Betting Guide for Beginners",
+        slug: "horse-racing-betting-guide-beginners",
+        excerpt: "Complete beginner's guide to horse racing betting covering race types, odds, form reading, and essential betting strategies...",
+        content: `# Horse Racing Betting Guide for Beginners
+
+## Understanding Race Types
+
+Different race types require different betting approaches. From handicaps to maiden races, each presents unique opportunities...
+
+## Reading the Form
+
+The form book is your most valuable tool in horse racing. Learn how to interpret recent performance data...
+
+## Essential Betting Strategies
+
+Successful horse racing betting requires discipline, bankroll management, and understanding of value...`,
+        featuredImage: "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=240",
+        category: "Horse Racing",
+        readTime: 8,
+        isPublished: true,
+        metaTitle: "Horse Racing Betting Guide - Beginner Tips & Strategies",
+        metaDescription: "Complete horse racing betting guide for beginners. Learn race types, form reading, odds, and winning strategies.",
+      },
+      {
+        title: "Understanding Betting Odds and Value",
+        slug: "understanding-betting-odds-value",
+        excerpt: "Learn how betting odds work, how to calculate implied probability, and identify value bets for long-term profitability...",
+        content: `# Understanding Betting Odds and Value
+
+## How Odds Work
+
+Betting odds represent the bookmaker's assessment of probability and determine your potential payout...
+
+## Calculating Implied Probability
+
+Converting odds to probability helps you assess whether a bet offers genuine value...
+
+## Finding Value Bets
+
+Value betting is the key to long-term profitability. Learn how to identify when odds are in your favour...`,
+        featuredImage: "https://images.unsplash.com/photo-1594736797933-d0401ba9db65?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=240",
+        category: "Betting Guides",
         readTime: 5,
         isPublished: true,
-        metaTitle: "Essential Poker Strategy for Beginners - Complete Guide",
-        metaDescription: "Master fundamental poker strategies with our beginner's guide. Learn hand selection, position play, and betting patterns to improve your game.",
-      },
-      {
-        title: "Mobile Casino Trends to Watch in 2024",
-        slug: "mobile-casino-trends-2024",
-        excerpt: "Discover the latest mobile gaming innovations, from AR experiences to improved live dealer technology...",
-        content: `# Mobile Casino Trends to Watch in 2024
-
-## Augmented Reality Gaming
-
-AR technology is revolutionizing mobile casino experiences...
-
-## Enhanced Live Dealers
-
-Mobile live dealer technology continues to improve...
-
-## Cryptocurrency Integration
-
-More mobile casinos are accepting crypto payments...`,
-        featuredImage: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=240",
-        category: "Technology",
-        readTime: 3,
-        isPublished: true,
-        metaTitle: "Mobile Casino Trends 2024 - Future of Mobile Gaming",
-        metaDescription: "Explore the latest mobile casino trends including AR gaming, live dealers, and cryptocurrency integration shaping 2024.",
-      },
-      {
-        title: "Complete Guide to Casino Bonuses",
-        slug: "casino-bonus-guide",
-        excerpt: "Understand wagering requirements, bonus types, and how to maximize your casino bonuses effectively...",
-        content: `# Complete Guide to Casino Bonuses
-
-## Types of Casino Bonuses
-
-There are several types of bonuses available...
-
-## Understanding Wagering Requirements
-
-Wagering requirements determine how many times you must play through your bonus...
-
-## Maximizing Bonus Value
-
-Here are strategies to get the most from your bonuses...`,
-        featuredImage: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=240",
-        category: "Bonuses",
-        readTime: 7,
-        isPublished: true,
-        metaTitle: "Casino Bonus Guide - Types, Requirements & Tips",
-        metaDescription: "Complete guide to casino bonuses including types, wagering requirements, and expert tips to maximize your bonus value.",
+        metaTitle: "Betting Odds Guide - Understanding Value & Probability",
+        metaDescription: "Learn how betting odds work, calculate implied probability, and identify value bets for profitable sports betting.",
       },
     ];
 

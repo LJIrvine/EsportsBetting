@@ -6,9 +6,9 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">CasinoHub</h3>
+            <h3 className="text-xl font-bold mb-4">TopBetSite</h3>
             <p className="text-neutral-300 mb-4">
-              Your trusted source for online casino reviews, expert analysis, and exclusive bonuses.
+              Your trusted source for betting offers, sportsbook reviews, and expert betting guidance.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-neutral-400 hover:text-white transition-colors">
@@ -33,35 +33,37 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-neutral-300">
               <li>
-                <Link href="/" className="hover:text-white transition-colors">
-                  Home
+                <Link href="/offers" className="hover:text-white transition-colors">
+                  All Betting Offers
                 </Link>
               </li>
               <li>
-                <Link href="/casinos" className="hover:text-white transition-colors">
-                  All Casinos
+                <Link href="/reviews" className="hover:text-white transition-colors">
+                  Bookmaker Reviews
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="hover:text-white transition-colors">
-                  Blog
+                <Link href="/resources" className="hover:text-white transition-colors">
+                  Betting Resources
                 </Link>
               </li>
               <li>
-                <Link href="/admin" className="hover:text-white transition-colors">
-                  Admin
+                <Link href="/faq" className="hover:text-white transition-colors">
+                  FAQ
                 </Link>
               </li>
             </ul>
           </div>
           
           <div>
-            <h4 className="font-semibold mb-4">Legal</h4>
+            <h4 className="font-semibold mb-4">Legal & Resources</h4>
             <ul className="space-y-2 text-neutral-300">
               <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Responsible Gambling</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Terms & Conditions</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Gambling Commission</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Betting Guide</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Odds Guide</a></li>
             </ul>
           </div>
           
@@ -79,7 +81,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-neutral-700 pt-8 text-center text-neutral-400 text-sm">
-          <p>&copy; 2024 CasinoHub. All rights reserved. | Gambling can be addictive. Please play responsibly. 18+</p>
+          <p>&copy; 2024 TopBetSite. All rights reserved. | Gambling can be addictive. Please bet responsibly. 18+</p>
         </div>
       </div>
     </footer>

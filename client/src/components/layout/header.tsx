@@ -25,44 +25,32 @@ export default function Header() {
 
   const NavLinks = () => (
     <>
-      <Link href="/">
+      <Link href="/offers">
         <Button 
-          variant="ghost" 
-          className={`px-3 py-2 text-sm font-medium transition-colors ${
-            isActive("/") ? "text-primary bg-primary/10" : "text-neutral-800 hover:text-primary"
-          }`}
+          variant="default"
+          className="bg-secondary hover:bg-green-600 text-white px-4 py-2 text-sm font-medium"
         >
-          Home
+          All Betting Offers
         </Button>
       </Link>
-      <Link href="/casinos">
+      <Link href="/reviews">
         <Button 
           variant="ghost" 
           className={`px-3 py-2 text-sm font-medium transition-colors ${
-            isActive("/casinos") ? "text-primary bg-primary/10" : "text-neutral-500 hover:text-primary"
+            isActive("/reviews") ? "text-primary bg-primary/10" : "text-neutral-500 hover:text-primary"
           }`}
         >
-          Casinos
+          Full Bookmaker Reviews
         </Button>
       </Link>
-      <Link href="/blog">
+      <Link href="/resources">
         <Button 
           variant="ghost" 
           className={`px-3 py-2 text-sm font-medium transition-colors ${
-            isActive("/blog") ? "text-primary bg-primary/10" : "text-neutral-500 hover:text-primary"
+            isActive("/resources") ? "text-primary bg-primary/10" : "text-neutral-500 hover:text-primary"
           }`}
         >
-          Blog
-        </Button>
-      </Link>
-      <Link href="/admin">
-        <Button 
-          variant="ghost" 
-          className={`px-3 py-2 text-sm font-medium transition-colors ${
-            isActive("/admin") ? "text-primary bg-primary/10" : "text-neutral-500 hover:text-primary"
-          }`}
-        >
-          Admin
+          Betting Resources
         </Button>
       </Link>
     </>
@@ -75,7 +63,7 @@ export default function Header() {
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <Link href="/">
-                <h1 className="text-2xl font-bold text-primary cursor-pointer">CasinoHub</h1>
+                <h1 className="text-2xl font-bold text-primary cursor-pointer">TopBetSite</h1>
               </Link>
             </div>
             <nav className="hidden md:ml-8 md:flex md:space-x-2">
@@ -88,7 +76,7 @@ export default function Header() {
             <form onSubmit={handleSearch} className="relative hidden md:block">
               <Input
                 type="search"
-                placeholder="Search casinos..."
+                placeholder="Search offers..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-64 pl-10 pr-4 py-2"
@@ -111,7 +99,7 @@ export default function Header() {
                   <form onSubmit={handleSearch} className="relative mt-4">
                     <Input
                       type="search"
-                      placeholder="Search casinos..."
+                      placeholder="Search offers..."
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
                       className="pl-10 pr-4 py-2"
