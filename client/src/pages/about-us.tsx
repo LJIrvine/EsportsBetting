@@ -113,15 +113,15 @@ export default function AboutUs() {
             <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-6 text-center">Our Values</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {values.map((value, index) => (
-                <Card key={index} className="text-center h-full">
+                <Card key={index} className="text-center h-full dark:bg-gray-700">
                   <CardHeader>
                     <div className="mx-auto mb-2">
                       {value.icon}
                     </div>
-                    <CardTitle className="text-lg">{value.title}</CardTitle>
+                    <CardTitle className="text-lg dark:text-neutral-200">{value.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-neutral-600 text-sm">{value.description}</p>
+                    <p className="text-neutral-600 dark:text-neutral-300 text-sm">{value.description}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -129,36 +129,36 @@ export default function AboutUs() {
           </div>
 
           {/* What We Offer */}
-          <div className="bg-white rounded-lg p-8 shadow-sm mb-12">
-            <h2 className="text-2xl font-bold text-neutral-800 mb-6 text-center">What We Offer</h2>
+          <div className="bg-white dark:bg-gray-700 rounded-lg p-8 shadow-sm mb-12">
+            <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-6 text-center">What We Offer</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {features.map((feature, index) => (
                 <div key={index} className="flex items-start space-x-3">
                   <CheckCircle className="h-6 w-6 text-secondary mt-0.5 flex-shrink-0" />
-                  <span className="text-neutral-700">{feature}</span>
+                  <span className="text-neutral-700 dark:text-neutral-300">{feature}</span>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Regulatory Information */}
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
-            <h3 className="font-semibold text-blue-800 mb-3">Regulatory Compliance</h3>
-            <p className="text-blue-700 mb-3">
+          <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-lg p-6 mb-8">
+            <h3 className="font-semibold text-blue-800 dark:text-blue-300 mb-3">Regulatory Compliance</h3>
+            <p className="text-blue-700 dark:text-blue-200 mb-3">
               TopBetSite operates as an affiliate marketing website. We only promote bookmakers that are licensed by the 
               UK Gambling Commission. All bookmakers featured on our site hold valid UK gambling licenses and are regulated 
               under UK gambling laws.
             </p>
-            <p className="text-blue-700">
+            <p className="text-blue-700 dark:text-blue-200">
               We may receive commission from bookmakers when users sign up through our links. This does not affect our 
               editorial independence or the honesty of our reviews. We are committed to transparency in all our partnerships.
             </p>
           </div>
 
           {/* Contact Information */}
-          <div className="text-center bg-white rounded-lg p-8 shadow-sm">
-            <h2 className="text-2xl font-bold text-neutral-800 mb-4">Get In Touch</h2>
-            <p className="text-neutral-600 mb-6 max-w-2xl mx-auto">
+          <div className="text-center bg-white dark:bg-gray-700 rounded-lg p-8 shadow-sm">
+            <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-4">Get In Touch</h2>
+            <p className="text-neutral-600 dark:text-neutral-300 mb-6 max-w-2xl mx-auto">
               Have questions about our reviews, suggestions for improvement, or need help with betting-related queries? 
               We're here to help.
             </p>
@@ -167,7 +167,7 @@ export default function AboutUs() {
                 Contact Us
               </Button>
             </Link>
-            <p className="text-sm text-neutral-500 mt-4">
+            <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-4">
               Response time: 3-5 working days due to high traffic volume
             </p>
           </div>

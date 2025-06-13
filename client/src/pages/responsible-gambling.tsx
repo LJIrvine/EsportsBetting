@@ -155,24 +155,24 @@ export default function ResponsibleGambling() {
 
           {/* Tools and Limits */}
           <div className="mb-8">
-            <h2 className="text-2xl font-bold text-neutral-800 mb-6 text-center">Responsible Gambling Tools</h2>
+            <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-6 text-center">Responsible Gambling Tools</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {toolsAndLimits.map((tool, index) => (
-                <Card key={index} className="text-center">
+                <Card key={index} className="text-center dark:bg-gray-700">
                   <CardHeader>
                     <div className="mx-auto mb-2">
                       {tool.icon}
                     </div>
-                    <CardTitle className="text-lg">{tool.tool}</CardTitle>
+                    <CardTitle className="text-lg dark:text-neutral-200">{tool.tool}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-neutral-600 text-sm">{tool.description}</p>
+                    <p className="text-neutral-600 dark:text-neutral-300 text-sm">{tool.description}</p>
                   </CardContent>
                 </Card>
               ))}
             </div>
             <div className="text-center mt-6">
-              <p className="text-neutral-600">
+              <p className="text-neutral-600 dark:text-neutral-300">
                 All UK licensed bookmakers are required to offer these tools. Find them in your account settings under "Responsible Gambling" or "Player Protection".
               </p>
             </div>
@@ -180,31 +180,31 @@ export default function ResponsibleGambling() {
 
           {/* Warning Signs */}
           <div className="grid md:grid-cols-2 gap-8 mb-8">
-            <div className="bg-amber-50 border border-amber-200 rounded-lg p-6">
+            <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700 rounded-lg p-6">
               <div className="flex items-center space-x-2 mb-4">
-                <AlertTriangle className="h-6 w-6 text-amber-600" />
-                <h3 className="font-semibold text-amber-800">Warning Signs - Personal</h3>
+                <AlertTriangle className="h-6 w-6 text-amber-600 dark:text-amber-400" />
+                <h3 className="font-semibold text-amber-800 dark:text-amber-300">Warning Signs - Personal</h3>
               </div>
               <ul className="space-y-2">
                 {warningSignsPersonal.map((sign, index) => (
                   <li key={index} className="flex items-start space-x-2">
-                    <div className="w-2 h-2 bg-amber-600 rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-amber-700 text-sm">{sign}</span>
+                    <div className="w-2 h-2 bg-amber-600 dark:bg-amber-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-amber-700 dark:text-amber-200 text-sm">{sign}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+            <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-lg p-6">
               <div className="flex items-center space-x-2 mb-4">
-                <Heart className="h-6 w-6 text-blue-600" />
-                <h3 className="font-semibold text-blue-800">Warning Signs - Family/Friends</h3>
+                <Heart className="h-6 w-6 text-blue-600 dark:text-blue-400" />
+                <h3 className="font-semibold text-blue-800 dark:text-blue-300">Warning Signs - Family/Friends</h3>
               </div>
               <ul className="space-y-2">
                 {warningSignsFamily.map((sign, index) => (
                   <li key={index} className="flex items-start space-x-2">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-blue-700 text-sm">{sign}</span>
+                    <div className="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <span className="text-blue-700 dark:text-blue-200 text-sm">{sign}</span>
                   </li>
                 ))}
               </ul>
@@ -213,26 +213,26 @@ export default function ResponsibleGambling() {
 
           {/* Help Organizations */}
           <div className="mb-8">
-            <h2 className="text-2xl font-bold text-neutral-800 mb-6 text-center">Support Organizations</h2>
+            <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-6 text-center">Support Organizations</h2>
             <div className="grid md:grid-cols-3 gap-6">
               {helpOrganizations.map((org, index) => (
-                <Card key={index} className="h-full">
+                <Card key={index} className="h-full dark:bg-gray-700">
                   <CardHeader>
                     <CardTitle className="text-xl text-primary">{org.name}</CardTitle>
-                    <p className="text-sm text-neutral-500">{org.hours}</p>
+                    <p className="text-sm text-neutral-500 dark:text-neutral-400">{org.hours}</p>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-neutral-600 mb-4">{org.description}</p>
+                    <p className="text-neutral-600 dark:text-neutral-300 mb-4">{org.description}</p>
                     <div className="space-y-2 mb-4">
                       {org.services.map((service, serviceIndex) => (
                         <div key={serviceIndex} className="flex items-center space-x-2">
                           <div className="w-2 h-2 bg-secondary rounded-full"></div>
-                          <span className="text-sm text-neutral-600">{service}</span>
+                          <span className="text-sm text-neutral-600 dark:text-neutral-300">{service}</span>
                         </div>
                       ))}
                     </div>
                     <div className="space-y-2">
-                      <p className="font-semibold text-sm">Contact: {org.contact}</p>
+                      <p className="font-semibold text-sm dark:text-neutral-200">Contact: {org.contact}</p>
                       <Button 
                         variant="outline" 
                         size="sm"

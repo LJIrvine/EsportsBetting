@@ -128,11 +128,11 @@ export default function PrivacyPolicy() {
                 <Lock className="h-6 w-6 text-primary" />
                 <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200">Data Security</h2>
               </div>
-              <p className="text-neutral-600 mb-4">
+              <p className="text-neutral-600 dark:text-neutral-300 mb-4">
                 We implement appropriate security measures to protect your information against unauthorized access, alteration, 
                 disclosure, or destruction. These include:
               </p>
-              <ul className="list-disc pl-6 space-y-2 text-neutral-600">
+              <ul className="list-disc pl-6 space-y-2 text-neutral-600 dark:text-neutral-300">
                 <li>SSL encryption for data transmission</li>
                 <li>Secure hosting with reputable providers</li>
                 <li>Regular security updates and monitoring</li>
@@ -142,11 +142,11 @@ export default function PrivacyPolicy() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-neutral-800 mb-4">Your Rights (GDPR)</h2>
-              <p className="text-neutral-600 mb-4">
+              <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-4">Your Rights (GDPR)</h2>
+              <p className="text-neutral-600 dark:text-neutral-300 mb-4">
                 Under the General Data Protection Regulation (GDPR), you have the following rights:
               </p>
-              <ul className="list-disc pl-6 space-y-2 text-neutral-600">
+              <ul className="list-disc pl-6 space-y-2 text-neutral-600 dark:text-neutral-300">
                 <li><strong>Right to Access:</strong> Request copies of your personal data</li>
                 <li><strong>Right to Rectification:</strong> Request correction of inaccurate data</li>
                 <li><strong>Right to Erasure:</strong> Request deletion of your personal data</li>
@@ -154,14 +154,14 @@ export default function PrivacyPolicy() {
                 <li><strong>Right to Data Portability:</strong> Receive your data in a portable format</li>
                 <li><strong>Right to Object:</strong> Object to processing of your personal data</li>
               </ul>
-              <p className="text-neutral-600 mt-4">
+              <p className="text-neutral-600 dark:text-neutral-300 mt-4">
                 To exercise these rights, contact us at privacy@topbetsite.com. We will respond within 30 days.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-neutral-800 mb-4">Third-Party Links</h2>
-              <p className="text-neutral-600">
+              <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-4">Third-Party Links</h2>
+              <p className="text-neutral-600 dark:text-neutral-300">
                 Our website contains links to bookmaker websites and other third-party sites. We are not responsible for the 
                 privacy practices of these external sites. We encourage you to review their privacy policies before providing 
                 any personal information.
@@ -169,16 +169,16 @@ export default function PrivacyPolicy() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-neutral-800 mb-4">Children's Privacy</h2>
-              <p className="text-neutral-600">
+              <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-4">Children's Privacy</h2>
+              <p className="text-neutral-600 dark:text-neutral-300">
                 Our services are not intended for individuals under 18 years of age. We do not knowingly collect personal 
                 information from children under 18. If we become aware of such data collection, we will delete it immediately.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-neutral-800 mb-4">Data Retention</h2>
-              <p className="text-neutral-600">
+              <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-4">Data Retention</h2>
+              <p className="text-neutral-600 dark:text-neutral-300">
                 We retain personal information only as long as necessary to fulfill the purposes outlined in this policy or 
                 as required by law. Analytics data is typically retained for 26 months, while contact information is kept 
                 until you request deletion or unsubscribe.
@@ -186,16 +186,16 @@ export default function PrivacyPolicy() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-neutral-800 mb-4">Changes to This Policy</h2>
-              <p className="text-neutral-600">
+              <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-4">Changes to This Policy</h2>
+              <p className="text-neutral-600 dark:text-neutral-300">
                 We may update this Privacy Policy periodically. Any changes will be posted on this page with an updated 
                 "Last updated" date. For significant changes, we may provide additional notice through email or website announcements.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-neutral-800 mb-4">Contact Information</h2>
-              <p className="text-neutral-600 mb-4">
+              <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-4">Contact Information</h2>
+              <p className="text-neutral-600 dark:text-neutral-300 mb-4">
                 If you have questions about this Privacy Policy or our data practices, please contact us through our contact form.
               </p>
               <Link href="/contact">
@@ -203,7 +203,7 @@ export default function PrivacyPolicy() {
                   Contact Us
                 </Button>
               </Link>
-              <p className="text-sm text-neutral-500 mt-4">
+              <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-4">
                 Response time: 3-5 working days due to high traffic volume
               </p>
             </section>
