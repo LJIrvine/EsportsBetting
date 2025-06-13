@@ -1,21 +1,10 @@
-import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Search, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 
 export default function Header() {
   const [location] = useLocation();
-  const [searchQuery, setSearchQuery] = useState("");
-
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (searchQuery.trim()) {
-      // Navigate to search results or filter current page
-      console.log("Searching for:", searchQuery);
-    }
-  };
 
   const isActive = (path: string) => {
     if (path === "/" && location === "/") return true;
@@ -72,18 +61,6 @@ export default function Header() {
           </div>
           
           <div className="flex items-center space-x-4">
-            {/* Search */}
-            <form onSubmit={handleSearch} className="relative hidden md:block">
-              <Input
-                type="search"
-                placeholder="Search offers..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-64 pl-10 pr-4 py-2"
-              />
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
-            </form>
-            
             {/* Mobile menu */}
             <Sheet>
               <SheetTrigger asChild>
@@ -94,18 +71,6 @@ export default function Header() {
               <SheetContent side="right" className="w-[240px]">
                 <div className="flex flex-col space-y-4 mt-8">
                   <NavLinks />
-                  
-                  {/* Mobile search */}
-                  <form onSubmit={handleSearch} className="relative mt-4">
-                    <Input
-                      type="search"
-                      placeholder="Search offers..."
-                      value={searchQuery}
-                      onChange={(e) => setSearchQuery(e.target.value)}
-                      className="pl-10 pr-4 py-2"
-                    />
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
-                  </form>
                 </div>
               </SheetContent>
             </Sheet>
