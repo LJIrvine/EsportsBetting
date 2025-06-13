@@ -78,16 +78,13 @@ export default function Reviews() {
                   className="relative overflow-hidden hover:shadow-xl transition-all duration-300 border-2 hover:border-primary group min-h-[160px]"
                 >
                   <div
-                    className="absolute inset-0 opacity-60 group-hover:opacity-75 transition-opacity duration-300"
+                    className="absolute inset-0 transition-opacity duration-300"
                     style={{
                       background: `url(${bookmaker.logo}) right center/auto 100% no-repeat`,
-                      maskImage:
-                        "linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 40%, rgba(0,0,0,0.7) 70%, rgba(0,0,0,1) 100%)",
-                      WebkitMaskImage:
-                        "linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 40%, rgba(0,0,0,0.7) 70%, rgba(0,0,0,1) 100%)",
+                      opacity: 0.85,
                     }}
                   />
-                  <CardContent className="relative z-10 p-6 flex items-center min-h-[160px] bg-gradient-to-r from-white/95 via-white/85 to-white/60">
+                  <CardContent className="relative z-10 p-6 flex items-center min-h-[160px] bg-gradient-to-r from-white/90 via-white/70 to-white/40">
                     <div className="flex-1 min-w-0 max-w-xl pr-6">
                       <div className="flex items-center gap-3 mb-3">
                         <h3 className="text-xl font-bold text-neutral-900 truncate">
