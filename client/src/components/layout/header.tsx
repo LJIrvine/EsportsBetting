@@ -16,7 +16,7 @@ export default function Header() {
 
   const NavLinks = () => (
     <>
-      <Link href="/offers" onClick={() => window.location.reload()}>
+      <Link href="/offers">
         <Button 
           variant="default"
           className="bg-secondary hover:bg-green-600 text-white px-4 py-2 text-sm font-medium"
@@ -24,7 +24,7 @@ export default function Header() {
           All Betting Offers
         </Button>
       </Link>
-      <Link href="/reviews" onClick={() => window.location.reload()}>
+      <Link href="/reviews">
         <Button 
           variant="ghost" 
           className={`px-3 py-2 text-sm font-medium transition-colors ${
@@ -34,7 +34,7 @@ export default function Header() {
           Full Bookmaker Reviews
         </Button>
       </Link>
-      <Link href="/resources" onClick={() => window.location.reload()}>
+      <Link href="/resources">
         <Button 
           variant="ghost" 
           className={`px-3 py-2 text-sm font-medium transition-colors ${
@@ -53,7 +53,7 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <Link href="/" onClick={() => window.location.reload()}>
+              <Link href="/">
                 <h1 className="text-2xl font-bold text-primary dark:text-primary cursor-pointer">
                   TopBetSite<span className="text-sm">.co.uk</span>
                 </h1>
