@@ -66,16 +66,48 @@ export default function Header() {
           
           <div className="flex items-center space-x-4">
             {/* Theme toggle */}
-            <Button
-              variant="ghost"
-              size="sm"
+            <button
               onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-              className="h-9 w-9 px-0"
+              className="relative w-16 h-8 bg-gray-200 dark:bg-gray-600 rounded-full p-1 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary/20"
+              aria-label="Toggle theme"
             >
-              <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-              <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-              <span className="sr-only">Toggle theme</span>
-            </Button>
+              <div
+                className={`w-6 h-6 bg-white rounded-full shadow-md transition-all duration-300 flex items-center justify-center ${
+                  theme === "dark" ? "translate-x-8" : "translate-x-0"
+                }`}
+              >
+                {theme === "light" ? (
+                  <Sun className="h-3 w-3 text-yellow-500" />
+                ) : (
+                  <Moon className="h-3 w-3 text-blue-600" />
+                )}
+              </div>
+              
+              {/* Background decorations */}
+              <div className="absolute inset-0 rounded-full overflow-hidden">
+                {/* Sun side (left) */}
+                <div className="absolute left-2 top-1/2 transform -translate-y-1/2">
+                  <Sun className={`h-3 w-3 text-yellow-400 transition-opacity duration-300 ${
+                    theme === "light" ? "opacity-0" : "opacity-100"
+                  }`} />
+                </div>
+                
+                {/* Moon side (right) */}
+                <div className="absolute right-2 top-1/2 transform -translate-y-1/2">
+                  <Moon className={`h-3 w-3 text-blue-400 transition-opacity duration-300 ${
+                    theme === "dark" ? "opacity-0" : "opacity-100"
+                  }`} />
+                </div>
+                
+                {/* Stars for dark side */}
+                <div className={`absolute right-1 top-1 w-1 h-1 bg-yellow-300 rounded-full transition-opacity duration-300 ${
+                  theme === "dark" ? "opacity-0" : "opacity-60"
+                }`}></div>
+                <div className={`absolute right-3 top-3 w-0.5 h-0.5 bg-yellow-300 rounded-full transition-opacity duration-300 ${
+                  theme === "dark" ? "opacity-0" : "opacity-40"
+                }`}></div>
+              </div>
+            </button>
             
             {/* Mobile menu */}
             <Sheet>
