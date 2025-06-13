@@ -330,7 +330,7 @@ export default function Home() {
                   className="relative overflow-hidden hover:shadow-xl transition-all duration-300 border-2 hover:border-primary group min-h-[160px] dark:bg-gray-700"
                 >
                   <div
-                    className="absolute inset-0 transition-opacity duration-300"
+                    className="absolute inset-0 transition-opacity duration-300 hidden sm:block"
                     style={{
                       background: `url(${bookmaker.logo}) right center/auto 100% no-repeat`,
                       opacity: 0.85,
