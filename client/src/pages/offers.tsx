@@ -87,7 +87,7 @@ export default function Offers() {
                         {bookmaker.bonusType}
                       </div>
                       {bookmaker.badge && (
-                        <Badge className="bg-secondary text-white mb-3">
+                        <Badge className="bg-primary text-white mb-3">
                           {bookmaker.badge}
                         </Badge>
                       )}

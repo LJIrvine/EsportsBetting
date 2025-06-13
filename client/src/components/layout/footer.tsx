@@ -58,10 +58,31 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Legal & Resources</h4>
             <ul className="space-y-2 text-neutral-300">
-              <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Terms & Conditions</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Gambling Commission</a></li>
+              <li>
+                <Link href="/privacy-policy" className="hover:text-white transition-colors">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="/terms-conditions" className="hover:text-white transition-colors">
+                  Terms & Conditions
+                </Link>
+              </li>
+              <li>
+                <Link href="/about-us" className="hover:text-white transition-colors">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <a 
+                  href="https://www.gamblingcommission.gov.uk/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="hover:text-white transition-colors"
+                >
+                  Gambling Commission
+                </a>
+              </li>
               <li><a href="#" className="hover:text-white transition-colors">Betting Guide</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Odds Guide</a></li>
             </ul>
@@ -81,7 +102,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-neutral-700 pt-8 text-center text-neutral-400 text-sm">
-          <p>&copy; 2024 TopBetSite. All rights reserved. | Gambling can be addictive. Please bet responsibly. 18+</p>
+          <p>&copy; 2025 TopBetSite. All rights reserved. | Remember to always gamble responsibly and never bet more than you can afford to lose 18+</p>
         </div>
       </div>
     </footer>
