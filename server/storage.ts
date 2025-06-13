@@ -432,7 +432,11 @@ Value betting is the key to long-term profitability. Learn how to identify when 
     if (published !== undefined) {
       return posts.filter(post => post.isPublished === published);
     }
-    return posts.sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime());
+    return posts.sort((a, b) => {
+      const aTime = a.createdAt?.getTime() || 0;
+      const bTime = b.createdAt?.getTime() || 0;
+      return bTime - aTime;
+    });
   }
 
   async getBlogPostBySlug(slug: string): Promise<BlogPost | undefined> {
@@ -497,7 +501,11 @@ Value betting is the key to long-term profitability. Learn how to identify when 
     if (casinoId !== undefined) {
       return clicks.filter(click => click.casinoId === casinoId);
     }
-    return clicks.sort((a, b) => b.timestamp.getTime() - a.timestamp.getTime());
+    return clicks.sort((a, b) => {
+      const aTime = a.timestamp?.getTime() || 0;
+      const bTime = b.timestamp?.getTime() || 0;
+      return bTime - aTime;
+    });
   }
 
   // User methods (existing)
