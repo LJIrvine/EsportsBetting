@@ -121,7 +121,7 @@ export class MemStorage implements IStorage {
       {
         name: "Coral",
         slug: "coral",
-        logo: "https://images.unsplash.com/photo-1594736797933-d0401ba9db65?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&h=80",
+        logo: "/logos/coral.png",
         rating: 4,
         bonus: "£20",
         bonusType: "Free Bet",
@@ -134,7 +134,7 @@ export class MemStorage implements IStorage {
       {
         name: "Ladbrokes",
         slug: "ladbrokes",
-        logo: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&h=80",
+        logo: "/logos/ladbrokes.png",
         rating: 4,
         bonus: "£25",
         bonusType: "Free Bet",
@@ -147,7 +147,7 @@ export class MemStorage implements IStorage {
       {
         name: "Unibet",
         slug: "unibet",
-        logo: "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&h=80",
+        logo: "/logos/unibet.png",
         rating: 4,
         bonus: "£40",
         bonusType: "Money Back + Bonus",
@@ -160,7 +160,7 @@ export class MemStorage implements IStorage {
       {
         name: "BetUK",
         slug: "betuk",
-        logo: "https://images.unsplash.com/photo-1566577739112-5180d4bf9390?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&h=80",
+        logo: "/logos/betuk.png",
         rating: 4,
         bonus: "£30",
         bonusType: "Free Bet",
@@ -173,7 +173,7 @@ export class MemStorage implements IStorage {
       {
         name: "BoyleSports",
         slug: "boylesports",
-        logo: "https://images.unsplash.com/photo-1574267432553-9b9ace3b5b26?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&h=80",
+        logo: "/logos/boylesports.png",
         rating: 4,
         bonus: "£20",
         bonusType: "Free Bet",
@@ -186,7 +186,7 @@ export class MemStorage implements IStorage {
       {
         name: "BetMGM",
         slug: "betmgm",
-        logo: "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&h=80",
+        logo: "/logos/betmgm.png",
         rating: 4,
         bonus: "£25",
         bonusType: "Free Bet",
@@ -199,7 +199,7 @@ export class MemStorage implements IStorage {
       {
         name: "Betano",
         slug: "betano",
-        logo: "https://images.unsplash.com/photo-1551836022-4c4c79ecde51?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&h=80",
+        logo: "/logos/betano.png",
         rating: 4,
         bonus: "£30",
         bonusType: "Free Bet",
@@ -212,7 +212,7 @@ export class MemStorage implements IStorage {
       {
         name: "Virgin Bet",
         slug: "virgin-bet",
-        logo: "https://images.unsplash.com/photo-1578498101924-a7c1061e92c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&h=80",
+        logo: "/logos/virgin-bet.png",
         rating: 4,
         bonus: "£20",
         bonusType: "Free Bet",
@@ -225,7 +225,7 @@ export class MemStorage implements IStorage {
       {
         name: "Kwiff",
         slug: "kwiff",
-        logo: "https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&h=80",
+        logo: "/logos/kwiff.png",
         rating: 3,
         bonus: "£30",
         bonusType: "Free Bet",
@@ -238,7 +238,7 @@ export class MemStorage implements IStorage {
       {
         name: "Casumo",
         slug: "casumo",
-        logo: "https://images.unsplash.com/photo-1560950221-0d8e2f7dd93c?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&h=80",
+        logo: "/logos/casumo.png",
         rating: 4,
         bonus: "£25",
         bonusType: "Free Bet",
@@ -251,7 +251,7 @@ export class MemStorage implements IStorage {
       {
         name: "Bet442",
         slug: "bet442",
-        logo: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&h=80",
+        logo: "/logos/bet442.png",
         rating: 3,
         bonus: "£10",
         bonusType: "Free Bet",
@@ -264,7 +264,7 @@ export class MemStorage implements IStorage {
       {
         name: "Betrino",
         slug: "betrino",
-        logo: "https://images.unsplash.com/photo-1553481187-be93c21490a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&h=80",
+        logo: "/logos/betrino.png",
         rating: 3,
         bonus: "£20",
         bonusType: "Free Bet",
