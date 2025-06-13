@@ -124,8 +124,8 @@ export default function BettingTips() {
                   <li>• Historical performance data</li>
                   <li>• When to place the bet</li>
                 </ul>
-                <h3 className="font-semibold text-lg mb-3 mt-4">Remember</h3>
-                <p className="text-neutral-600">
+                <h3 className="font-semibold text-lg mb-3 mt-4 dark:text-neutral-200">Remember</h3>
+                <p className="text-neutral-600 dark:text-neutral-300">
                   Even the best tipsters lose regularly. No one can predict sports outcomes with certainty. 
                   Tips should be part of your research, not the only factor in your betting decisions.
                 </p>
@@ -135,26 +135,26 @@ export default function BettingTips() {
 
           {/* Trusted Tipster Sources */}
           <div className="mb-8">
-            <h2 className="text-2xl font-bold text-neutral-800 mb-6 text-center">Trusted Tipster Sources</h2>
+            <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-6 text-center">Trusted Tipster Sources</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {tipsterPlatforms.map((platform, index) => (
-                <Card key={index} className="h-full">
+                <Card key={index} className="h-full dark:bg-gray-700">
                   <CardHeader>
                     <div className="flex items-center space-x-3 mb-2">
                       {platform.icon}
                       <div>
-                        <CardTitle className="text-xl">{platform.name}</CardTitle>
-                        <p className="text-sm text-neutral-500">{platform.type}</p>
+                        <CardTitle className="text-xl dark:text-neutral-200">{platform.name}</CardTitle>
+                        <p className="text-sm text-neutral-500 dark:text-neutral-400">{platform.type}</p>
                       </div>
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-neutral-600 mb-4">{platform.description}</p>
+                    <p className="text-neutral-600 dark:text-neutral-300 mb-4">{platform.description}</p>
                     <div className="space-y-2 mb-4">
                       {platform.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center space-x-2">
                           <div className="w-2 h-2 bg-primary rounded-full"></div>
-                          <span className="text-sm text-neutral-600">{feature}</span>
+                          <span className="text-sm text-neutral-600 dark:text-neutral-300">{feature}</span>
                         </div>
                       ))}
                     </div>

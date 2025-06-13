@@ -123,29 +123,29 @@ export default function HorseRacingGuide() {
             <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-6 text-center">Reading Horse Racing Form</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h3 className="font-semibold text-lg mb-4">Form Numbers Explained</h3>
+                <h3 className="font-semibold text-lg mb-4 dark:text-neutral-200">Form Numbers Explained</h3>
                 <div className="space-y-3">
                   {formTerms.map((term, index) => (
-                    <div key={index} className="flex items-center space-x-3 p-2 bg-neutral-50 rounded">
+                    <div key={index} className="flex items-center space-x-3 p-2 bg-neutral-50 dark:bg-gray-600 rounded">
                       <div className="w-8 h-8 bg-primary text-white rounded flex items-center justify-center font-bold text-sm">
                         {term.term}
                       </div>
-                      <span className="text-neutral-700">{term.meaning}</span>
+                      <span className="text-neutral-700 dark:text-neutral-300">{term.meaning}</span>
                     </div>
                   ))}
                 </div>
               </div>
               <div>
-                <h3 className="font-semibold text-lg mb-4">Example Form Analysis</h3>
-                <div className="bg-neutral-50 p-4 rounded-lg mb-4">
-                  <p className="font-mono text-lg mb-2">1-2-3-1-0</p>
-                  <p className="text-sm text-neutral-600">
+                <h3 className="font-semibold text-lg mb-4 dark:text-neutral-200">Example Form Analysis</h3>
+                <div className="bg-neutral-50 dark:bg-gray-600 p-4 rounded-lg mb-4">
+                  <p className="font-mono text-lg mb-2 dark:text-neutral-200">1-2-3-1-0</p>
+                  <p className="text-sm text-neutral-600 dark:text-neutral-300">
                     Reading right to left (most recent first): Finished outside first three, 
                     then won, then third, then second, then won.
                   </p>
                 </div>
-                <h4 className="font-semibold mb-2">What to Look For:</h4>
-                <ul className="space-y-1 text-sm text-neutral-600">
+                <h4 className="font-semibold mb-2 dark:text-neutral-200">What to Look For:</h4>
+                <ul className="space-y-1 text-sm text-neutral-600 dark:text-neutral-300">
                   <li>• Consistent placings indicate reliability</li>
                   <li>• Recent wins show current form</li>
                   <li>• Consider the quality of opposition</li>
@@ -158,12 +158,12 @@ export default function HorseRacingGuide() {
 
           {/* Going Conditions */}
           <div className="mb-8">
-            <h2 className="text-2xl font-bold text-neutral-800 mb-6 text-center">Going Conditions</h2>
+            <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-6 text-center">Going Conditions</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               {goingDescriptions.map((going, index) => (
-                <div key={index} className="bg-white p-4 rounded-lg shadow-sm border-l-4 border-primary">
+                <div key={index} className="bg-white dark:bg-gray-700 p-4 rounded-lg shadow-sm border-l-4 border-primary">
                   <h3 className="font-semibold text-primary mb-1">{going.going}</h3>
-                  <p className="text-sm text-neutral-600">{going.description}</p>
+                  <p className="text-sm text-neutral-600 dark:text-neutral-300">{going.description}</p>
                 </div>
               ))}
             </div>
@@ -172,23 +172,23 @@ export default function HorseRacingGuide() {
           {/* Key Factors */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             {keyFactors.map((factor, index) => (
-              <Card key={index} className="text-center">
+              <Card key={index} className="text-center dark:bg-gray-700">
                 <CardHeader>
                   <div className="mx-auto mb-2">
                     {factor.icon}
                   </div>
-                  <CardTitle className="text-lg">{factor.title}</CardTitle>
+                  <CardTitle className="text-lg dark:text-neutral-200">{factor.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-neutral-600 text-sm">{factor.description}</p>
+                  <p className="text-neutral-600 dark:text-neutral-300 text-sm">{factor.description}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
 
           {/* Betting Markets */}
-          <div className="bg-white rounded-lg p-8 shadow-sm mb-8">
-            <h2 className="text-2xl font-bold text-neutral-800 mb-6 text-center">Popular Horse Racing Betting Markets</h2>
+          <div className="bg-white dark:bg-gray-700 rounded-lg p-8 shadow-sm mb-8">
+            <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-6 text-center">Popular Horse Racing Betting Markets</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="p-4 border rounded-lg">
                 <h3 className="font-semibold mb-2">Win</h3>
