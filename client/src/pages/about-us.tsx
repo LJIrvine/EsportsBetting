@@ -76,30 +76,30 @@ export default function AboutUs() {
 
           {/* What We Do */}
           <div className="mb-12">
-            <h2 className="text-2xl font-bold text-neutral-800 mb-6 text-center">What We Do</h2>
-            <div className="bg-white rounded-lg p-8 shadow-sm">
+            <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-6 text-center">What We Do</h2>
+            <div className="bg-white dark:bg-gray-700 rounded-lg p-8 shadow-sm">
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <h3 className="font-semibold text-lg mb-4">Bookmaker Reviews</h3>
-                  <p className="text-neutral-600 mb-4">
+                  <h3 className="font-semibold text-lg mb-4 dark:text-neutral-200">Bookmaker Reviews</h3>
+                  <p className="text-neutral-600 dark:text-neutral-300 mb-4">
                     We provide detailed, unbiased reviews of UK-licensed bookmakers, examining everything from welcome offers 
                     and odds quality to customer service and withdrawal times. Our reviews are based on thorough research 
                     and real user experiences.
                   </p>
-                  <h3 className="font-semibold text-lg mb-4">Educational Content</h3>
-                  <p className="text-neutral-600">
+                  <h3 className="font-semibold text-lg mb-4 dark:text-neutral-200">Educational Content</h3>
+                  <p className="text-neutral-600 dark:text-neutral-300">
                     From understanding odds to advanced betting strategies, we create comprehensive guides to help both 
                     beginners and experienced bettors improve their knowledge and approach to sports betting.
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-lg mb-4">Welcome Offer Verification</h3>
-                  <p className="text-neutral-600 mb-4">
+                  <h3 className="font-semibold text-lg mb-4 dark:text-neutral-200">Welcome Offer Verification</h3>
+                  <p className="text-neutral-600 dark:text-neutral-300 mb-4">
                     We continuously monitor and verify welcome offers from major UK bookmakers, ensuring our users 
                     have access to current, accurate information about available promotions and their terms.
                   </p>
-                  <h3 className="font-semibold text-lg mb-4">Responsible Gambling Advocacy</h3>
-                  <p className="text-neutral-600">
+                  <h3 className="font-semibold text-lg mb-4 dark:text-neutral-200">Responsible Gambling Advocacy</h3>
+                  <p className="text-neutral-600 dark:text-neutral-300">
                     We're committed to promoting safe betting practices through educational content, links to support 
                     organizations, and clear information about self-exclusion options like Gamstop.
                   </p>
@@ -110,7 +110,7 @@ export default function AboutUs() {
 
           {/* Our Values */}
           <div className="mb-12">
-            <h2 className="text-2xl font-bold text-neutral-800 mb-6 text-center">Our Values</h2>
+            <h2 className="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-6 text-center">Our Values</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {values.map((value, index) => (
                 <Card key={index} className="text-center h-full">

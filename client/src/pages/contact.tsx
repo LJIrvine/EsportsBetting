@@ -115,9 +115,9 @@ export default function Contact() {
             </p>
           </div>
 
-          <Card className="max-w-2xl mx-auto">
+          <Card className="max-w-2xl mx-auto dark:bg-gray-700">
             <CardHeader>
-              <CardTitle className="flex items-center">
+              <CardTitle className="flex items-center dark:text-neutral-200">
                 <Mail className="h-5 w-5 mr-2" />
                 Send us a Message
               </CardTitle>
