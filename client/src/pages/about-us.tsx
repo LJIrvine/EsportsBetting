@@ -2,7 +2,9 @@ import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import SEOHead from "@/components/seo-head";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Target, Users, Shield, Award, Heart, CheckCircle } from "lucide-react";
+import { Link } from "wouter";
 
 export default function AboutUs() {
   const values = [

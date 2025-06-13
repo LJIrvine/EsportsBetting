@@ -99,56 +99,74 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="space-y-4">
               {bookmakersLoading
                 ? Array.from({ length: 8 }).map((_, i) => (
                     <Card key={i} className="animate-pulse">
-                      <CardContent className="p-6">
-                        <div className="h-16 bg-gray-200 rounded mb-4"></div>
-                        <div className="h-6 bg-gray-200 rounded mb-2"></div>
-                        <div className="h-4 bg-gray-200 rounded mb-4"></div>
-                        <div className="h-10 bg-gray-200 rounded"></div>
+                      <CardContent className="p-6 flex items-center">
+                        <div className="w-32 h-32 bg-gray-200 rounded-xl mr-6"></div>
+                        <div className="flex-1">
+                          <div className="h-6 bg-gray-200 rounded mb-2"></div>
+                          <div className="h-4 bg-gray-200 rounded mb-4"></div>
+                          <div className="h-10 bg-gray-200 rounded w-32"></div>
+                        </div>
                       </CardContent>
                     </Card>
                   ))
                 : topBookmakers.map((bookmaker) => (
                     <Card
                       key={bookmaker.id}
-                      className="hover:shadow-lg transition-shadow border-2 hover:border-primary"
+                      className="relative overflow-hidden hover:shadow-xl transition-all duration-300 border-2 hover:border-primary group h-32"
                     >
-                      <CardContent className="p-6 text-center">
-                        <div className="relative mx-auto mb-4 w-28 h-20 group">
+                      <div 
+                        className="absolute inset-0 opacity-15 group-hover:opacity-25 transition-opacity duration-300"
+                        style={{
+                          background: `url(${bookmaker.logo}) left center/auto 100% no-repeat`,
+                          maskImage: 'linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 30%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0) 100%)',
+                          WebkitMaskImage: 'linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 30%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0) 100%)',
+                        }}
+                      />
+                      <CardContent className="relative z-10 p-6 flex items-center h-full bg-gradient-to-r from-white/95 via-white/90 to-white/95">
+                        <div className="relative w-32 h-32 mr-6 flex-shrink-0">
                           <img
                             src={bookmaker.logo}
                             alt={`${bookmaker.name} Logo`}
-                            className="w-full h-full object-contain rounded-xl border border-neutral-200 shadow-md bg-white p-2 transition-all duration-300 group-hover:shadow-lg group-hover:scale-105"
+                            className="w-full h-full object-contain rounded-2xl border-2 border-neutral-300 shadow-xl bg-white p-3 transition-all duration-300 group-hover:shadow-2xl group-hover:scale-105"
                             style={{
-                              filter: 'drop-shadow(0 2px 4px rgba(108, 59, 170, 0.1))',
+                              filter: 'drop-shadow(0 6px 12px rgba(108, 59, 170, 0.2))',
                             }}
                           />
-                          <div className="absolute inset-0 rounded-xl bg-gradient-to-tr from-transparent via-white/20 to-transparent opacity-30 pointer-events-none"></div>
+                          <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-transparent via-white/30 to-transparent opacity-50 pointer-events-none"></div>
                         </div>
-                        <h3 className="font-bold text-lg mb-2">
-                          {bookmaker.name}
-                        </h3>
-                        <div className="text-2xl font-bold text-secondary mb-1">
-                          {bookmaker.bonus}
+                        
+                        <div className="flex-1 min-w-0">
+                          <h3 className="font-bold text-2xl mb-2 text-neutral-800">
+                            {bookmaker.name}
+                          </h3>
+                          <div className="flex items-center gap-4 mb-3">
+                            <div className="text-3xl font-bold text-secondary">
+                              {bookmaker.bonus}
+                            </div>
+                            <div className="text-base text-neutral-600">
+                              {bookmaker.bonusType}
+                            </div>
+                            {bookmaker.badge && (
+                              <Badge className="bg-primary text-white text-sm px-3 py-1">
+                                {bookmaker.badge}
+                              </Badge>
+                            )}
+                          </div>
                         </div>
-                        <div className="text-sm text-neutral-600 mb-4">
-                          {bookmaker.bonusType}
+                        
+                        <div className="flex-shrink-0 ml-6">
+                          <Button
+                            onClick={() => handleAffiliateClick(bookmaker)}
+                            className="bg-secondary hover:bg-green-600 text-white font-semibold px-8 py-4 text-lg"
+                          >
+                            <Play className="mr-2 h-5 w-5" />
+                            Claim Offer
+                          </Button>
                         </div>
-                        {bookmaker.badge && (
-                          <Badge className="bg-primary text-white mb-3">
-                            {bookmaker.badge}
-                          </Badge>
-                        )}
-                        <Button
-                          onClick={() => handleAffiliateClick(bookmaker)}
-                          className="w-full bg-secondary hover:bg-green-600 text-white font-semibold"
-                        >
-                          <Play className="mr-2 h-4 w-4" />
-                          Claim Offer
-                        </Button>
                       </CardContent>
                     </Card>
                   ))}
@@ -222,46 +240,55 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="space-y-6">
               {sampleReviews.map((bookmaker) => (
                 <Card
                   key={bookmaker.id}
-                  className="hover:shadow-lg transition-shadow"
+                  className="relative overflow-hidden hover:shadow-xl transition-all duration-300 border-2 hover:border-primary group h-40"
                 >
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
+                  <div 
+                    className="absolute inset-0 opacity-12 group-hover:opacity-20 transition-opacity duration-300"
+                    style={{
+                      background: `url(${bookmaker.logo}) left center/auto 100% no-repeat`,
+                      maskImage: 'linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 35%, rgba(0,0,0,0.2) 65%, rgba(0,0,0,0) 100%)',
+                      WebkitMaskImage: 'linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 35%, rgba(0,0,0,0.2) 65%, rgba(0,0,0,0) 100%)',
+                    }}
+                  />
+                  <CardContent className="relative z-10 p-6 flex items-center h-full bg-gradient-to-r from-white/96 via-white/92 to-white/96">
+                    <div className="relative w-36 h-36 mr-8 flex-shrink-0">
                       <img
                         src={bookmaker.logo}
                         alt={`${bookmaker.name} Logo`}
-                        className="w-16 h-10 object-contain rounded"
+                        className="w-full h-full object-contain rounded-2xl border-2 border-neutral-300 shadow-xl bg-white p-4 transition-all duration-300 group-hover:shadow-2xl group-hover:scale-105"
+                        style={{
+                          filter: 'drop-shadow(0 8px 16px rgba(108, 59, 170, 0.25))',
+                        }}
                       />
-                      <div className="flex-1">
-                        <div className="flex items-center justify-between mb-2">
-                          <h3 className="text-xl font-bold">
-                            {bookmaker.name}
-                          </h3>
-                          <StarRating rating={bookmaker.rating} />
-                        </div>
-                        <p className="text-neutral-600 mb-4 line-clamp-3">
-                          {bookmaker.description.substring(0, 150)}...
-                        </p>
-                        <div className="flex items-center justify-between">
-                          <Link href={`/casino/${bookmaker.slug}`}>
-                            <Button
-                              variant="outline"
-                              className="text-primary border-primary hover:bg-primary hover:text-white"
-                            >
-                              Read Full Review
-                              <ChevronRight className="ml-2 h-4 w-4" />
-                            </Button>
-                          </Link>
-                          <div className="text-right">
-                            <div className="text-lg font-bold text-secondary">
-                              {bookmaker.bonus}
-                            </div>
-                            <div className="text-sm text-neutral-500">
-                              {bookmaker.bonusType}
-                            </div>
+                      <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-transparent via-white/30 to-transparent opacity-50 pointer-events-none"></div>
+                    </div>
+                    
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center justify-between mb-3">
+                        <h3 className="text-2xl font-bold text-neutral-800">
+                          {bookmaker.name}
+                        </h3>
+                        <StarRating rating={bookmaker.rating} size="lg" />
+                      </div>
+                      <p className="text-neutral-600 mb-4 text-base line-clamp-2 leading-relaxed">
+                        {bookmaker.description.substring(0, 180)}...
+                      </p>
+                      <div className="flex items-center gap-4">
+                        <Link href={`/casino/${bookmaker.slug}`}>
+                          <Button variant="outline" className="px-6 py-2">
+                            Read Full Review
+                          </Button>
+                        </Link>
+                        <div className="text-right">
+                          <div className="text-lg font-bold text-secondary">
+                            {bookmaker.bonus}
+                          </div>
+                          <div className="text-sm text-neutral-500">
+                            {bookmaker.bonusType}
                           </div>
                         </div>
                       </div>
