@@ -3,10 +3,12 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Moon, Sun } from "lucide-react";
 import { useTheme } from "@/lib/theme-context";
+import { useScrollToTopOnCurrentPage } from "@/hooks/use-scroll-to-top-on-current-page";
 
 export default function Header() {
   const [location] = useLocation();
   const { theme, setTheme } = useTheme();
+  const { handleClick } = useScrollToTopOnCurrentPage();
 
   const isActive = (path: string) => {
     if (path === "/" && location === "/") return true;

@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import StarRating from "@/components/star-rating";
 import { Link } from "wouter";
 import { useState } from "react";
@@ -106,6 +107,13 @@ export default function Reviews() {
                               {bookmaker.rating}/5
                             </span>
                           </div>
+                          {bookmaker.badge && (
+                            <div className="mb-2">
+                              <Badge className="bg-primary text-white text-xs px-2 py-1 text-center whitespace-nowrap max-w-fit">
+                                {bookmaker.badge}
+                              </Badge>
+                            </div>
+                          )}
                         </div>
                       </div>
                       

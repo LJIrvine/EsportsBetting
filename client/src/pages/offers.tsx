@@ -97,7 +97,7 @@ export default function Offers() {
                               {bookmaker.rating}/5
                             </span>
                             {bookmaker.badge && (
-                              <Badge className="bg-primary text-white text-xs">
+                              <Badge className="bg-primary text-white text-xs px-2 py-1 text-center whitespace-nowrap max-w-fit">
                                 {bookmaker.badge}
                               </Badge>
                             )}

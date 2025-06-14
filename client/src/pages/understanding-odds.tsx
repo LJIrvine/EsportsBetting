@@ -15,23 +15,34 @@ function fractionalToDecimal(numerator: number, denominator: number): number {
 
 function decimalToFractional(decimal: number): { numerator: number; denominator: number } {
   const fraction = decimal - 1;
-  let numerator = fraction;
-  let denominator = 1;
   
-  // Convert to fraction
-  while (numerator % 1 !== 0) {
-    numerator *= 10;
-    denominator *= 10;
-  }
+  // Handle edge cases
+  if (fraction <= 0) return { numerator: 0, denominator: 1 };
+  if (fraction >= 100) return { numerator: Math.round(fraction), denominator: 1 };
   
-  // Simplify fraction
+  // Use a more precise approach with limited precision
+  const precision = 1000000; // Limit precision to avoid huge numbers
+  let numerator = Math.round(fraction * precision);
+  let denominator = precision;
+  
+  // Simplify fraction using GCD
   const gcd = (a: number, b: number): number => b === 0 ? a : gcd(b, a % b);
   const divisor = gcd(numerator, denominator);
   
-  return {
-    numerator: numerator / divisor,
-    denominator: denominator / divisor
-  };
+  numerator = numerator / divisor;
+  denominator = denominator / divisor;
+  
+  // If numbers are still too large, approximate with simpler fraction
+  if (numerator > 10000 || denominator > 10000) {
+    const ratio = fraction;
+    if (ratio < 1) {
+      return { numerator: 1, denominator: Math.round(1 / ratio) };
+    } else {
+      return { numerator: Math.round(ratio), denominator: 1 };
+    }
+  }
+  
+  return { numerator, denominator };
 }
 
 function decimalToMoneyline(decimal: number): number {
