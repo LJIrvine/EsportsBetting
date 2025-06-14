@@ -65,38 +65,50 @@ export default function Home() {
   return (
     <>
       <SEOHead
-        title="TopBetSite - Best UK Betting Offers & Sportsbook Reviews 2024"
-        description="Find the best UK betting offers and welcome bonuses from top bookmakers. Expert reviews of William Hill, Bet365, Ladbrokes and more. Free betting guides and tips."
-        ogTitle="TopBetSite - Best UK Betting Offers & Sportsbook Reviews"
-        ogDescription="Find the best UK betting offers and welcome bonuses from top bookmakers including William Hill, Bet365, and Ladbrokes."
+        title="Top Bet Site – Your Guide to Esports Betting"
+        description="Discover the best esports betting sites for CS2, League of Legends, Dota 2, and Valorant. Expert reviews, betting guides, and top odds comparison."
+        ogTitle="Top Bet Site – Your Guide to Esports Betting"
+        ogDescription="Your ultimate destination for esports betting guides, site comparisons, and expert tips for competitive gaming."
       />
 
       <div className="min-h-screen bg-neutral-50 dark:bg-gray-900">
         <Header />
 
         {/* Top Banner */}
-        <section className="bg-primary text-white py-8">
+        <section className="bg-gradient-to-r from-purple-900 via-blue-900 to-teal-900 text-white py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-3xl md:text-5xl font-bold mb-4">
-              TopBetSite<span className="text-2xl md:text-3xl">.co.uk</span>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-green-400 bg-clip-text text-transparent">
+              Top Bet Site – Your Guide to Esports Betting
             </h1>
-            <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto">
-              Your trusted source for the best UK betting offers, expert
-              reviews, and winning strategies
+            <p className="text-lg md:text-xl opacity-90 max-w-3xl mx-auto mb-8">
+              Discover the explosive world of esports betting! From CS2 tournaments to League of Legends championships, 
+              we help you find the best sites, understand the odds, and master competitive gaming wagering.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link href="/casinos">
+                <Button size="lg" className="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold px-8 py-3">
+                  Compare Esports Betting Sites
+                </Button>
+              </Link>
+              <Link href="/esports-betting-guide">
+                <Button size="lg" variant="outline" className="border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-semibold px-8 py-3">
+                  Learn How to Bet on Esports
+                </Button>
+              </Link>
+            </div>
           </div>
         </section>
 
-        {/* Welcome Offers Section */}
+        {/* Esports Betting Sites Section */}
         <section className="py-12 bg-white dark:bg-gray-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-10">
               <h2 className="text-3xl md:text-4xl font-bold text-neutral-800 dark:text-neutral-200 mb-4">
-                Best Welcome Offers
+                Top Esports Betting Sites
               </h2>
               <p className="text-lg text-neutral-600 dark:text-neutral-300 max-w-3xl mx-auto">
-                Claim exclusive welcome bonuses from the UK's top bookmakers.
-                All offers verified and updated regularly.
+                Compare the best esports betting platforms. From crypto-friendly sites to those with the highest odds, 
+                find your perfect match for CS2, LoL, Dota 2, and Valorant betting.
               </p>
             </div>
 
@@ -250,59 +262,82 @@ export default function Home() {
           </div>
         </section>
 
-        {/* What Are Welcome Offers */}
+        {/* Top Esports Betting Games */}
         <section className="py-12 bg-neutral-50 dark:bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-10">
               <h2 className="text-3xl font-bold text-neutral-800 dark:text-neutral-200 mb-4">
-                What Are Welcome Offers?
+                Top Esports Betting Games
               </h2>
               <p className="text-lg text-neutral-600 dark:text-neutral-300 max-w-3xl mx-auto">
-                Welcome offers are promotional bonuses designed to attract new
-                customers to betting sites.
+                Master the art of esports betting with our comprehensive guides for the most popular competitive games.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              <Card className="text-center">
-                <CardContent className="p-6">
-                  <Gift className="h-12 w-12 text-secondary mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold mb-3 dark:text-neutral-200">
-                    Free Bets
-                  </h3>
-                  <p className="text-neutral-600 dark:text-neutral-300">
-                    Risk-free bets that let you place wagers without using your
-                    own money. Perfect for trying new markets or strategies.
-                  </p>
-                </CardContent>
-              </Card>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <Link href="/cs2-betting-guide">
+                <Card className="text-center hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 border-2 hover:border-orange-400">
+                  <CardContent className="p-6">
+                    <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
+                      CS2
+                    </div>
+                    <h3 className="text-xl font-semibold mb-3 dark:text-neutral-200">
+                      CS2 Betting Guide
+                    </h3>
+                    <p className="text-neutral-600 dark:text-neutral-300">
+                      Master Counter-Strike 2 betting with map analysis, team form, and tactical insights for major tournaments.
+                    </p>
+                  </CardContent>
+                </Card>
+              </Link>
 
-              <Card className="text-center">
-                <CardContent className="p-6">
-                  <Shield className="h-12 w-12 text-primary mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold mb-3 dark:text-neutral-200">
-                    Deposit Bonuses
-                  </h3>
-                  <p className="text-neutral-600 dark:text-neutral-300">
-                    Extra betting funds added to your account when you make your
-                    first deposit. Typically matches a percentage of your
-                    deposit.
-                  </p>
-                </CardContent>
-              </Card>
+              <Link href="/lol-betting-guide">
+                <Card className="text-center hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 border-2 hover:border-blue-400">
+                  <CardContent className="p-6">
+                    <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl mx-auto mb-4 flex items-center justify-center text-white text-xl font-bold">
+                      LoL
+                    </div>
+                    <h3 className="text-xl font-semibold mb-3 dark:text-neutral-200">
+                      League of Legends Guide
+                    </h3>
+                    <p className="text-neutral-600 dark:text-neutral-300">
+                      Navigate LoL betting with patch analysis, meta understanding, and championship predictions.
+                    </p>
+                  </CardContent>
+                </Card>
+              </Link>
 
-              <Card className="text-center">
-                <CardContent className="p-6">
-                  <Clock className="h-12 w-12 text-accent mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold mb-3 dark:text-neutral-200">
-                    Enhanced Odds
-                  </h3>
-                  <p className="text-neutral-600 dark:text-neutral-300">
-                    Boosted odds on selected markets giving you better potential
-                    returns than the standard market price.
-                  </p>
-                </CardContent>
-              </Card>
+              <Link href="/dota2-betting-guide">
+                <Card className="text-center hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer bg-gradient-to-br from-red-50 to-pink-50 dark:from-red-900/20 dark:to-pink-900/20 border-2 hover:border-red-400">
+                  <CardContent className="p-6">
+                    <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-500 rounded-xl mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
+                      D2
+                    </div>
+                    <h3 className="text-xl font-semibold mb-3 dark:text-neutral-200">
+                      Dota 2 Betting Guide
+                    </h3>
+                    <p className="text-neutral-600 dark:text-neutral-300">
+                      Understand Dota 2's complex meta, draft phases, and tournament formats for successful betting.
+                    </p>
+                  </CardContent>
+                </Card>
+              </Link>
+
+              <Link href="/valorant-betting-guide">
+                <Card className="text-center hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer bg-gradient-to-br from-teal-50 to-green-50 dark:from-teal-900/20 dark:to-green-900/20 border-2 hover:border-teal-400">
+                  <CardContent className="p-6">
+                    <div className="w-16 h-16 bg-gradient-to-r from-teal-500 to-green-500 rounded-xl mx-auto mb-4 flex items-center justify-center text-white text-xl font-bold">
+                      VAL
+                    </div>
+                    <h3 className="text-xl font-semibold mb-3 dark:text-neutral-200">
+                      Valorant Betting Guide
+                    </h3>
+                    <p className="text-neutral-600 dark:text-neutral-300">
+                      Master Valorant betting with agent compositions, map control, and round-by-round analysis.
+                    </p>
+                  </CardContent>
+                </Card>
+              </Link>
             </div>
           </div>
         </section>

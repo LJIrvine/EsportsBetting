@@ -14,10 +14,10 @@ export default function Casinos() {
   return (
     <>
       <SEOHead 
-        title="All UK Bookmakers - Complete Sportsbook Directory | TopBetSite"
-        description="Browse our complete directory of UK licensed bookmakers. Compare welcome bonuses, odds, and features from all major sports betting sites."
-        ogTitle="All UK Bookmakers - Complete Directory"
-        ogDescription="Complete directory of UK licensed bookmakers with welcome bonuses and detailed reviews."
+        title="Best Esports Betting Sites Comparison | Top Bet Site"
+        description="Compare the top esports betting platforms including Betway, GG.Bet, Pinnacle, and Stake. Find the best odds, crypto options, and live betting for CS2, LoL, Dota 2, and Valorant."
+        ogTitle="Best Esports Betting Sites Comparison"
+        ogDescription="Compare top esports betting platforms with expert reviews, features analysis, and betting guides."
       />
       
       <div className="min-h-screen bg-neutral-50">
@@ -25,12 +25,12 @@ export default function Casinos() {
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center mb-12">
-            <h1 className="text-3xl md:text-4xl font-bold text-neutral-800 mb-4">
-              All UK Bookmakers
+            <h1 className="text-3xl md:text-4xl font-bold text-neutral-800 mb-4 bg-gradient-to-r from-purple-600 to-cyan-600 bg-clip-text text-transparent">
+              Best Esports Betting Sites
             </h1>
             <p className="text-lg text-neutral-600 max-w-3xl mx-auto">
-              Complete directory of UK licensed bookmakers. Compare welcome bonuses, 
-              features, and find the perfect sportsbook for your betting needs.
+              Compare the top esports betting platforms for CS2, League of Legends, Dota 2, and Valorant. 
+              Find sites with the best odds, crypto support, live betting, and tournament coverage.
             </p>
           </div>
 
