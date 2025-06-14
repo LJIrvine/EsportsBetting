@@ -142,7 +142,7 @@ export default function Home() {
                             "linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 30%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0) 100%)",
                         }}
                       />
-                      <CardContent className="relative z-10 p-3 sm:p-4 sm:bg-gradient-to-r sm:from-white/95 sm:via-white/90 sm:to-white/95 dark:sm:from-gray-700/95 dark:sm:via-gray-700/90 dark:sm:to-gray-700/95">
+                      <CardContent className="relative z-10 p-3 sm:p-6">
                         {/* Mobile Layout */}
                         <div className="flex flex-col space-y-3 sm:hidden">
                           <div className="flex items-start space-x-4">
@@ -368,7 +368,7 @@ export default function Home() {
                       opacity: 0.85,
                     }}
                   />
-                  <CardContent className="relative z-10 p-3 sm:p-6 sm:bg-gradient-to-r sm:from-white/100 sm:via-white/0 sm:to-white/0 dark:sm:from-gray-700/100 dark:sm:via-gray-700/0 dark:sm:to-gray-700/0">
+                  <CardContent className="relative z-10 p-3 sm:p-6">
                     {/* Mobile Layout */}
                     <div className="flex flex-col space-y-3 sm:hidden">
                       <div className="flex items-start space-x-4">
