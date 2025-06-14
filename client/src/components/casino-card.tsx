@@ -20,7 +20,7 @@ export default function CasinoCard({ casino }: CasinoCardProps) {
   };
 
   return (
-    <Card className="bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+    <Card className="bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl shadow-sm hover:shadow-md transition-shadow bg-none">
       <CardContent className="p-4 sm:p-6">
         {/* Mobile: Stacked Layout */}
         <div className="flex flex-col space-y-4 lg:hidden">
