@@ -91,13 +91,10 @@ export default function Offers() {
                           <h3 className="font-bold text-3xl text-neutral-800 dark:text-neutral-200 mb-2 leading-tight">
                             {bookmaker.name}
                           </h3>
-                          <div className="flex items-center gap-3 mb-2">
+                          <div className="flex items-center gap-2 mb-2">
                             <StarRating rating={bookmaker.rating} size="sm" />
-                            <span className="text-sm text-neutral-600 dark:text-neutral-300">
-                              {bookmaker.rating}/5
-                            </span>
                             {bookmaker.badge && (
-                              <Badge className="bg-primary text-white text-xs px-2 py-1 text-center whitespace-nowrap max-w-fit">
+                              <Badge className="bg-primary text-white text-xs px-1.5 py-0.5 text-center whitespace-nowrap max-w-fit text-[10px]">
                                 {bookmaker.badge}
                               </Badge>
                             )}
