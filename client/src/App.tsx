@@ -17,6 +17,7 @@ import BettingStrategy from "@/pages/betting-strategy";
 import UnderstandingOdds from "@/pages/understanding-odds";
 import BettingTips from "@/pages/betting-tips";
 import EsportsBettingGuide from "@/pages/esports-betting-guide";
+import CS2BettingGuide from "@/pages/cs2-betting-guide";
 import ResponsibleGambling from "@/pages/responsible-gambling";
 import BettingGlossary from "@/pages/betting-glossary";
 import FirstBetGuide from "@/pages/first-bet-guide";
@@ -48,6 +49,7 @@ function Router() {
       <Route path="/understanding-odds" component={UnderstandingOdds} />
       <Route path="/betting-tips" component={BettingTips} />
       <Route path="/esports-betting-guide" component={EsportsBettingGuide} />
+      <Route path="/cs2-betting-guide" component={CS2BettingGuide} />
       <Route path="/responsible-gambling" component={ResponsibleGambling} />
       <Route path="/betting-glossary" component={BettingGlossary} />
       <Route path="/first-bet-guide" component={FirstBetGuide} />
