@@ -119,7 +119,7 @@ export default function CasinoCard({ casino }: CasinoCardProps) {
                   filter: 'drop-shadow(0 2px 4px rgba(108, 59, 170, 0.1))',
                 }}
               />
-              <div className="absolute inset-0 rounded-xl bg-gradient-to-tr from-transparent via-white/20 to-transparent opacity-30 pointer-events-none"></div>
+              {/* <div className="absolute inset-0 rounded-xl bg-gradient-to-tr from-transparent via-white/20 to-transparent opacity-30 pointer-events-none"></div> */}
             </div>
           </div>
           
