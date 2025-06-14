@@ -1,18 +1,20 @@
-# TopBetSite - Betting Comparison Platform
+# Top Bet Site - Esports Betting Platform
 
 ## Overview
 
-TopBetSite is a comprehensive betting comparison platform designed to help UK users find the best bookmakers, welcome offers, and betting information. The application features a modern React frontend with a Node.js/Express backend, PostgreSQL database with Drizzle ORM, and comprehensive betting-focused content management.
+Top Bet Site is a dedicated esports betting platform designed to help users master competitive gaming wagering. The application provides comprehensive guides for CS2, League of Legends, Dota 2, and Valorant betting, alongside detailed reviews of esports-focused betting sites. Features a dark gaming-themed React frontend with neon highlights, Node.js/Express backend, and specialized esports content management.
 
 ## System Architecture
 
 ### Frontend Architecture
 - **Framework**: React 18 with TypeScript
 - **Routing**: Wouter for client-side routing
-- **Styling**: Tailwind CSS with custom design system
-- **UI Components**: Radix UI components with shadcn/ui
+- **Styling**: Tailwind CSS with dark esports theme and neon highlights
+- **Typography**: Orbitron font for gaming aesthetic, Inter for body text
+- **UI Components**: Radix UI components with shadcn/ui, customized for esports theme
 - **State Management**: TanStack Query for server state
 - **Build Tool**: Vite for development and production builds
+- **Theme**: Dark-first design with purple, blue, and green neon accents
 
 ### Backend Architecture
 - **Runtime**: Node.js with Express.js
@@ -31,8 +33,8 @@ TopBetSite is a comprehensive betting comparison platform designed to help UK us
 ### Database Schema
 The application uses three main database tables:
 
-1. **Casinos Table**: Stores bookmaker information including name, slug, logo, rating, bonus details, features, and affiliate URLs
-2. **Blog Posts Table**: Content management for articles with title, slug, content (markdown), category, and SEO fields
+1. **Casinos Table**: Stores esports betting site information including name, slug, logo, rating, bonus details, esports-specific features, and affiliate URLs
+2. **Blog Posts Table**: Content management for esports articles with title, slug, content (markdown), category, and SEO fields
 3. **Affiliate Clicks Table**: Tracking table for monitoring affiliate link interactions
 
 ### API Structure
@@ -42,19 +44,20 @@ The application uses three main database tables:
 - Error handling middleware with structured responses
 
 ### Frontend Pages
-- **Home**: Featured bookmakers and latest offers
-- **Casinos**: Complete directory of all bookmakers
-- **Offers**: Dedicated page for all betting offers
-- **Reviews**: Detailed bookmaker reviews
-- **Blog**: Content management with category filtering
-- **Resources**: Educational betting guides and strategies
-- **Static Pages**: FAQ, Terms, Privacy Policy, About Us
+- **Home**: Featured esports betting sites with gaming-themed design
+- **Esports Betting Sites**: Complete directory comparing Betway, GG.Bet, Pinnacle, Stake, and others
+- **Esports Betting Guide**: Comprehensive guide covering CS2, LoL, Dota 2, and Valorant
+- **Game-Specific Guides**: Individual betting guides for CS2, League of Legends, Dota 2, and Valorant
+- **Blog**: Esports-focused content management with tournament analysis and betting strategies
+- **Resources**: Educational esports betting guides and responsible gambling information
+- **Static Pages**: FAQ, Terms, Privacy Policy, About Us (updated for esports focus)
 
 ### Content Management
-- Markdown-based blog system
-- SEO-optimized page structure
-- Responsive design for mobile and desktop
-- Comprehensive betting guides and educational content
+- Markdown-based esports blog system
+- SEO-optimized page structure with esports keywords
+- Dark theme responsive design optimized for gaming audience
+- Comprehensive esports betting guides and educational content
+- Game-specific strategy guides for major esports titles
 
 ## Data Flow
 
@@ -102,7 +105,15 @@ The application uses three main database tables:
 - Port 5000 mapped to external port 80
 
 ## Changelog
-- June 13, 2025. Initial setup
+- June 14, 2025: Major platform transformation to esports betting focus
+  - Complete UI redesign with dark gaming theme and neon highlights
+  - Replaced casino/sportsbook content with esports betting sites (Betway, GG.Bet, Pinnacle, Stake)
+  - Added comprehensive esports betting guides for CS2, LoL, Dota 2, and Valorant
+  - Implemented Orbitron gaming font and enhanced visual effects
+  - Updated sample data to reflect esports betting platforms
+  - Created dedicated esports betting guide pages with tactical insights
+  - Transformed homepage with esports-focused messaging and CTAs
+- June 13, 2025: Initial setup
 
 ## User Preferences
 
